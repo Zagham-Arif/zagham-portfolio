@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "skills": "Habilidades",
+    "contact": "Contacto",
+    "toggleTheme": "Cambiar tema",
+    "toggleLanguage": "Cambiar idioma"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "title": "Ingeniero de Software",
+    "subtitle": "Creo experiencias web increíbles con tecnologías modernas",
+    "description": "Apasionado por construir aplicaciones escalables y dar vida a las ideas a través del código.",
+    "downloadCV": "Descargar CV",
+    "contactMe": "Contáctame"
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "subtitle": "Aquí están algunos de mis trabajos recientes",
+    "viewCode": "Ver Código",
+    "liveDemo": "Demo en Vivo",
+    "viewProject": "Ver Proyecto"
+  },
+  "experience": {
+    "title": "Experiencia Laboral",
+    "subtitle": "Mi trayectoria profesional",
+    "present": "Presente"
+  },
+  "skills": {
+    "title": "Habilidades y Tecnologías",
+    "subtitle": "Tecnologías con las que trabajo",
+    "categories": {
+      "backend": "Backend y APIs",
+      "frontend": "Tecnologías Frontend",
+      "database": "Bases de Datos y Almacenamiento",
+      "tools": "Nube y DevOps",
+      "other": "Herramientas y Utilidades"
+    },
+    "stats": {
+      "yearsExperience": "Años de Experiencia",
+      "projectsCompleted": "Proyectos Completados",
+      "technologies": "Tecnologías"
+    }
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "description": "¡No dudes en contactarme para colaboraciones o simplemente un saludo amigable!",
+    "subtitle": "Trabajemos juntos",
+    "followMe": "Sígueme",
+    "sendMessage": "Enviar un Mensaje",
+    "getBackSoon": "Te responderé lo antes posible.",
+    "messageSentTitle": "¡Mensaje Enviado Exitosamente!",
+    "messageSentDescription": "Gracias por contactarme. Te responderé lo antes posible.",
+    "errorSending": "Hubo un error al enviar tu mensaje. Por favor intenta de nuevo.",
+    "validation": {
+      "nameMinLength": "El nombre debe tener al menos 2 caracteres",
+      "messageMinLength": "El mensaje debe tener al menos 10 caracteres",
+      "invalidUrl": "Por favor ingresa una URL válida"
+    },
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "website": "Sitio web (Opcional)",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado con éxito!",
+    "error": "Error al enviar el mensaje. Por favor intenta de nuevo."
+  },
+  "notFound": {
+    "title": "404 - Página No Encontrada",
+    "description": "La página que buscas no existe.",
+    "backToHome": "Ir al Inicio"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "madeWith": "Hecho con ❤️ usando Next.js",
+    "builtWith": "Construido con Next.js y TypeScript",
+    "quickLinks": "Enlaces Rápidos",
+    "getInTouch": "Ponte en Contacto",
+    "availableForWork": "Disponible para trabajo freelance",
+    "hireOnFiverr": "Contrátame en Fiverr",
+    "hireOnUpwork": "Contrátame en Upwork",
+    "backToTop": "Volver arriba",
+    "brandDescription": "Desarrollador Full Stack Senior con más de 4 años de experiencia en Python, ReactJS y el stack MERN. Apasionado por crear soluciones web innovadoras y liderar equipos de desarrollo para entregar resultados excepcionales."
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "experience": "Experience",
+    "skills": "Skills",
+    "contact": "Contact",
+    "toggleTheme": "Toggle theme",
+    "toggleLanguage": "Toggle language"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "title": "Software Engineer",
+    "subtitle": "I create amazing web experiences with modern technologies",
+    "description": "Passionate about building scalable applications and bringing ideas to life through code.",
+    "downloadCV": "Download CV",
+    "contactMe": "Contact Me"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Here are some of my recent works",
+    "viewCode": "View Code",
+    "liveDemo": "Live Demo",
+    "viewProject": "View Project"
+  },
+  "experience": {
+    "title": "Work Experience",
+    "subtitle": "My professional journey",
+    "present": "Present"
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "subtitle": "Technologies I work with",
+    "categories": {
+      "backend": "Backend & APIs",
+      "frontend": "Frontend Technologies",
+      "database": "Databases & Storage",
+      "tools": "Cloud & DevOps",
+      "other": "Tools & Utilities"
+    },
+    "stats": {
+      "yearsExperience": "Years Experience",
+      "projectsCompleted": "Projects Completed",
+      "technologies": "Technologies"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "Feel free to reach out for collaborations or just a friendly hello!",
+    "subtitle": "Let's work together",
+    "followMe": "Follow Me",
+    "sendMessage": "Send a Message",
+    "getBackSoon": "I'll get back to you as soon as possible.",
+    "messageSentTitle": "Message Sent Successfully!",
+    "messageSentDescription": "Thank you for reaching out. I'll get back to you as soon as possible.",
+    "errorSending": "There was an error sending your message. Please try again.",
+    "validation": {
+      "nameMinLength": "Name must be at least 2 characters",
+      "messageMinLength": "Message must be at least 10 characters",
+      "invalidUrl": "Please enter a valid URL"
+    },
+    "name": "Name",
+    "email": "Email",
+    "website": "Website (Optional)",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Failed to send message. Please try again."
+  },
+  "notFound": {
+    "title": "404 - Page Not Found",
+    "description": "The page you are looking for does not exist.",
+    "backToHome": "Go to Homepage"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "madeWith": "Made with ❤️ using Next.js",
+    "builtWith": "Built with Next.js & TypeScript",
+    "quickLinks": "Quick Links",
+    "getInTouch": "Get In Touch",
+    "availableForWork": "Available for freelance work",
+    "hireOnFiverr": "Hire me on Fiverr",
+    "hireOnUpwork": "Hire me on Upwork",
+    "backToTop": "Back to top",
+    "brandDescription": "Senior Full Stack Developer with 4+ years of experience in Python, ReactJS, and the MERN stack. Passionate about creating innovative web solutions and leading development teams to deliver exceptional results."
+  }
+}
