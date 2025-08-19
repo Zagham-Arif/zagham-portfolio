@@ -1,4 +1,10 @@
-import { Project, Experience, Skill, SocialLink, Education } from './types';
+import type {
+  Project,
+  Experience,
+  Skill,
+  SocialLink,
+  Education,
+} from './types';
 
 export const personalInfo = {
   name: 'Zagham Arif',
@@ -177,6 +183,42 @@ export const projects: Project[] = [
 
 export const experiences: Experience[] = [
   {
+    id: 'senior-software-engineer-xavor',
+    title: 'Senior Software Engineer',
+    company: 'Xavor Corporation',
+    duration: {
+      start: '2025-05',
+      end: '2025-07',
+    },
+    responsibilities: [
+      'Designed and developed backend architecture from scratch for retail-focused mobile price auditing project',
+      'Built scalable system using Node.js, Express, TypeScript, and TypeORM with containerized Docker deployment',
+      'Deployed application on AWS ECS Fargate with infrastructure managed via Terraform',
+      'Integrated Okta authentication, Swagger documentation, Zod validation, and Datadog logging via FireLens sidecars',
+      'Processed and cached over 2 million records from AccessVia using cron jobs and Redis for optimized data access',
+      'Implemented high-volume data inserts through Redis-based job queues and Node.js Worker Threads for parallel processing',
+      'Enabled paginated and queryable access for mobile client with efficient data retrieval mechanisms',
+      'Collaborated directly with US-based client and worked under experienced technical leadership',
+      'Supported onboarding for junior developers and managed tasks using JIRA for project coordination',
+    ],
+    technologies: [
+      'Node.js',
+      'Express',
+      'TypeScript',
+      'TypeORM',
+      'Docker',
+      'AWS ECS Fargate',
+      'Terraform',
+      'Okta',
+      'Swagger',
+      'Zod',
+      'Datadog',
+      'Redis',
+      'Worker Threads',
+      'JIRA',
+    ],
+  },
+  {
     id: 'software-engineer-hashlogics',
     title: 'Senior Software Engineer',
     company: 'Hashlogics',
@@ -290,31 +332,29 @@ export const experiences: Experience[] = [
 ];
 
 export const skills: Skill[] = [
-  // Core Technologies
-  { name: 'JavaScript', icon: 'SiJavascript', category: 'frontend' },
-  { name: 'Python', icon: 'SiPython', category: 'backend' },
-  { name: 'PHP', icon: 'SiPhp', category: 'backend' },
-  { name: 'TypeScript', icon: 'SiTypescript', category: 'frontend' },
-
-  // Backend Frameworks
-  { name: 'Node.js', icon: 'SiNodedotjs', category: 'backend' },
-  { name: 'Express.js', icon: 'SiExpress', category: 'backend' },
-  { name: 'Supabase', icon: 'SiSupabase', category: 'backend' },
-  { name: 'KeystoneJS', icon: 'SiNodedotjs', category: 'backend' }, // Using Node.js icon as fallback
-  { name: 'Strapi', icon: 'SiStrapi', category: 'backend' },
-  { name: 'Django', icon: 'SiDjango', category: 'backend' },
-  { name: 'FastAPI', icon: 'SiFastapi', category: 'backend' },
-
   // Frontend Technologies
+  { name: 'JavaScript', icon: 'SiJavascript', category: 'frontend' },
+  { name: 'TypeScript', icon: 'SiTypescript', category: 'frontend' },
   { name: 'React', icon: 'SiReact', category: 'frontend' },
   { name: 'Next.js', icon: 'SiNextdotjs', category: 'frontend' },
-
-  // UI Libraries
   { name: 'Material UI', icon: 'SiMui', category: 'frontend' },
   { name: 'Tailwind CSS', icon: 'SiTailwindcss', category: 'frontend' },
   { name: 'Ant Design', icon: 'SiAntdesign', category: 'frontend' },
-  { name: 'shadcn/ui', icon: 'SiReact', category: 'frontend' }, // Using React icon as fallback
+  { name: 'shadcn/ui', icon: 'SiReact', category: 'frontend' },
   { name: 'Bootstrap', icon: 'SiBootstrap', category: 'frontend' },
+
+  // Backend Technologies
+  { name: 'Node.js', icon: 'SiNodedotjs', category: 'backend' },
+  { name: 'Express.js', icon: 'SiExpress', category: 'backend' },
+  { name: 'Python', icon: 'SiPython', category: 'backend' },
+  { name: 'PHP', icon: 'SiPhp', category: 'backend' },
+  { name: 'FastAPI', icon: 'SiFastapi', category: 'backend' },
+  { name: 'Django', icon: 'SiDjango', category: 'backend' },
+  { name: 'Supabase', icon: 'SiSupabase', category: 'backend' },
+  { name: 'KeystoneJS', icon: 'SiNodedotjs', category: 'backend' },
+  { name: 'Strapi', icon: 'SiStrapi', category: 'backend' },
+  { name: 'TypeORM', icon: 'SiTypescript', category: 'backend' },
+  { name: 'Zod', icon: 'SiTypescript', category: 'backend' },
 
   // Databases & Storage
   { name: 'MongoDB', icon: 'SiMongodb', category: 'database' },
@@ -324,16 +364,16 @@ export const skills: Skill[] = [
   { name: 'Couchbase', icon: 'SiCouchbase', category: 'database' },
   { name: 'Firebase', icon: 'SiFirebase', category: 'database' },
   { name: 'AWS S3', icon: 'SiAmazons3', category: 'database' },
+  { name: 'AWS DynamoDB', icon: 'SiAmazondynamodb', category: 'database' },
   { name: 'Cloudinary', icon: 'SiCloudinary', category: 'database' },
 
-  // Cloud & DevOps
+  // Cloud & DevOps Tools
   { name: 'AWS EC2', icon: 'SiAmazonaws', category: 'tools' },
   { name: 'AWS ECS', icon: 'SiAmazonaws', category: 'tools' },
   { name: 'AWS Fargate', icon: 'SiAmazonaws', category: 'tools' },
   { name: 'AWS Lightsail', icon: 'SiAmazonaws', category: 'tools' },
   { name: 'AWS CloudFront', icon: 'SiAmazonaws', category: 'tools' },
   { name: 'AWS RDS', icon: 'SiAmazonaws', category: 'tools' },
-  { name: 'AWS DynamoDB', icon: 'SiAmazondynamodb', category: 'tools' },
   { name: 'Docker', icon: 'SiDocker', category: 'tools' },
   { name: 'Terraform', icon: 'SiTerraform', category: 'tools' },
   { name: 'DigitalOcean', icon: 'SiDigitalocean', category: 'tools' },
@@ -345,8 +385,10 @@ export const skills: Skill[] = [
   { name: 'GitHub', icon: 'SiGithub', category: 'tools' },
   { name: 'GitLab', icon: 'SiGitlab', category: 'tools' },
   { name: 'Bitbucket', icon: 'SiBitbucket', category: 'tools' },
+  { name: 'Okta', icon: 'SiOkta', category: 'tools' },
+  { name: 'Swagger', icon: 'SiSwagger', category: 'tools' },
 
-  // Tools & Utilities
+  // Other Tools & Utilities
   { name: 'Jira', icon: 'SiJira', category: 'other' },
   { name: 'ClickUp', icon: 'SiClickup', category: 'other' },
   { name: 'Trello', icon: 'SiTrello', category: 'other' },

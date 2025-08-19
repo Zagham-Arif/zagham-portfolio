@@ -31,8 +31,8 @@ export function Skills() {
   };
 
   const categories = {
-    backend: t('categories.backend'),
     frontend: t('categories.frontend'),
+    backend: t('categories.backend'),
     database: t('categories.database'),
     tools: t('categories.tools'),
     other: t('categories.other'),
