@@ -17,7 +17,7 @@ export interface Experience {
     start: string;
     end: string | null;
   };
-  responsibilities: string[];
+  responsibilitiesKey: string;
   technologies: string[];
 }
 

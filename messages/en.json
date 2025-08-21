@@ -6,7 +6,11 @@
     "skills": "Skills",
     "contact": "Contact",
     "toggleTheme": "Toggle theme",
-    "toggleLanguage": "Toggle language"
+    "toggleLanguage": "Toggle language",
+    "languages": {
+      "en": "English",
+      "es": "Spanish"
+    }
   },
   "hero": {
     "greeting": "Hi, I'm",
@@ -14,19 +18,34 @@
     "subtitle": "I create amazing web experiences with modern technologies",
     "description": "Passionate about building scalable applications and bringing ideas to life through code.",
     "downloadCV": "Download CV",
-    "contactMe": "Contact Me"
+    "contactMe": "Contact Me",
+    "available": "Available",
+    "bio": "Senior Full Stack Developer with 4+ years of experience specializing in Javascript, Python, ReactJS, and Next.js. Expert in AWS deployments, microservices architecture, and team leadership. Proven track record of optimizing web applications, implementing cloud solutions with Terraform, and leading development teams. Employee of the Month recognition for outstanding contributions.",
+    "cv": {
+      "europass": "Europass CV",
+      "traditional": "Traditional CV"
+    }
+  },
+  "social": {
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "discord": "Discord"
   },
   "projects": {
     "title": "Featured Projects",
     "subtitle": "Here are some of my recent works",
     "viewCode": "View Code",
     "liveDemo": "Live Demo",
-    "viewProject": "View Project"
+    "viewProject": "View Project",
+    "code": "Code",
+    "demo": "Demo"
   },
   "experience": {
     "title": "Work Experience",
     "subtitle": "My professional journey",
-    "present": "Present"
+    "present": "Present",
+    "keyAchievements": "Key Achievements",
+    "technologiesUsed": "Technologies Used"
   },
   "skills": {
     "title": "Skills & Technologies",
@@ -79,10 +98,142 @@
     "builtWith": "Built with Next.js & TypeScript",
     "quickLinks": "Quick Links",
     "getInTouch": "Get In Touch",
-    "availableForWork": "Available for freelance work",
     "hireOnFiverr": "Hire me on Fiverr",
     "hireOnUpwork": "Hire me on Upwork",
     "backToTop": "Back to top",
     "brandDescription": "Senior Full Stack Developer with 4+ years of experience in Python, ReactJS, and the MERN stack. Passionate about creating innovative web solutions and leading development teams to deliver exceptional results."
+  },
+  "projectsData": {
+    "givingfridays": {
+      "title": "GivingFridays",
+      "description": "Migrated from Strapi to Supabase, rebuilt APIs with Next.js + Deno. Led a team of 3-4 developers in the migration process."
+    },
+    "civasource": {
+      "title": "CivaSource",
+      "description": "Scraped product data with integrated Redis Queues and AI product matching system. Built using FastAPI with authentication."
+    },
+    "playertotals": {
+      "title": "PlayerTotals",
+      "description": "Real-time player statistics system built with Node.js (TypeScript), Redis Queues, and MongoDB for high-performance data processing."
+    },
+    "forwood-safety": {
+      "title": "Forwood Safety",
+      "description": "Developed a safety checklist management system with microservices architecture using Node.js and TypeScript. Managed DevOps tasks and AWS deployments."
+    },
+    "alteraapp": {
+      "title": "AlteraApp (Minecraft)",
+      "description": "Built JavaScript libraries and WebSocket connections for Minecraft bot behavior and communication. Devised UI and command libraries for bot control."
+    },
+    "tradefundrr": {
+      "title": "TradeFundrr",
+      "description": "Worked on a CRM system using Python, Flask, Django, and ReactJS. Conducted API testing and actively participated in agile methodology."
+    },
+    "autotempest": {
+      "title": "Autotempest",
+      "description": "Developed a responsive web app to filter and display scraped cars stored in a MySQL database. Designed with React.js and REST APIs for searching and filtering."
+    },
+    "points-app": {
+      "title": "Points App",
+      "description": "Created a web-based points redemption app for customers to redeem top-up codes. Comprehensive customer loyalty solution."
+    },
+    "sicp": {
+      "title": "SICP E-Presentations",
+      "description": "Built an e-presentations web app for managing research events (authors, dates, promotional videos, event durations, etc.) deployed on AWS."
+    },
+    "vehicles-extension": {
+      "title": "Vehicles-Extension Solution",
+      "description": "Engineered a web app to scrape vehicle data using CRON jobs and store it in MongoDB. Frontend designed with React.js and backend services using Node.js."
+    },
+    "al-khair-traders-pos": {
+      "title": "Al Khair Traders POS",
+      "description": "Built a web-based management system for a local store to handle sales, purchases, and bookkeeping operations. Deployed on Namecheap for enhanced store management efficiency."
+    },
+    "modern-pos": {
+      "title": "Modern POS",
+      "description": "Developed a web-based POS system to manage various business operations, including sales, purchases, user management, and accounting. Streamlined solution for retail management."
+    },
+    "deployment-tool": {
+      "title": "N1QL to Firebase Automation Tool (FYP)",
+      "description": "Created an automation tool for converting N1QL queries into Firebase functions, improving system reliability and user experience. Facilitated seamless integration between N1QL (Couchbase) and Firebase."
+    }
+  },
+  "experiencesData": {
+    "xavor": {
+      "title": "Senior Software Engineer",
+      "company": "Xavor Corporation",
+      "responsibilities": [
+        "Designed and developed backend architecture from scratch for retail-focused mobile price auditing project",
+        "Built scalable system using Node.js, Express, TypeScript, and TypeORM with containerized Docker deployment",
+        "Deployed application on AWS ECS Fargate with infrastructure managed via Terraform",
+        "Integrated Okta authentication, Swagger documentation, Zod validation, and Datadog logging via FireLens sidecars",
+        "Processed and cached over 2 million records from AccessVia using cron jobs and Redis for optimized data access",
+        "Implemented high-volume data inserts through Redis-based job queues and Node.js Worker Threads for parallel processing",
+        "Enabled paginated and queryable access for mobile client with efficient data retrieval mechanisms",
+        "Collaborated directly with US-based client and worked under experienced technical leadership",
+        "Supported onboarding for junior developers and managed tasks using JIRA for project coordination"
+      ]
+    },
+    "hashlogics": {
+      "title": "Senior Software Engineer",
+      "company": "Hashlogics",
+      "responsibilities": [
+        "Enhanced skills in Python, ReactJS, and the MERN stack while optimizing web app performance",
+        "Implemented AWS Lambda functions and architected microservices frontends for scalable solutions",
+        "Administered AWS deployments using Terraform for infrastructure as code",
+        "Earned recognition as Employee of the Month for outstanding contributions and team leadership",
+        "Led development teams on multiple high-impact projects including CivaSource, GivingFridays, and AlteraApp",
+        "Developed FAST APIs for product management, authentication, and AI-driven solutions",
+        "Managed Redis Queues for concurrent processing and real-time data handling",
+        "Directed teams to implement safety checklists and managed DevOps tasks for Forwood Safety",
+        "Built CRM systems using Python, Flask, Django, and ReactJS for TradeFundrr",
+        "Engineered real-time player statistics updates using Node.js, TypeScript, and MongoDB for Playertotals"
+      ]
+    },
+    "skupreme": {
+      "title": "Software Engineer",
+      "company": "Skupreme",
+      "responsibilities": [
+        "Enhanced web dashboard features using modern frontend technologies",
+        "Developed responsive user interfaces with Next.js and TypeScript",
+        "Collaborated with remote team to deliver high-quality frontend solutions",
+        "Optimized application performance and implemented modern React patterns",
+        "Maintained code quality and followed best practices for scalable development"
+      ]
+    },
+    "homeats": {
+      "title": "Software Engineer",
+      "company": "Homeats",
+      "responsibilities": [
+        "Enhanced and refined web dashboard features for leading online healthy food marketplace",
+        "Developed frontend solutions using Next.js with TypeScript for improved user experience",
+        "Built and maintained robust REST APIs using Node.js backend architecture",
+        "Managed comprehensive API documentation using Swagger for better team collaboration",
+        "Optimized application performance and implemented responsive design patterns"
+      ]
+    },
+    "memberhood": {
+      "title": "Software Engineer",
+      "company": "Memberhood Inc.",
+      "responsibilities": [
+        "Engaged in both GraphQL and RESTful API development for comprehensive backend solutions",
+        "Implemented Next.js frontend using TypeScript for type-safe development",
+        "Developed backend systems with KeystoneJS, GraphQL, and MongoDB for scalable architecture",
+        "Integrated Stripe payment processing and onboarding systems with webhook management",
+        "Coordinated multiple deployment stages and maintained CI/CD pipelines",
+        "Collaborated with international team members across different time zones"
+      ]
+    },
+    "gulzarsoft": {
+      "title": "Associate Software Engineer",
+      "company": "GulzarSoft",
+      "responsibilities": [
+        "Acquired foundational professional experience as Full-Stack JavaScript Developer",
+        "Crafted responsive web applications using React.js and Node.js technologies",
+        "Demonstrated proficiency in both independent development and collaborative team environments",
+        "Developed REST APIs for data filtering, searching, and database management",
+        "Built comprehensive web solutions from frontend interfaces to backend services",
+        "Participated in agile development methodologies and sprint planning"
+      ]
+    }
   }
 }

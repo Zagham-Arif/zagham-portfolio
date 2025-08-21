@@ -15,6 +15,7 @@ import { useForm as useFormspree, ValidationError } from '@formspree/react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import {
   FiGithub,
@@ -54,6 +55,7 @@ export function Contact() {
       email: z.string().email(),
       website: z
         .string()
+        .trim()
         .url({ message: t('validation.invalidUrl') })
         .optional()
         .or(z.literal('')),
@@ -108,6 +110,12 @@ export function Contact() {
       },
     },
   };
+
+  useEffect(() => {
+    if (formspreeState.succeeded) {
+      reset();
+    }
+  }, [formspreeState.succeeded, reset]);
 
   return (
     <section id="contact" className="bg-muted/50 px-4 py-20 sm:px-6 lg:px-8">
@@ -171,7 +179,7 @@ export function Contact() {
                             href={link.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            title={link.name}
+                            title={t(`social.${link.name.toLowerCase()}`)}
                           >
                             <IconComponent
                               className="h-4 w-4"
@@ -237,7 +245,7 @@ export function Contact() {
                         </p>
                       )}
                       <ValidationError
-                        prefix="Email"
+                        prefix={t('Email')}
                         field="email"
                         errors={formspreeState.errors}
                         className="mt-1 text-sm text-destructive"
@@ -273,7 +281,7 @@ export function Contact() {
                         </p>
                       )}
                       <ValidationError
-                        prefix="Message"
+                        prefix={t('message')}
                         field="message"
                         errors={formspreeState.errors}
                         className="mt-1 text-sm text-destructive"

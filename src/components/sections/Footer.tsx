@@ -13,6 +13,7 @@ import {
 import Link from 'next/link';
 import { SiFiverr, SiUpwork } from 'react-icons/si';
 import { personalInfo } from '@/lib/data';
+import { Links } from '@/constants/links';
 
 export function Footer() {
   const tNav = useTranslations('nav');
@@ -21,13 +22,13 @@ export function Footer() {
   const socialLinks = [
     {
       name: 'GitHub',
-      href: 'https://github.com/Zagham-Arif',
+      href: Links.github,
       icon: FiGithub,
       color: '#181717',
     },
     {
       name: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/zagham-arif',
+      href: Links.linkedIn,
       icon: FiLinkedin,
       color: '#0A66C2',
     },
@@ -39,7 +40,7 @@ export function Footer() {
     },
     {
       name: 'Discord',
-      href: 'https://discord.com/users/zagham_arif',
+      href: Links.discord,
       icon: FiMessageCircle,
       color: '#5865F2',
     },
@@ -48,13 +49,13 @@ export function Footer() {
   const freelanceLinks = [
     {
       name: 'Fiverr',
-      href: 'https://www.fiverr.com/zagham123',
+      href: Links.fiverr,
       icon: SiFiverr,
       color: '#1DBF73',
     },
     {
       name: 'Upwork',
-      href: 'https://www.upwork.com/freelancers/~01b58b210c60ff7195',
+      href: Links.upwork,
       icon: SiUpwork,
       color: '#14A800',
     },
@@ -183,19 +184,12 @@ export function Footer() {
                   </a>
                 </li>
                 <li className="flex items-center">
-                  <FiMessageCircle
-                    className="mr-2 h-4 w-4"
-                    style={{ color: '#5865F2' }}
-                  />
-                  <span>{tFooter('availableForWork')}</span>
-                </li>
-                <li className="flex items-center">
                   <SiFiverr
                     className="mr-2 h-4 w-4"
                     style={{ color: '#1DBF73' }}
                   />
                   <a
-                    href="https://www.fiverr.com/zaghama123"
+                    href={Links.fiverr}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="transition-colors hover:text-foreground"
@@ -209,7 +203,7 @@ export function Footer() {
                     style={{ color: '#14A800' }}
                   />
                   <a
-                    href="https://www.upwork.com/freelancers/~01234567890abcdef"
+                    href={Links.upwork}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="transition-colors hover:text-foreground"
@@ -231,7 +225,7 @@ export function Footer() {
               viewport={{ once: true }}
               className="flex items-center text-sm text-muted-foreground"
             >
-              © 2025 {personalInfo.name}. {tFooter('builtWith')}
+              ©{new Date().getFullYear()} {personalInfo.name}.{' '}
             </motion.p>
 
             <motion.div

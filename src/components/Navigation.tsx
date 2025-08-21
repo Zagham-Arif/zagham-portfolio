@@ -24,11 +24,6 @@ const navItems = [
   { key: 'contact', href: '#contact' },
 ];
 
-const languages = [
-  { code: 'en', name: 'English', flag: '🇺🇸' },
-  // { code: 'es', name: 'Español', flag: '🇪🇸' },
-];
-
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, setTheme } = useTheme();
@@ -36,6 +31,10 @@ export function Navigation() {
   const pathname = usePathname();
   const currentLocale = pathname.split('/')[1] || 'en';
   const router = useRouter();
+  const languages = [
+    { code: 'en', name: t('languages.en'), flag: '🇺🇸' },
+    { code: 'es', name: t('languages.es'), flag: '🇪🇸' },
+  ];
 
   const toggleTheme = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');

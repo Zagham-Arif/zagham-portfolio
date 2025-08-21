@@ -1,48 +1,44 @@
+import { Links } from '@/constants/links';
 import type {
-  Project,
+  Education,
   Experience,
+  Project,
   Skill,
   SocialLink,
-  Education,
 } from './types';
 
+// -----------------------------
+// Personal Info
+// -----------------------------
 export const personalInfo = {
   name: 'Zagham Arif',
   title: 'Senior Full Stack Developer',
   email: 'zaghamarif@gmail.com',
   phone: '+92 (314) 758435',
   location: 'Pakistan',
-  bio: 'Senior Full Stack Developer with 4+ years of experience specializing in Javascript, Python, ReactJS, and Next.js. Expert in AWS deployments, microservices architecture, and team leadership. Proven track record of optimizing web applications, implementing cloud solutions with Terraform, and leading development teams. Employee of the Month recognition for outstanding contributions.',
   cvUrls: {
     europass: '/Zagham-Arif_Europass-CV.pdf',
     traditional: '/Zagham-Arif_Traditional-CV.pdf',
   },
 };
 
+// -----------------------------
+// Social Links
+// -----------------------------
 export const socialLinks: SocialLink[] = [
-  {
-    name: 'GitHub',
-    url: 'https://github.com/Zagham-Arif',
-    icon: 'Github',
-  },
-  {
-    name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/zagham-arif',
-    icon: 'Linkedin',
-  },
-  {
-    name: 'Discord',
-    url: 'https://discord.com/users/zagham-arif',
-    icon: 'Discord',
-  },
+  { name: 'GitHub', url: Links.github, icon: 'Github' },
+  { name: 'LinkedIn', url: Links.linkedIn, icon: 'Linkedin' },
+  { name: 'Discord', url: Links.discord, icon: 'Discord' },
 ];
 
+// -----------------------------
+// Projects
+// -----------------------------
 export const projects: Project[] = [
   {
     id: 'givingfridays',
-    title: 'GivingFridays',
-    description:
-      'Migrated from Strapi to Supabase, rebuilt APIs with Next.js + Deno. Led a team of 3-4 developers in the migration process.',
+    title: 'projectsData.givingfridays.title',
+    description: 'projectsData.givingfridays.description',
     technologies: [
       'Next.js',
       'Supabase',
@@ -56,9 +52,8 @@ export const projects: Project[] = [
   },
   {
     id: 'civasource',
-    title: 'CivaSource',
-    description:
-      'Scraped product data with integrated Redis Queues and AI product matching system. Built using FastAPI with authentication.',
+    title: 'projectsData.civasource.title',
+    description: 'projectsData.civasource.description',
     technologies: ['FastAPI', 'Python', 'Redis', 'AI/ML', 'Authentication'],
     liveUrl: '#',
     imageUrl: '',
@@ -66,19 +61,18 @@ export const projects: Project[] = [
   },
   {
     id: 'playertotals',
-    title: 'PlayerTotals',
-    description:
-      'Real-time player statistics system built with Node.js (TypeScript), Redis Queues, and MongoDB for high-performance data processing.',
+    title: 'projectsData.playertotals.title',
+    description: 'projectsData.playertotals.description',
     technologies: ['Node.js', 'TypeScript', 'Redis', 'MongoDB', 'Real-time'],
     liveUrl: 'https://playertotals.com',
     imageUrl: '',
     featured: true,
   },
+
   {
     id: 'forwood-safety',
-    title: 'Forwood Safety',
-    description:
-      'Developed a safety checklist management system with microservices architecture using Node.js and TypeScript. Managed DevOps tasks and AWS deployments.',
+    title: 'projectsData.forwood-safety.title',
+    description: 'projectsData.forwood-safety.description',
     technologies: ['Node.js', 'TypeScript', 'AWS', 'Microservices', 'DevOps'],
     liveUrl: 'https://forwoodsafety.com',
     imageUrl: '',
@@ -86,9 +80,8 @@ export const projects: Project[] = [
   },
   {
     id: 'alteraapp',
-    title: 'AlteraApp (Minecraft)',
-    description:
-      'Built JavaScript libraries and WebSocket connections for Minecraft bot behavior and communication. Devised UI and command libraries for bot control.',
+    title: 'projectsData.alterapp.title',
+    description: 'projectsData.alterapp.description',
     technologies: ['JavaScript', 'WebSocket', 'UI Libraries', 'Minecraft'],
     liveUrl: 'https://playlabs.altera.al/discover',
     imageUrl: '',
@@ -96,9 +89,8 @@ export const projects: Project[] = [
   },
   {
     id: 'tradefundrr',
-    title: 'TradeFundrr',
-    description:
-      'Worked on a CRM system using Python, Flask, Django, and ReactJS. Conducted API testing and actively participated in agile methodology.',
+    title: 'projectsData.tradefundrr.title',
+    description: 'projectsData.tradefundrr.description',
     technologies: ['Python', 'Flask', 'Django', 'ReactJS', 'CRM'],
     liveUrl: 'https://tradefundrr.com',
     imageUrl: '',
@@ -106,36 +98,32 @@ export const projects: Project[] = [
   },
   {
     id: 'autotempest',
-    title: 'Autotempest',
-    description:
-      'Developed a responsive web app to filter and display scraped cars stored in a MySQL database. Designed with React.js and REST APIs for searching and filtering.',
+    title: 'projectsData.autotempest.title',
+    description: 'projectsData.autotempest.description',
     technologies: ['React.js', 'Node.js', 'MySQL', 'REST APIs', 'Web Scraping'],
     imageUrl: '',
     featured: true,
   },
   {
     id: 'points-app',
-    title: 'Points App',
-    description:
-      'Created a web-based points redemption app for customers to redeem top-up codes. Comprehensive customer loyalty solution.',
+    title: 'projectsData.points-app.title',
+    description: 'projectsData.points-app.description',
     technologies: ['Node.js', 'React.js', 'MySQL', 'Payment Integration'],
     imageUrl: '',
     featured: true,
   },
   {
     id: 'sicp',
-    title: 'SICP E-Presentations',
-    description:
-      'Built an e-presentations web app for managing research events (authors, dates, promotional videos, event durations, etc.) deployed on AWS.',
+    title: 'projectsData.sicp.title',
+    description: 'projectsData.sicp.description',
     technologies: ['Node.js', 'React.js', 'MySQL', 'AWS', 'Event Management'],
     imageUrl: '',
     featured: false,
   },
   {
     id: 'vehicles-extension',
-    title: 'Vehicles-Extension Solution',
-    description:
-      'Engineered a web app to scrape vehicle data using CRON jobs and store it in MongoDB. Frontend designed with React.js and backend services using Node.js.',
+    title: 'projectsData.vehicles-extension.title',
+    description: 'projectsData.vehicles-extension.description',
     technologies: [
       'Node.js',
       'React.js',
@@ -148,18 +136,16 @@ export const projects: Project[] = [
   },
   {
     id: 'al-khair-traders-pos',
-    title: 'Al Khair Traders POS',
-    description:
-      'Built a web-based management system for a local store to handle sales, purchases, and bookkeeping operations. Deployed on Namecheap for enhanced store management efficiency.',
+    title: 'projectsData.al-khair-traders.title',
+    description: 'projectsData.al-khair-traders.description',
     technologies: ['Node.js', 'React.js', 'MySQL', 'POS System', 'Namecheap'],
     imageUrl: '',
     featured: false,
   },
   {
     id: 'modern-pos',
-    title: 'Modern POS',
-    description:
-      'Developed a web-based POS system to manage various business operations, including sales, purchases, user management, and accounting. Streamlined solution for retail management.',
+    title: 'projectsData.modern-pos.title',
+    description: 'projectsData.modern-pos.description',
     technologies: [
       'Core PHP',
       'Bootstrap',
@@ -172,35 +158,31 @@ export const projects: Project[] = [
   },
   {
     id: 'deployment-tool',
-    title: 'N1QL to Firebase Automation Tool (FYP)',
-    description:
-      'Created an automation tool for converting N1QL queries into Firebase functions, improving system reliability and user experience. Facilitated seamless integration between N1QL (Couchbase) and Firebase.',
-    technologies: ['Node.js', 'Firebase', 'N1QL', 'Couchbase', 'HTML/CSS/JS'],
+    title: 'projectsData.deployment.title',
+    description: 'projectsData.deployment.description',
+    technologies: [
+      'Node.js',
+      'Firebase',
+      'N1QL',
+      'Couchbase',
+      'Javascript',
+      'HTML/CSS',
+    ],
     imageUrl: '',
     featured: false,
   },
 ];
 
+// -----------------------------
+// Experiences
+// -----------------------------
 export const experiences: Experience[] = [
   {
     id: 'senior-software-engineer-xavor',
-    title: 'Senior Software Engineer',
-    company: 'Xavor Corporation',
-    duration: {
-      start: '2025-05',
-      end: '2025-07',
-    },
-    responsibilities: [
-      'Designed and developed backend architecture from scratch for retail-focused mobile price auditing project',
-      'Built scalable system using Node.js, Express, TypeScript, and TypeORM with containerized Docker deployment',
-      'Deployed application on AWS ECS Fargate with infrastructure managed via Terraform',
-      'Integrated Okta authentication, Swagger documentation, Zod validation, and Datadog logging via FireLens sidecars',
-      'Processed and cached over 2 million records from AccessVia using cron jobs and Redis for optimized data access',
-      'Implemented high-volume data inserts through Redis-based job queues and Node.js Worker Threads for parallel processing',
-      'Enabled paginated and queryable access for mobile client with efficient data retrieval mechanisms',
-      'Collaborated directly with US-based client and worked under experienced technical leadership',
-      'Supported onboarding for junior developers and managed tasks using JIRA for project coordination',
-    ],
+    title: 'experiencesData.xavor.title',
+    company: 'experiencesData.xavor.company',
+    duration: { start: '2025-05', end: '2025-07' },
+    responsibilitiesKey: 'experiencesData.xavor.responsibilities',
     technologies: [
       'Node.js',
       'Express',
@@ -220,24 +202,10 @@ export const experiences: Experience[] = [
   },
   {
     id: 'software-engineer-hashlogics',
-    title: 'Senior Software Engineer',
-    company: 'Hashlogics',
-    duration: {
-      start: '2022-08',
-      end: null,
-    },
-    responsibilities: [
-      'Enhanced skills in Python, ReactJS, and the MERN stack while optimizing web app performance',
-      'Implemented AWS Lambda functions and architected microservices frontends for scalable solutions',
-      'Administered AWS deployments using Terraform for infrastructure as code',
-      'Earned recognition as Employee of the Month for outstanding contributions and team leadership',
-      'Led development teams on multiple high-impact projects including CivaSource, GivingFridays, and AlteraApp',
-      'Developed FAST APIs for product management, authentication, and AI-driven solutions',
-      'Managed Redis Queues for concurrent processing and real-time data handling',
-      'Directed teams to implement safety checklists and managed DevOps tasks for Forwood Safety',
-      'Built CRM systems using Python, Flask, Django, and ReactJS for TradeFundrr',
-      'Engineered real-time player statistics updates using Node.js, TypeScript, and MongoDB for Playertotals',
-    ],
+    title: 'experiencesData.hashlogics.title',
+    company: 'experiencesData.hashlogics.company',
+    duration: { start: '2022-08', end: '2025-02' },
+    responsibilitiesKey: 'experiencesData.hashlogics.responsibilities',
     technologies: [
       'Python',
       'React',
@@ -254,54 +222,35 @@ export const experiences: Experience[] = [
   },
   {
     id: 'software-engineer-skupreme',
-    title: 'Software Engineer',
-    company: 'Skupreme',
+    title: 'experiencesData.skupreme.title',
+    company: 'experiencesData.skupreme.company',
     duration: {
       start: '2022-06',
       end: '2022-08',
     },
-    responsibilities: [
-      'Enhanced web dashboard features using modern frontend technologies',
-      'Developed responsive user interfaces with Next.js and TypeScript',
-      'Collaborated with remote team to deliver high-quality frontend solutions',
-      'Optimized application performance and implemented modern React patterns',
-      'Maintained code quality and followed best practices for scalable development',
-    ],
+    responsibilitiesKey: 'experiencesData.skupreme.responsibilities',
     technologies: ['Next.js', 'React', 'TypeScript', 'Frontend Development'],
   },
   {
     id: 'software-engineer-homeats',
-    title: 'Software Engineer',
-    company: 'Homeats',
+    title: 'experiencesData.homeats.title',
+    company: 'experiencesData.homeats.company',
     duration: {
       start: '2022-03',
       end: '2022-06',
     },
-    responsibilities: [
-      'Enhanced and refined web dashboard features for leading online healthy food marketplace',
-      'Developed frontend solutions using Next.js with TypeScript for improved user experience',
-      'Built and maintained robust REST APIs using Node.js backend architecture',
-      'Managed comprehensive API documentation using Swagger for better team collaboration',
-      'Optimized application performance and implemented responsive design patterns',
-    ],
+    responsibilitiesKey: 'experiencesData.homeats.responsibilities',
     technologies: ['Next.js', 'TypeScript', 'Node.js', 'REST API', 'Swagger'],
   },
   {
     id: 'software-engineer-memberhood',
-    title: 'Software Engineer',
-    company: 'Memberhood Inc.',
+    title: 'experiencesData.memberhood.title',
+    company: 'experiencesData.memberhood.company',
     duration: {
       start: '2021-07',
       end: '2022-07',
     },
-    responsibilities: [
-      'Engaged in both GraphQL and RESTful API development for comprehensive backend solutions',
-      'Implemented Next.js frontend using TypeScript for type-safe development',
-      'Developed backend systems with KeystoneJS, GraphQL, and MongoDB for scalable architecture',
-      'Integrated Stripe payment processing and onboarding systems with webhook management',
-      'Coordinated multiple deployment stages and maintained CI/CD pipelines',
-      'Collaborated with international team members across different time zones',
-    ],
+    responsibilitiesKey: 'experiencesData.memberhood.responsibilities',
     technologies: [
       'KeystoneJS',
       'GraphQL',
@@ -313,24 +262,20 @@ export const experiences: Experience[] = [
   },
   {
     id: 'associate-software-engineer-gulzarsoft',
-    title: 'Associate Software Engineer',
-    company: 'GulzarSoft',
+    title: 'experiencesData.gulzarsoft.title',
+    company: 'experiencesData.gulzarsoft.company',
     duration: {
       start: '2020-04',
       end: '2021-07',
     },
-    responsibilities: [
-      'Acquired foundational professional experience as Full-Stack JavaScript Developer',
-      'Crafted responsive web applications using React.js and Node.js technologies',
-      'Demonstrated proficiency in both independent development and collaborative team environments',
-      'Developed REST APIs for data filtering, searching, and database management',
-      'Built comprehensive web solutions from frontend interfaces to backend services',
-      'Participated in agile development methodologies and sprint planning',
-    ],
+    responsibilitiesKey: 'experiencesData.gulzarsoft.responsibilities',
     technologies: ['Node.js', 'React.js', 'MySQL', 'MongoDB', 'REST APIs'],
   },
 ];
 
+// -----------------------------
+// Skills
+// -----------------------------
 export const skills: Skill[] = [
   // Frontend Technologies
   { name: 'JavaScript', icon: 'SiJavascript', category: 'frontend' },
@@ -400,15 +345,15 @@ export const skills: Skill[] = [
   { name: 'Figma', icon: 'SiFigma', category: 'other' },
 ];
 
+// -----------------------------
+// Education
+// -----------------------------
 export const education: Education[] = [
   {
     id: 'software-engineering-bachelor',
     degree: 'Bachelor of Software Engineering',
     institution: 'University of Gujrat, Hafiz Hayat Campus',
-    duration: {
-      start: '2016',
-      end: '2020',
-    },
+    duration: { start: '2016', end: '2020' },
     location: 'Gujrat, Pakistan',
   },
 ];

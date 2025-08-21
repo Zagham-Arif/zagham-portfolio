@@ -21,9 +21,11 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { projects } from '@/lib/data';
+import { Links } from '@/constants/links';
 
 export function Projects() {
   const t = useTranslations('projects');
+  const tProjectData = useTranslations();
   const [currentSlide, setCurrentSlide] = useState(0);
   const sliderRef = useRef<HTMLDivElement>(null);
 
@@ -34,32 +36,46 @@ export function Projects() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.15,
+        delayChildren: 0.1,
       },
     },
   };
 
   const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 60, scale: 0.9 },
     visible: {
       opacity: 1,
       y: 0,
+      scale: 1,
       transition: {
         duration: 0.8,
+        ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
   };
 
-  // Function to generate gradient background based on project index
   const getProjectGradient = (index: number) => {
     const gradients = [
-      'bg-gradient-to-br from-blue-500 to-purple-600',
-      'bg-gradient-to-br from-green-500 to-teal-600',
-      'bg-gradient-to-br from-orange-500 to-red-600',
-      'bg-gradient-to-br from-indigo-500 to-blue-600',
-      'bg-gradient-to-br from-pink-500 to-rose-600',
+      'bg-gradient-to-br from-blue-500 via-blue-600 to-purple-700',
+      'bg-gradient-to-br from-emerald-500 via-teal-600 to-cyan-700',
+      'bg-gradient-to-br from-orange-500 via-red-500 to-pink-600',
+      'bg-gradient-to-br from-indigo-500 via-purple-600 to-blue-700',
+      'bg-gradient-to-br from-rose-500 via-pink-600 to-purple-700',
     ];
     return gradients[index % gradients.length];
+  };
+
+  const getProjectImage = (project: { title: string }, index: number) => {
+    const queries = [
+      'modern web application dashboard interface',
+      'mobile app user interface design',
+      'e-commerce website product page',
+      'data visualization dashboard',
+      'social media platform interface',
+    ];
+    const query = queries[index % queries.length];
+    return `/placeholder.svg?height=200&width=400&query=${encodeURIComponent(`${query} ${project.title}`)}`;
   };
 
   const nextSlide = () => {
@@ -77,24 +93,37 @@ export function Projects() {
   };
 
   const handleViewAllProjects = () => {
-    // Scroll to a hypothetical "all projects" section or show modal
-    window.open('https://github.com/Zagham-Arif', '_blank');
+    window.open(Links.github, '_blank');
   };
 
   return (
     <section id="projects" className="bg-muted/30 px-4 py-20 sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
           className="mb-16 text-center"
         >
-          <h2 className="mb-4 text-3xl font-bold sm:text-4xl">{t('title')}</h2>
-          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+          <motion.h2
+            className="mb-4 text-3xl font-bold sm:text-4xl"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            {t('title')}
+          </motion.h2>
+          <motion.p
+            className="mx-auto max-w-2xl text-lg text-muted-foreground"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
             {t('subtitle')}
-          </p>
+          </motion.p>
         </motion.div>
 
         {/* Project Slider */}
@@ -102,38 +131,45 @@ export function Projects() {
           {/* Slider Navigation */}
           <div className="mb-8 flex items-center justify-between">
             <motion.h3
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl font-semibold"
             >
-              Featured Projects
+              {t('title')}
             </motion.h3>
-            <div className="flex space-x-2">
+            <motion.div
+              className="flex space-x-2"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
               <Button
                 variant="outline"
                 size="icon"
                 onClick={prevSlide}
-                className="group"
+                className="group bg-transparent transition-all duration-300 hover:scale-110 hover:shadow-lg"
               >
-                <FiChevronLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
+                <FiChevronLeft className="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-1" />
               </Button>
               <Button
                 variant="outline"
                 size="icon"
                 onClick={nextSlide}
-                className="group"
+                className="group bg-transparent transition-all duration-300 hover:scale-110 hover:shadow-lg"
               >
-                <FiChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <FiChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
-            </div>
+            </motion.div>
           </div>
 
-          {/* Projects Grid with Slider */}
-          <div className="overflow-hidden">
+          {/* Projects Grid with Enhanced Slider */}
+          <div className="overflow-hidden rounded-2xl">
             <motion.div
               ref={sliderRef}
-              className="flex transition-transform duration-500 ease-in-out"
+              className="flex transition-all duration-700 ease-[0.25,0.46,0.45,0.94]"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               variants={containerVariants}
               initial="hidden"
@@ -151,35 +187,63 @@ export function Projects() {
                         const globalIndex = slideIndex * 2 + index;
                         return (
                           <motion.div key={project.id} variants={itemVariants}>
-                            <Card className="group h-full overflow-hidden border-0 bg-gradient-to-br from-background to-muted/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
-                              {/* Project Icon Header */}
-                              <div
-                                className={`h-32 ${getProjectGradient(globalIndex)} relative overflow-hidden`}
-                              >
-                                <div className="absolute inset-0 bg-black/20" />
-                                <div className="absolute inset-0 flex items-center justify-center">
-                                  <motion.div
-                                    className="rounded-full bg-white/20 p-4 backdrop-blur-sm"
-                                    whileHover={{ scale: 1.1, rotate: 360 }}
-                                    transition={{ duration: 0.5 }}
-                                  >
-                                    <FiCode className="h-10 w-10 text-white" />
-                                  </motion.div>
-                                </div>
-                                {/* Decorative elements */}
+                            <Card className="group h-full overflow-hidden border-0 bg-gradient-to-br from-background via-background to-muted/50 transition-all duration-700 hover:-translate-y-3 hover:shadow-2xl hover:shadow-primary/10">
+                              <div className="relative h-48 overflow-hidden">
+                                <motion.img
+                                  src={getProjectImage(project, globalIndex)}
+                                  alt={tProjectData(project.title)}
+                                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                  initial={{ scale: 1.1, opacity: 0 }}
+                                  whileInView={{ scale: 1, opacity: 1 }}
+                                  viewport={{ once: true }}
+                                  transition={{ duration: 0.8 }}
+                                />
+                                <div
+                                  className={`absolute inset-0 ${getProjectGradient(globalIndex)} opacity-80 mix-blend-overlay`}
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+
+                                {/* Floating project icon */}
                                 <motion.div
-                                  className="absolute right-4 top-4 h-20 w-20 rounded-full bg-white/10"
-                                  animate={{ rotate: 360 }}
+                                  className="absolute right-4 top-4"
+                                  whileHover={{ scale: 1.2, rotate: 360 }}
+                                  transition={{ duration: 0.6, type: 'spring' }}
+                                >
+                                  <div className="rounded-full bg-white/20 p-3 backdrop-blur-sm">
+                                    <FiCode className="h-6 w-6 text-white" />
+                                  </div>
+                                </motion.div>
+
+                                <motion.div
+                                  className="absolute bottom-8 right-8 h-16 w-16 rounded-full bg-white/10 backdrop-blur-sm"
+                                  animate={{
+                                    rotate: 360,
+                                    scale: [1, 1.1, 1],
+                                  }}
                                   transition={{
-                                    duration: 20,
-                                    repeat: Infinity,
-                                    ease: 'linear',
+                                    rotate: {
+                                      duration: 25,
+                                      repeat: Number.POSITIVE_INFINITY,
+                                      ease: 'linear',
+                                    },
+                                    scale: {
+                                      duration: 3,
+                                      repeat: Number.POSITIVE_INFINITY,
+                                      ease: 'easeInOut',
+                                    },
                                   }}
                                 />
                                 <motion.div
-                                  className="absolute bottom-4 left-4 h-12 w-12 rounded-full bg-white/10"
-                                  animate={{ scale: [1, 1.2, 1] }}
-                                  transition={{ duration: 2, repeat: Infinity }}
+                                  className="absolute bottom-4 left-4 h-8 w-8 rounded-full bg-white/15 backdrop-blur-sm"
+                                  animate={{
+                                    scale: [1, 1.3, 1],
+                                    opacity: [0.7, 1, 0.7],
+                                  }}
+                                  transition={{
+                                    duration: 2.5,
+                                    repeat: Number.POSITIVE_INFINITY,
+                                    ease: 'easeInOut',
+                                  }}
                                 />
                               </div>
 
@@ -187,20 +251,27 @@ export function Projects() {
                                 <div className="flex items-start justify-between">
                                   <div className="flex-1">
                                     <motion.div
-                                      whileHover={{ x: 5 }}
-                                      transition={{ duration: 0.2 }}
+                                      whileHover={{ x: 8 }}
+                                      transition={{
+                                        duration: 0.3,
+                                        type: 'spring',
+                                        stiffness: 300,
+                                      }}
                                     >
-                                      <CardTitle className="mb-3 text-xl transition-colors group-hover:text-primary">
-                                        {project.title}
+                                      <CardTitle className="mb-3 text-xl transition-colors duration-300 group-hover:text-primary">
+                                        {tProjectData(project.title)}
                                       </CardTitle>
                                       <CardDescription className="text-sm leading-relaxed">
-                                        {project.description}
+                                        {tProjectData(project.description)}
                                       </CardDescription>
                                     </motion.div>
                                   </div>
                                   <motion.div
-                                    whileHover={{ rotate: 180 }}
-                                    transition={{ duration: 0.3 }}
+                                    whileHover={{ rotate: 180, scale: 1.2 }}
+                                    transition={{
+                                      duration: 0.4,
+                                      type: 'spring',
+                                    }}
                                   >
                                     <FiZap className="ml-3 h-6 w-6 flex-shrink-0 text-primary" />
                                   </motion.div>
@@ -208,18 +279,35 @@ export function Projects() {
                               </CardHeader>
 
                               <CardContent className="pt-0">
-                                {/* Technologies */}
                                 <div className="mb-6 flex flex-wrap gap-2">
                                   {project.technologies.map(
                                     (tech, techIndex) => (
                                       <motion.span
                                         key={tech}
-                                        initial={{ opacity: 0, scale: 0 }}
-                                        whileInView={{ opacity: 1, scale: 1 }}
+                                        initial={{
+                                          opacity: 0,
+                                          scale: 0,
+                                          y: 20,
+                                        }}
+                                        whileInView={{
+                                          opacity: 1,
+                                          scale: 1,
+                                          y: 0,
+                                        }}
                                         viewport={{ once: true }}
-                                        transition={{ delay: techIndex * 0.1 }}
-                                        whileHover={{ scale: 1.05 }}
-                                        className="cursor-default rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary transition-colors hover:bg-primary/20"
+                                        transition={{
+                                          delay: techIndex * 0.1,
+                                          duration: 0.5,
+                                          type: 'spring',
+                                          stiffness: 200,
+                                        }}
+                                        whileHover={{
+                                          scale: 1.1,
+                                          y: -2,
+                                          boxShadow:
+                                            '0 4px 12px rgba(0,0,0,0.15)',
+                                        }}
+                                        className="cursor-default rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-medium text-primary transition-all duration-300 hover:border-primary/40 hover:bg-primary/20"
                                       >
                                         {tech}
                                       </motion.span>
@@ -227,24 +315,27 @@ export function Projects() {
                                   )}
                                 </div>
 
-                                {/* Action Buttons */}
                                 <div className="flex gap-3">
                                   {project.githubUrl && (
                                     <Button
                                       size="sm"
                                       variant="outline"
                                       asChild
-                                      className="group/btn flex-1"
+                                      className="group/btn flex-1 bg-transparent transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
                                     >
                                       <motion.a
                                         href={project.githubUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        whileHover={{ scale: 1.02 }}
-                                        whileTap={{ scale: 0.98 }}
+                                        whileHover={{ scale: 1.05, y: -2 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        transition={{
+                                          type: 'spring',
+                                          stiffness: 300,
+                                        }}
                                       >
-                                        <FiGithub className="mr-2 h-4 w-4 transition-transform group-hover/btn:rotate-12" />
-                                        Code
+                                        <FiGithub className="mr-2 h-4 w-4 transition-transform duration-300 group-hover/btn:rotate-12" />
+                                        {t('code')}
                                       </motion.a>
                                     </Button>
                                   )}
@@ -252,17 +343,21 @@ export function Projects() {
                                     <Button
                                       size="sm"
                                       asChild
-                                      className="group/btn flex-1"
+                                      className="group/btn flex-1 transition-all duration-300 hover:shadow-lg hover:shadow-primary/30"
                                     >
                                       <motion.a
                                         href={project.liveUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        whileHover={{ scale: 1.02 }}
-                                        whileTap={{ scale: 0.98 }}
+                                        whileHover={{ scale: 1.05, y: -2 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        transition={{
+                                          type: 'spring',
+                                          stiffness: 300,
+                                        }}
                                       >
-                                        <FiExternalLink className="mr-2 h-4 w-4 transition-transform group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5" />
-                                        Demo
+                                        <FiExternalLink className="mr-2 h-4 w-4 transition-transform duration-300 group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5" />
+                                        {t('demo')}
                                       </motion.a>
                                     </Button>
                                   )}
@@ -278,18 +373,22 @@ export function Projects() {
             </motion.div>
           </div>
 
-          {/* Slider Indicators */}
-          <div className="mt-8 flex justify-center space-x-2">
+          <div className="mt-8 flex justify-center space-x-3">
             {Array.from({ length: Math.ceil(featuredProjects.length / 2) }).map(
               (_, index) => (
-                <button
+                <motion.button
                   key={index}
-                  className={`h-3 w-3 rounded-full transition-all duration-300 ${
+                  className={`h-3 rounded-full transition-all duration-500 ${
                     index === currentSlide
-                      ? 'scale-125 bg-primary'
-                      : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
+                      ? 'w-8 bg-primary shadow-lg shadow-primary/30'
+                      : 'w-3 bg-muted-foreground/30 hover:bg-muted-foreground/50'
                   }`}
                   onClick={() => setCurrentSlide(index)}
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                  animate={{
+                    scale: index === currentSlide ? 1.1 : 1,
+                  }}
                 />
               )
             )}
@@ -298,20 +397,20 @@ export function Projects() {
 
         {/* View All Projects Button */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
           className="mt-12 text-center"
         >
           <Button
             variant="outline"
             size="lg"
-            className="group"
+            className="group bg-transparent transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20"
             onClick={handleViewAllProjects}
           >
-            <FiEye className="mr-2 h-4 w-4 transition-transform group-hover:scale-110" />
-            {t('viewProject')}
+            <FiEye className="mr-2 h-4 w-4 transition-transform duration-300 group-hover:scale-125" />
+            {t('viewCode')}
           </Button>
         </motion.div>
       </div>

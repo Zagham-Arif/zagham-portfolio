@@ -6,7 +6,11 @@
     "skills": "Habilidades",
     "contact": "Contacto",
     "toggleTheme": "Cambiar tema",
-    "toggleLanguage": "Cambiar idioma"
+    "toggleLanguage": "Cambiar idioma",
+    "languages": {
+      "en": "Inglés",
+      "es": "Español"
+    }
   },
   "hero": {
     "greeting": "Hola, soy",
@@ -14,19 +18,34 @@
     "subtitle": "Creo experiencias web increíbles con tecnologías modernas",
     "description": "Apasionado por construir aplicaciones escalables y dar vida a las ideas a través del código.",
     "downloadCV": "Descargar CV",
-    "contactMe": "Contáctame"
+    "contactMe": "Contáctame",
+    "available": "Disponible",
+    "bio": "Desarrollador Full Stack Senior con más de 4 años de experiencia especializado en Javascript, Python, ReactJS y Next.js. Experto en despliegues en AWS, arquitectura de microservicios y liderazgo de equipos. Historial comprobado en la optimización de aplicaciones web, implementación de soluciones en la nube con Terraform y dirección de equipos de desarrollo. Reconocimiento como Empleado del Mes por contribuciones destacadas.",
+    "cv": {
+      "europass": "CV Europass",
+      "traditional": "CV Tradicional"
+    }
+  },
+  "social": {
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "discord": "Discord"
   },
   "projects": {
     "title": "Proyectos Destacados",
     "subtitle": "Aquí están algunos de mis trabajos recientes",
     "viewCode": "Ver Código",
     "liveDemo": "Demo en Vivo",
-    "viewProject": "Ver Proyecto"
+    "viewProject": "Ver Proyecto",
+    "code": "Código",
+    "demo": "Demostración"
   },
   "experience": {
     "title": "Experiencia Laboral",
     "subtitle": "Mi trayectoria profesional",
-    "present": "Presente"
+    "present": "Presente",
+    "keyAchievements": "Logros Clave",
+    "technologiesUsed": "Tecnologías Utilizadas"
   },
   "skills": {
     "title": "Habilidades y Tecnologías",
@@ -79,10 +98,149 @@
     "builtWith": "Construido con Next.js y TypeScript",
     "quickLinks": "Enlaces Rápidos",
     "getInTouch": "Ponte en Contacto",
-    "availableForWork": "Disponible para trabajo freelance",
     "hireOnFiverr": "Contrátame en Fiverr",
     "hireOnUpwork": "Contrátame en Upwork",
     "backToTop": "Volver arriba",
     "brandDescription": "Desarrollador Full Stack Senior con más de 4 años de experiencia en Python, ReactJS y el stack MERN. Apasionado por crear soluciones web innovadoras y liderar equipos de desarrollo para entregar resultados excepcionales."
+  },
+  "personalInfo": {
+    "bio": "Desarrollador Full Stack Senior con más de 4 años de experiencia especializado en Javascript, Python, ReactJS y Next.js. Experto en despliegues en AWS, arquitectura de microservicios y liderazgo de equipos. Historial comprobado en optimización de aplicaciones web, implementación de soluciones en la nube con Terraform y dirección de equipos de desarrollo. Reconocimiento como Empleado del Mes por contribuciones destacadas.",
+    "cv": {
+      "europass": "CV Europass",
+      "traditional": "CV Tradicional"
+    }
+  },
+  "projectsData": {
+    "givingfridays": {
+      "title": "GivingFridays",
+      "description": "Migración de Strapi a Supabase, reconstrucción de APIs con Next.js + Deno. Lideré un equipo de 3-4 desarrolladores durante el proceso."
+    },
+    "civasource": {
+      "title": "CivaSource",
+      "description": "Extracción de datos de productos con colas Redis integradas y sistema de coincidencia de productos con IA. Construido con FastAPI y autenticación."
+    },
+    "playertotals": {
+      "title": "PlayerTotals",
+      "description": "Sistema de estadísticas de jugadores en tiempo real construido con Node.js (TypeScript), colas Redis y MongoDB para procesamiento de datos de alto rendimiento."
+    },
+    "forwood-safety": {
+      "title": "Forwood Safety",
+      "description": "Desarrollo de un sistema de gestión de listas de verificación de seguridad con arquitectura de microservicios usando Node.js y TypeScript. Gestión de tareas DevOps y despliegues en AWS."
+    },
+    "alteraapp": {
+      "title": "AlteraApp (Minecraft)",
+      "description": "Desarrollo de librerías JavaScript y conexiones WebSocket para el comportamiento y comunicación de bots en Minecraft. Creación de bibliotecas de UI y comandos para control de bots."
+    },
+    "tradefundrr": {
+      "title": "TradeFundrr",
+      "description": "Trabajo en un sistema CRM usando Python, Flask, Django y ReactJS. Pruebas de API y participación activa en metodología ágil."
+    },
+    "autotempest": {
+      "title": "Autotempest",
+      "description": "Desarrollo de una aplicación web responsiva para filtrar y mostrar autos extraídos y almacenados en una base de datos MySQL. Diseñada con React.js y APIs REST para búsqueda y filtrado."
+    },
+    "points-app": {
+      "title": "Points App",
+      "description": "Creación de una aplicación web de canje de puntos para que los clientes puedan canjear códigos de recarga. Solución integral de fidelización de clientes."
+    },
+    "sicp": {
+      "title": "SICP E-Presentations",
+      "description": "Desarrollo de una aplicación web de e-presentaciones para gestionar eventos de investigación (autores, fechas, videos promocionales, duración de eventos, etc.) desplegada en AWS."
+    },
+    "vehicles-extension": {
+      "title": "Vehicles-Extension Solution",
+      "description": "Desarrollo de una aplicación web para extraer datos de vehículos usando trabajos CRON y almacenarlos en MongoDB. Frontend con React.js y servicios backend usando Node.js."
+    },
+    "al-khair-traders-pos": {
+      "title": "Al Khair Traders POS",
+      "description": "Creación de un sistema de gestión web para una tienda local para manejar ventas, compras y operaciones contables. Desplegado en Namecheap para mejorar la eficiencia de la gestión."
+    },
+    "modern-pos": {
+      "title": "Modern POS",
+      "description": "Desarrollo de un sistema POS web para gestionar diversas operaciones comerciales, incluyendo ventas, compras, gestión de usuarios y contabilidad. Solución optimizada para gestión minorista."
+    },
+    "deployment-tool": {
+      "title": "N1QL a Herramienta de Automatización Firebase (FYP)",
+      "description": "Creación de una herramienta de automatización para convertir consultas N1QL en funciones de Firebase, mejorando la confiabilidad del sistema y la experiencia del usuario. Facilitó la integración entre N1QL (Couchbase) y Firebase."
+    }
+  },
+  "experiencesData": {
+    "xavor": {
+      "title": "Senior Software Engineer",
+      "company": "Xavor Corporation",
+      "responsibilities": [
+        "Diseño y desarrollo de arquitectura backend desde cero para proyecto de auditoría de precios móvil enfocado en retail",
+        "Construcción de sistema escalable usando Node.js, Express, TypeScript y TypeORM con despliegue en contenedores Docker",
+        "Despliegue de la aplicación en AWS ECS Fargate con infraestructura gestionada mediante Terraform",
+        "Integración de autenticación Okta, documentación Swagger, validación Zod y logging Datadog mediante FireLens sidecars",
+        "Procesamiento y cacheo de más de 2 millones de registros desde AccessVia usando cron jobs y Redis para acceso optimizado",
+        "Implementación de inserciones de datos de alto volumen mediante colas de trabajo Redis y Node.js Worker Threads para procesamiento paralelo",
+        "Acceso paginado y consultable para cliente móvil con mecanismos eficientes de recuperación de datos",
+        "Colaboración directa con cliente en EE.UU. y trabajo bajo liderazgo técnico experimentado",
+        "Soporte en incorporación de desarrolladores junior y gestión de tareas mediante JIRA"
+      ]
+    },
+    "hashlogics": {
+      "title": "Senior Software Engineer",
+      "company": "Hashlogics",
+      "responsibilities": [
+        "Mejora de habilidades en Python, ReactJS y stack MERN optimizando el rendimiento de aplicaciones web",
+        "Implementación de funciones AWS Lambda y arquitectura de microservicios frontends para soluciones escalables",
+        "Administración de despliegues en AWS usando Terraform como infraestructura como código",
+        "Reconocimiento como Empleado del Mes por contribuciones destacadas y liderazgo de equipo",
+        "Liderazgo de equipos de desarrollo en proyectos de alto impacto incluyendo CivaSource, GivingFridays y AlteraApp",
+        "Desarrollo de APIs FAST para gestión de productos, autenticación y soluciones impulsadas por IA",
+        "Gestión de colas Redis para procesamiento concurrente y manejo de datos en tiempo real",
+        "Dirección de equipos para implementar listas de verificación de seguridad y gestión de tareas DevOps para Forwood Safety",
+        "Desarrollo de sistemas CRM usando Python, Flask, Django y ReactJS para TradeFundrr",
+        "Ingeniería de actualizaciones de estadísticas de jugadores en tiempo real usando Node.js, TypeScript y MongoDB para Playertotals"
+      ]
+    },
+    "skupreme": {
+      "title": "Software Engineer",
+      "company": "Skupreme",
+      "responsibilities": [
+        "Mejora de características del panel web usando tecnologías frontend modernas",
+        "Desarrollo de interfaces responsivas con Next.js y TypeScript",
+        "Colaboración con equipo remoto para entregar soluciones frontend de alta calidad",
+        "Optimización del rendimiento de la aplicación e implementación de patrones modernos de React",
+        "Mantenimiento de la calidad del código y buenas prácticas para desarrollo escalable"
+      ]
+    },
+    "homeats": {
+      "title": "Software Engineer",
+      "company": "Homeats",
+      "responsibilities": [
+        "Mejora y refinamiento de funciones del panel web para un marketplace líder de comida saludable en línea",
+        "Desarrollo de soluciones frontend con Next.js y TypeScript para mejor experiencia de usuario",
+        "Construcción y mantenimiento de APIs REST robustas usando Node.js",
+        "Gestión de documentación API completa con Swagger para mejor colaboración de equipo",
+        "Optimización del rendimiento de la aplicación e implementación de patrones de diseño responsivo"
+      ]
+    },
+    "memberhood": {
+      "title": "Software Engineer",
+      "company": "Memberhood Inc.",
+      "responsibilities": [
+        "Participación en desarrollo de APIs GraphQL y RESTful para soluciones backend completas",
+        "Implementación de frontend Next.js usando TypeScript para desarrollo con tipado seguro",
+        "Desarrollo de sistemas backend con KeystoneJS, GraphQL y MongoDB para arquitectura escalable",
+        "Integración de pagos y onboarding con Stripe usando webhooks",
+        "Coordinación de múltiples etapas de despliegue y mantenimiento de pipelines CI/CD",
+        "Colaboración con miembros del equipo internacional en diferentes zonas horarias"
+      ]
+    },
+    "gulzarsoft": {
+      "title": "Associate Software Engineer",
+      "company": "GulzarSoft",
+      "responsibilities": [
+        "Adquisición de experiencia profesional básica como Desarrollador Full-Stack JavaScript",
+        "Creación de aplicaciones web responsivas usando React.js y Node.js",
+        "Demostración de habilidades en desarrollo independiente y trabajo en equipo",
+        "Desarrollo de APIs REST para filtrado, búsqueda y gestión de bases de datos",
+        "Construcción de soluciones web completas desde interfaces frontend hasta servicios backend",
+        "Participación en metodologías ágiles y planificación de sprints"
+      ]
+    }
   }
 }
