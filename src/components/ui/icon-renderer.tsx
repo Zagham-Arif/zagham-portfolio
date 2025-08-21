@@ -1,7 +1,9 @@
 'use client';
 
-import * as Si from 'react-icons/si';
+import { useTheme } from 'next-themes';
 import { IconType } from 'react-icons';
+import * as Fi from 'react-icons/fi';
+import * as Si from 'react-icons/si';
 
 interface IconRendererProps {
   iconName: string;
@@ -9,7 +11,6 @@ interface IconRendererProps {
   size?: number;
 }
 
-// Brand colors for common technologies
 const brandColors: Record<string, string> = {
   SiReact: '#61DAFB',
   SiNextdotjs: '#000000',
@@ -33,12 +34,6 @@ const brandColors: Record<string, string> = {
   SiFirebase: '#FFCA28',
   SiAmazons3: '#569A31',
   SiCloudinary: '#3448C5',
-  // SiAmazonecs: '#D36528',
-  // SiAmazonec2: '#EF8434',
-  // SiAmazonfargate: '#sD86729',
-  // SiAmazonlightsail: '#FF9900',
-  // SiAmazoncloudfront: '#FF9900',
-  // SiAmazonrds: '#FF9900',
   SiAmazonaws: '#FF9900',
   SiAmazondynamodb: '#4053D6',
   SiDocker: '#2496ED',
@@ -62,9 +57,6 @@ const brandColors: Record<string, string> = {
   SiPycharm: '#000000',
   SiPostman: '#FF6C37',
   SiFigma: '#F24E1E',
-  SiVscode: '#007ACC',
-  SiLinux: '#FCC624',
-  SiUbuntu: '#E95420',
   SiTailwindcss: '#06B6D4',
   SiBootstrap: '#7952B3',
   SiHtml5: '#E34F26',
@@ -80,30 +72,53 @@ const brandColors: Record<string, string> = {
   SiLinkedin: '#0A66C2',
   SiGmail: '#EA4335',
   SiCloudflare: '#F38020',
+  SiFiverr: '#1DBF73',
+  SiUpwork: '#14A800',
+  FiMail: '#EA4335',
 };
+
+// Icons that are too dark to see in dark mode
+const darkModeSensitiveIcons = new Set([
+  'SiNextdotjs',
+  'SiExpress',
+  'SiDjango',
+  'SiVercel',
+  'SiSwagger',
+  'SiGithub',
+  'SiOkta',
+  'SiNotion',
+  'SiPycharm',
+]);
 
 export function IconRenderer({
   iconName,
   className = '',
   size = 24,
 }: IconRendererProps) {
-  // Get the icon component from react-icons/si
-  const IconComponent = (Si as Record<string, IconType>)[iconName];
+  const { theme } = useTheme();
 
-  // Fallback to a default icon if the specified icon doesn't exist
+  // Look up across supported packs
+  const packs: Record<string, Record<string, IconType>> = { Si, Fi };
+  const IconComponent =
+    (packs.Si as Record<string, IconType>)[iconName] ||
+    (packs.Fi as Record<string, IconType>)[iconName];
+
   if (!IconComponent) {
+    // sensible fallback
     return (
       <Si.SiReact
         style={{ color: brandColors.SiReact }}
-        className={className}
         size={size}
+        className={className}
       />
     );
   }
 
-  // Apply brand color if available
-  const brandColor = brandColors[iconName];
-  const style = brandColor ? { color: brandColor } : undefined;
+  let color = brandColors[iconName];
 
-  return <IconComponent style={style} className={className} size={size} />;
+  if (theme === 'dark' && darkModeSensitiveIcons.has(iconName)) {
+    color = '#FFFFFF';
+  }
+
+  return <IconComponent style={{ color }} size={size} className={className} />;
 }

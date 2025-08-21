@@ -9,27 +9,20 @@ import { skills } from '@/lib/data';
 export function Skills() {
   const t = useTranslations('skills');
 
+  // Motion variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
+      transition: { staggerChildren: 0.1 },
     },
   };
-
   const itemVariants = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
   };
 
+  // Categories mapping
   const categories = {
     frontend: t('categories.frontend'),
     backend: t('categories.backend'),
@@ -38,30 +31,34 @@ export function Skills() {
     other: t('categories.other'),
   };
 
-  // Define the order for categories
   const categoryOrder = ['backend', 'frontend', 'database', 'tools', 'other'];
 
+  // Group skills by category
   const groupedSkills = skills.reduce(
     (acc, skill) => {
-      if (!acc[skill.category]) {
-        acc[skill.category] = [];
-      }
+      acc[skill.category] = acc[skill.category] || [];
       acc[skill.category].push(skill);
       return acc;
     },
     {} as Record<string, typeof skills>
   );
 
-  // Sort categories according to the defined order
+  // Sorted categories
   const sortedCategories = categoryOrder
-    .filter(
-      category => groupedSkills[category] && groupedSkills[category].length > 0
-    )
+    .filter(category => groupedSkills[category]?.length)
     .map(category => [category, groupedSkills[category]] as const);
+
+  // Stats for Additional Skills
+  const stats = [
+    { value: '4+', label: t('stats.yearsExperience') },
+    { value: '25+', label: t('stats.projectsCompleted') },
+    { value: '40+', label: t('stats.technologies') },
+  ];
 
   return (
     <section id="skills" className="px-4 py-20 sm:px-6 lg:px-8">
       <div className="container mx-auto">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,6 +72,7 @@ export function Skills() {
           </p>
         </motion.div>
 
+        {/* Skills Grid */}
         <div className="space-y-12">
           {sortedCategories.map(([category, categorySkills]) => (
             <div key={category}>
@@ -105,40 +103,24 @@ export function Skills() {
           ))}
         </div>
 
-        {/* Additional Skills Grid */}
+        {/* Additional Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16"
+          className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3"
         >
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            <Card className="p-6 text-center">
+          {stats.map(stat => (
+            <Card key={stat.label} className="p-6 text-center">
               <CardContent className="p-0">
-                <div className="mb-2 text-3xl font-bold text-primary">4+</div>
-                <p className="text-sm text-muted-foreground">
-                  {t('stats.yearsExperience')}
-                </p>
+                <div className="mb-2 text-3xl font-bold text-primary">
+                  {stat.value}
+                </div>
+                <p className="text-sm text-muted-foreground">{stat.label}</p>
               </CardContent>
             </Card>
-            <Card className="p-6 text-center">
-              <CardContent className="p-0">
-                <div className="mb-2 text-3xl font-bold text-primary">25+</div>
-                <p className="text-sm text-muted-foreground">
-                  {t('stats.projectsCompleted')}
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="p-6 text-center">
-              <CardContent className="p-0">
-                <div className="mb-2 text-3xl font-bold text-primary">40+</div>
-                <p className="text-sm text-muted-foreground">
-                  {t('stats.technologies')}
-                </p>
-              </CardContent>
-            </Card>
-          </div>
+          ))}
         </motion.div>
       </div>
     </section>

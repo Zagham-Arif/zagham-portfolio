@@ -26,11 +26,19 @@ export const personalInfo = {
 // Social Links
 // -----------------------------
 export const socialLinks: SocialLink[] = [
-  { name: 'GitHub', url: Links.github, icon: 'Github' },
-  { name: 'LinkedIn', url: Links.linkedIn, icon: 'Linkedin' },
-  { name: 'Discord', url: Links.discord, icon: 'Discord' },
+  { name: 'GitHub', url: Links.github, icon: 'SiGithub' },
+  { name: 'LinkedIn', url: Links.linkedIn, icon: 'SiLinkedin' },
+  { name: 'Discord', url: Links.discord, icon: 'SiDiscord' },
+  { name: 'Email', url: `mailto:${personalInfo.email}`, icon: 'FiMail' },
 ];
 
+// -----------------------------
+// Freelance Links
+// -----------------------------
+export const freelanceLinks: SocialLink[] = [
+  { name: 'Fiverr', url: Links.fiverr, icon: 'SiFiverr' },
+  { name: 'Upwork', url: Links.upwork, icon: 'SiUpwork' },
+];
 // -----------------------------
 // Projects
 // -----------------------------

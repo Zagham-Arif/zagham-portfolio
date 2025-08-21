@@ -17,29 +17,15 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import {
-  FiGithub,
-  FiLinkedin,
-  FiLoader,
-  FiMail,
-  FiMapPin,
-  FiMessageCircle,
-  FiPhone,
-  FiSend,
-} from 'react-icons/fi';
+import { FiLoader, FiMail, FiMapPin, FiPhone, FiSend } from 'react-icons/fi';
 import { z } from 'zod';
+import { IconRenderer } from '../ui/icon-renderer';
 
 type ContactFormData = {
   name: string;
   email: string;
   website?: string;
   message: string;
-};
-
-const iconMap = {
-  Github: { icon: FiGithub, color: '#181717' },
-  Linkedin: { icon: FiLinkedin, color: '#0A66C2' },
-  Discord: { icon: FiMessageCircle, color: '#5865F2' },
 };
 
 export function Contact() {
@@ -164,31 +150,27 @@ export function Contact() {
                 <div className="pt-6">
                   <h4 className="mb-4 font-semibold">{t('followMe')}</h4>
                   <div className="flex space-x-4">
-                    {socialLinks.map(link => {
-                      const iconData =
-                        iconMap[link.icon as keyof typeof iconMap];
-                      const IconComponent = iconData.icon;
-                      return (
-                        <Button
-                          key={link.name}
-                          variant="outline"
-                          size="icon"
-                          asChild
+                    {socialLinks.map(link => (
+                      <Button
+                        key={link.name}
+                        variant="outline"
+                        size="icon"
+                        asChild
+                      >
+                        <a
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title={t(`social.${link.name.toLowerCase()}`)}
                         >
-                          <a
-                            href={link.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            title={t(`social.${link.name.toLowerCase()}`)}
-                          >
-                            <IconComponent
-                              className="h-4 w-4"
-                              style={{ color: iconData.color }}
-                            />
-                          </a>
-                        </Button>
-                      );
-                    })}
+                          <IconRenderer
+                            iconName={link.icon}
+                            size={20}
+                            className="transition-colors duration-200 group-hover:text-primary"
+                          />
+                        </a>
+                      </Button>
+                    ))}
                   </div>
                 </div>
               </CardContent>
