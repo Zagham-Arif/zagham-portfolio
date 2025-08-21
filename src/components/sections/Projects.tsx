@@ -55,27 +55,26 @@ export function Projects() {
     },
   };
 
-  const getProjectGradient = (index: number) => {
-    const gradients = [
-      'bg-gradient-to-br from-blue-500 via-blue-600 to-purple-700',
-      'bg-gradient-to-br from-emerald-500 via-teal-600 to-cyan-700',
-      'bg-gradient-to-br from-orange-500 via-red-500 to-pink-600',
-      'bg-gradient-to-br from-indigo-500 via-purple-600 to-blue-700',
-      'bg-gradient-to-br from-rose-500 via-pink-600 to-purple-700',
-    ];
-    return gradients[index % gradients.length];
-  };
-
+  // 🔹 Replace getProjectImage with this
   const getProjectImage = (project: { title: string }, index: number) => {
-    const queries = [
-      'modern web application dashboard interface',
-      'mobile app user interface design',
-      'e-commerce website product page',
-      'data visualization dashboard',
-      'social media platform interface',
+    const gradients = [
+      'from-blue-500 via-indigo-500 to-purple-600',
+      'from-emerald-400 via-teal-500 to-cyan-600',
+      'from-orange-400 via-pink-500 to-rose-600',
+      'from-sky-400 via-blue-500 to-indigo-600',
+      'from-fuchsia-500 via-pink-500 to-rose-500',
     ];
-    const query = queries[index % queries.length];
-    return `/placeholder.svg?height=200&width=400&query=${encodeURIComponent(`${query} ${project.title}`)}`;
+    const bg = gradients[index % gradients.length];
+
+    return (
+      <div
+        className={`flex h-48 w-full items-center justify-center rounded-t-2xl bg-gradient-to-br ${bg}`}
+      >
+        <span className="text-4xl font-bold text-white/90 drop-shadow-lg">
+          {project.title[0]}
+        </span>
+      </div>
+    );
   };
 
   const nextSlide = () => {
@@ -188,63 +187,20 @@ export function Projects() {
                         return (
                           <motion.div key={project.id} variants={itemVariants}>
                             <Card className="group h-full overflow-hidden border-0 bg-gradient-to-br from-background via-background to-muted/50 transition-all duration-700 hover:-translate-y-3 hover:shadow-2xl hover:shadow-primary/10">
-                              <div className="relative h-48 overflow-hidden">
-                                <motion.img
-                                  src={getProjectImage(project, globalIndex)}
-                                  alt={tProjectData(project.title)}
-                                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                  initial={{ scale: 1.1, opacity: 0 }}
-                                  whileInView={{ scale: 1, opacity: 1 }}
-                                  viewport={{ once: true }}
-                                  transition={{ duration: 0.8 }}
-                                />
-                                <div
-                                  className={`absolute inset-0 ${getProjectGradient(globalIndex)} opacity-80 mix-blend-overlay`}
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                              <div className="relative overflow-hidden rounded-t-2xl">
+                                {getProjectImage(project, globalIndex)}
 
-                                {/* Floating project icon */}
+                                {/* Overlay for depth */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+
+                                {/* Floating corner icon */}
                                 <motion.div
-                                  className="absolute right-4 top-4"
-                                  whileHover={{ scale: 1.2, rotate: 360 }}
-                                  transition={{ duration: 0.6, type: 'spring' }}
+                                  className="absolute right-4 top-4 rounded-full bg-white/10 p-2 backdrop-blur-md"
+                                  whileHover={{ scale: 1.2, rotate: 20 }}
+                                  transition={{ duration: 0.4, type: 'spring' }}
                                 >
-                                  <div className="rounded-full bg-white/20 p-3 backdrop-blur-sm">
-                                    <FiCode className="h-6 w-6 text-white" />
-                                  </div>
+                                  <FiCode className="h-5 w-5 text-white" />
                                 </motion.div>
-
-                                <motion.div
-                                  className="absolute bottom-8 right-8 h-16 w-16 rounded-full bg-white/10 backdrop-blur-sm"
-                                  animate={{
-                                    rotate: 360,
-                                    scale: [1, 1.1, 1],
-                                  }}
-                                  transition={{
-                                    rotate: {
-                                      duration: 25,
-                                      repeat: Number.POSITIVE_INFINITY,
-                                      ease: 'linear',
-                                    },
-                                    scale: {
-                                      duration: 3,
-                                      repeat: Number.POSITIVE_INFINITY,
-                                      ease: 'easeInOut',
-                                    },
-                                  }}
-                                />
-                                <motion.div
-                                  className="absolute bottom-4 left-4 h-8 w-8 rounded-full bg-white/15 backdrop-blur-sm"
-                                  animate={{
-                                    scale: [1, 1.3, 1],
-                                    opacity: [0.7, 1, 0.7],
-                                  }}
-                                  transition={{
-                                    duration: 2.5,
-                                    repeat: Number.POSITIVE_INFINITY,
-                                    ease: 'easeInOut',
-                                  }}
-                                />
                               </div>
 
                               <CardHeader className="pb-4">

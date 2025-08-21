@@ -45,7 +45,7 @@ export const freelanceLinks: SocialLink[] = [
 export const projects: Project[] = [
   {
     id: 'givingfridays',
-    title: 'projectsData.givingfridays.title',
+    title: 'GivingFridays',
     description: 'projectsData.givingfridays.description',
     technologies: [
       'Next.js',
@@ -60,7 +60,7 @@ export const projects: Project[] = [
   },
   {
     id: 'civasource',
-    title: 'projectsData.civasource.title',
+    title: 'CivaSource',
     description: 'projectsData.civasource.description',
     technologies: ['FastAPI', 'Python', 'Redis', 'AI/ML', 'Authentication'],
     liveUrl: '#',
@@ -69,7 +69,7 @@ export const projects: Project[] = [
   },
   {
     id: 'playertotals',
-    title: 'projectsData.playertotals.title',
+    title: 'PlayerTotals',
     description: 'projectsData.playertotals.description',
     technologies: ['Node.js', 'TypeScript', 'Redis', 'MongoDB', 'Real-time'],
     liveUrl: 'https://playertotals.com',
@@ -79,7 +79,7 @@ export const projects: Project[] = [
 
   {
     id: 'forwood-safety',
-    title: 'projectsData.forwood-safety.title',
+    title: 'Forwood Safety',
     description: 'projectsData.forwood-safety.description',
     technologies: ['Node.js', 'TypeScript', 'AWS', 'Microservices', 'DevOps'],
     liveUrl: 'https://forwoodsafety.com',
@@ -88,7 +88,7 @@ export const projects: Project[] = [
   },
   {
     id: 'alteraapp',
-    title: 'projectsData.alterapp.title',
+    title: 'AlteraApp (Minecraft)',
     description: 'projectsData.alterapp.description',
     technologies: ['JavaScript', 'WebSocket', 'UI Libraries', 'Minecraft'],
     liveUrl: 'https://playlabs.altera.al/discover',
@@ -97,7 +97,7 @@ export const projects: Project[] = [
   },
   {
     id: 'tradefundrr',
-    title: 'projectsData.tradefundrr.title',
+    title: 'TradeFundrr',
     description: 'projectsData.tradefundrr.description',
     technologies: ['Python', 'Flask', 'Django', 'ReactJS', 'CRM'],
     liveUrl: 'https://tradefundrr.com',
@@ -106,7 +106,7 @@ export const projects: Project[] = [
   },
   {
     id: 'autotempest',
-    title: 'projectsData.autotempest.title',
+    title: 'Autotempest',
     description: 'projectsData.autotempest.description',
     technologies: ['React.js', 'Node.js', 'MySQL', 'REST APIs', 'Web Scraping'],
     imageUrl: '',
@@ -114,7 +114,7 @@ export const projects: Project[] = [
   },
   {
     id: 'points-app',
-    title: 'projectsData.points-app.title',
+    title: 'Points App',
     description: 'projectsData.points-app.description',
     technologies: ['Node.js', 'React.js', 'MySQL', 'Payment Integration'],
     imageUrl: '',
@@ -122,7 +122,7 @@ export const projects: Project[] = [
   },
   {
     id: 'sicp',
-    title: 'projectsData.sicp.title',
+    title: 'SICP E-Presentations',
     description: 'projectsData.sicp.description',
     technologies: ['Node.js', 'React.js', 'MySQL', 'AWS', 'Event Management'],
     imageUrl: '',
@@ -130,7 +130,7 @@ export const projects: Project[] = [
   },
   {
     id: 'vehicles-extension',
-    title: 'projectsData.vehicles-extension.title',
+    title: 'Vehicles-Extension Solution',
     description: 'projectsData.vehicles-extension.description',
     technologies: [
       'Node.js',
@@ -144,7 +144,7 @@ export const projects: Project[] = [
   },
   {
     id: 'al-khair-traders-pos',
-    title: 'projectsData.al-khair-traders.title',
+    title: 'Al Khair Traders POS',
     description: 'projectsData.al-khair-traders.description',
     technologies: ['Node.js', 'React.js', 'MySQL', 'POS System', 'Namecheap'],
     imageUrl: '',
@@ -152,7 +152,7 @@ export const projects: Project[] = [
   },
   {
     id: 'modern-pos',
-    title: 'projectsData.modern-pos.title',
+    title: 'Modern POS',
     description: 'projectsData.modern-pos.description',
     technologies: [
       'Core PHP',
@@ -166,7 +166,7 @@ export const projects: Project[] = [
   },
   {
     id: 'deployment-tool',
-    title: 'projectsData.deployment.title',
+    title: 'N1QL a Herramienta de Automatización Firebase (FYP)',
     description: 'projectsData.deployment.description',
     technologies: [
       'Node.js',

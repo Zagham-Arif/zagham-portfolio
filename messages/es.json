@@ -112,55 +112,42 @@
   },
   "projectsData": {
     "givingfridays": {
-      "title": "GivingFridays",
       "description": "Migración de Strapi a Supabase, reconstrucción de APIs con Next.js + Deno. Lideré un equipo de 3-4 desarrolladores durante el proceso."
     },
     "civasource": {
-      "title": "CivaSource",
       "description": "Extracción de datos de productos con colas Redis integradas y sistema de coincidencia de productos con IA. Construido con FastAPI y autenticación."
     },
     "playertotals": {
-      "title": "PlayerTotals",
       "description": "Sistema de estadísticas de jugadores en tiempo real construido con Node.js (TypeScript), colas Redis y MongoDB para procesamiento de datos de alto rendimiento."
     },
     "forwood-safety": {
-      "title": "Forwood Safety",
       "description": "Desarrollo de un sistema de gestión de listas de verificación de seguridad con arquitectura de microservicios usando Node.js y TypeScript. Gestión de tareas DevOps y despliegues en AWS."
     },
     "alteraapp": {
-      "title": "AlteraApp (Minecraft)",
       "description": "Desarrollo de librerías JavaScript y conexiones WebSocket para el comportamiento y comunicación de bots en Minecraft. Creación de bibliotecas de UI y comandos para control de bots."
     },
     "tradefundrr": {
-      "title": "TradeFundrr",
       "description": "Trabajo en un sistema CRM usando Python, Flask, Django y ReactJS. Pruebas de API y participación activa en metodología ágil."
     },
     "autotempest": {
-      "title": "Autotempest",
       "description": "Desarrollo de una aplicación web responsiva para filtrar y mostrar autos extraídos y almacenados en una base de datos MySQL. Diseñada con React.js y APIs REST para búsqueda y filtrado."
     },
     "points-app": {
-      "title": "Points App",
       "description": "Creación de una aplicación web de canje de puntos para que los clientes puedan canjear códigos de recarga. Solución integral de fidelización de clientes."
     },
     "sicp": {
-      "title": "SICP E-Presentations",
       "description": "Desarrollo de una aplicación web de e-presentaciones para gestionar eventos de investigación (autores, fechas, videos promocionales, duración de eventos, etc.) desplegada en AWS."
     },
     "vehicles-extension": {
-      "title": "Vehicles-Extension Solution",
       "description": "Desarrollo de una aplicación web para extraer datos de vehículos usando trabajos CRON y almacenarlos en MongoDB. Frontend con React.js y servicios backend usando Node.js."
     },
     "al-khair-traders-pos": {
-      "title": "Al Khair Traders POS",
       "description": "Creación de un sistema de gestión web para una tienda local para manejar ventas, compras y operaciones contables. Desplegado en Namecheap para mejorar la eficiencia de la gestión."
     },
     "modern-pos": {
-      "title": "Modern POS",
       "description": "Desarrollo de un sistema POS web para gestionar diversas operaciones comerciales, incluyendo ventas, compras, gestión de usuarios y contabilidad. Solución optimizada para gestión minorista."
     },
     "deployment-tool": {
-      "title": "N1QL a Herramienta de Automatización Firebase (FYP)",
       "description": "Creación de una herramienta de automatización para convertir consultas N1QL en funciones de Firebase, mejorando la confiabilidad del sistema y la experiencia del usuario. Facilitó la integración entre N1QL (Couchbase) y Firebase."
     }
   },

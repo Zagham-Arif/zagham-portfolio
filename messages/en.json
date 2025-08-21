@@ -105,55 +105,42 @@
   },
   "projectsData": {
     "givingfridays": {
-      "title": "GivingFridays",
       "description": "Migrated from Strapi to Supabase, rebuilt APIs with Next.js + Deno. Led a team of 3-4 developers in the migration process."
     },
     "civasource": {
-      "title": "CivaSource",
       "description": "Scraped product data with integrated Redis Queues and AI product matching system. Built using FastAPI with authentication."
     },
     "playertotals": {
-      "title": "PlayerTotals",
       "description": "Real-time player statistics system built with Node.js (TypeScript), Redis Queues, and MongoDB for high-performance data processing."
     },
     "forwood-safety": {
-      "title": "Forwood Safety",
       "description": "Developed a safety checklist management system with microservices architecture using Node.js and TypeScript. Managed DevOps tasks and AWS deployments."
     },
     "alteraapp": {
-      "title": "AlteraApp (Minecraft)",
       "description": "Built JavaScript libraries and WebSocket connections for Minecraft bot behavior and communication. Devised UI and command libraries for bot control."
     },
     "tradefundrr": {
-      "title": "TradeFundrr",
       "description": "Worked on a CRM system using Python, Flask, Django, and ReactJS. Conducted API testing and actively participated in agile methodology."
     },
     "autotempest": {
-      "title": "Autotempest",
       "description": "Developed a responsive web app to filter and display scraped cars stored in a MySQL database. Designed with React.js and REST APIs for searching and filtering."
     },
     "points-app": {
-      "title": "Points App",
       "description": "Created a web-based points redemption app for customers to redeem top-up codes. Comprehensive customer loyalty solution."
     },
     "sicp": {
-      "title": "SICP E-Presentations",
       "description": "Built an e-presentations web app for managing research events (authors, dates, promotional videos, event durations, etc.) deployed on AWS."
     },
     "vehicles-extension": {
-      "title": "Vehicles-Extension Solution",
       "description": "Engineered a web app to scrape vehicle data using CRON jobs and store it in MongoDB. Frontend designed with React.js and backend services using Node.js."
     },
     "al-khair-traders-pos": {
-      "title": "Al Khair Traders POS",
       "description": "Built a web-based management system for a local store to handle sales, purchases, and bookkeeping operations. Deployed on Namecheap for enhanced store management efficiency."
     },
     "modern-pos": {
-      "title": "Modern POS",
       "description": "Developed a web-based POS system to manage various business operations, including sales, purchases, user management, and accounting. Streamlined solution for retail management."
     },
     "deployment-tool": {
-      "title": "N1QL to Firebase Automation Tool (FYP)",
       "description": "Created an automation tool for converting N1QL queries into Firebase functions, improving system reliability and user experience. Facilitated seamless integration between N1QL (Couchbase) and Firebase."
     }
   },
