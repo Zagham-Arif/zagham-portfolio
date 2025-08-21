@@ -271,7 +271,7 @@ export function Hero() {
               whileTap={{ scale: 0.95 }}
             >
               <span className="text-xs uppercase tracking-wider text-muted-foreground transition-colors group-hover:text-primary">
-                Scroll Down
+                {t('scrollDown')}
               </span>
               <motion.div
                 whileHover={{ scale: 1.2 }}
