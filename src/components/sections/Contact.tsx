@@ -30,6 +30,7 @@ type ContactFormData = {
 
 export function Contact() {
   const t = useTranslations('contact');
+  const social = useTranslations('social');
   const [formspreeState, handleFormspreeSubmit] = useFormspree(
     process.env.NEXT_PUBLIC_FORMSPREE_ID!
   );
@@ -161,7 +162,7 @@ export function Contact() {
                           href={link.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          title={t(`social.${link.name.toLowerCase()}`)}
+                          title={social(`${link.name.toLowerCase()}`)}
                         >
                           <IconRenderer
                             iconName={link.icon}
@@ -227,7 +228,7 @@ export function Contact() {
                         </p>
                       )}
                       <ValidationError
-                        prefix={t('Email')}
+                        prefix={t('email')}
                         field="email"
                         errors={formspreeState.errors}
                         className="mt-1 text-sm text-destructive"

@@ -1,13 +1,11 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
 import { IconRenderer } from '@/components/ui/icon-renderer';
 import { Links } from '@/constants/links';
 import { freelanceLinks, personalInfo, socialLinks } from '@/lib/data';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { FiArrowUp } from 'react-icons/fi';
 
 export function Footer() {
   const tNav = useTranslations('nav');
@@ -20,8 +18,6 @@ export function Footer() {
     { name: tNav('skills'), href: '#skills' },
     { name: tNav('contact'), href: '#contact' },
   ];
-
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   const renderIconLink = (link: {
     name: string;
@@ -58,6 +54,8 @@ export function Footer() {
               <h3 className="mb-4 text-2xl font-bold">{personalInfo.name}</h3>
               <p className="mb-6 max-w-md text-muted-foreground">
                 {tFooter('brandDescription')}
+                <br />
+                <sub>© {new Date().getFullYear()}</sub>
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -145,37 +143,6 @@ export function Footer() {
                   </a>
                 </li>
               </ul>
-            </motion.div>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="border-t border-border py-6">
-          <div className="flex flex-col items-center justify-between md:flex-row">
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="flex items-center text-sm text-muted-foreground"
-            >
-              ©{new Date().getFullYear()} {personalInfo.name}.{' '}
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="mt-4 md:mt-0"
-            >
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={scrollToTop}
-                className="group"
-              >
-                <FiArrowUp className="mr-2 h-4 w-4 transition-transform group-hover:-translate-y-1" />
-                {tFooter('backToTop')}
-              </Button>
             </motion.div>
           </div>
         </div>

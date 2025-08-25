@@ -69,6 +69,10 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  cursor: none; /* Hide default cursor */
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -86,3 +90,4 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--primary));
 }
+

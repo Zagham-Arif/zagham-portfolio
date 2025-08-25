@@ -1,11 +1,12 @@
+import { Cursor } from '@/components/CustomCursor';
+import { personalInfo } from '@/lib/data';
+import '@/lib/dev-suppressions';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { ThemeProvider } from 'next-themes';
 import localFont from 'next/font/local';
 import '../globals.css';
-import '@/lib/dev-suppressions';
-import { personalInfo } from '@/lib/data';
 
 const geistSans = localFont({
   src: '../fonts/GeistVF.woff',
@@ -27,21 +28,15 @@ export const metadata: Metadata = {
   creator: personalInfo.name,
   icons: {
     icon: [
-      {
-        url: '/favicon.svg',
-        type: 'image/svg+xml',
-      },
-      {
-        url: '/icon-192.svg',
-        sizes: '192x192',
-        type: 'image/svg+xml',
-      },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon-48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/favicon-96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/favicon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/favicon-512.png', sizes: '512x512', type: 'image/png' },
     ],
-    apple: {
-      url: '/icon-192.svg',
-      sizes: '180x180',
-      type: 'image/svg+xml',
-    },
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
     shortcut: '/favicon.svg',
   },
   openGraph: {
@@ -51,12 +46,21 @@ export const metadata: Metadata = {
     title: `${personalInfo.name} - Software Engineer`,
     description: `Portfolio of ${personalInfo.name}, an experienced Software Engineer specializing in full-stack development and cloud engineering.`,
     siteName: `${personalInfo.name} Portfolio`,
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Portfolio Preview',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${personalInfo.name} - Software Engineer`,
     description: `Portfolio of ${personalInfo.name}, an experienced Software Engineer specializing in full-stack development and cloud engineering.`,
     creator: '@zagham',
+    images: ['/og-image.png'],
   },
 };
 
@@ -67,15 +71,12 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages({ locale });
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        suppressHydrationWarning
       >
         <ThemeProvider
           attribute="class"
@@ -84,6 +85,7 @@ export default async function LocaleLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
+            <Cursor />
             {children}
           </NextIntlClientProvider>
         </ThemeProvider>

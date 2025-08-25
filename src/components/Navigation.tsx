@@ -36,9 +36,7 @@ export function Navigation() {
     { code: 'es', name: t('languages.es'), flag: '🇪🇸' },
   ];
 
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-  };
+  const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark');
 
   const switchLanguage = (newLocale: string) => {
     router.push(`/${newLocale}`);
@@ -55,25 +53,42 @@ export function Navigation() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="text-xl font-bold">
-            {personalInfo.name}
-          </Link>
+          {/* Logo / Name */}
+          <motion.div whileHover={{ scale: 1.05 }}>
+            <Link
+              href="/"
+              className="relative text-xl font-bold transition-colors hover:text-primary"
+            >
+              {personalInfo.name}
+              <motion.span
+                layoutId="underline-name"
+                className="absolute -bottom-1 left-0 h-[2px] w-0 bg-primary transition-all group-hover:w-full"
+              />
+            </Link>
+          </motion.div>
 
           {/* Desktop Navigation */}
           <div className="hidden items-center space-x-8 md:flex">
-            {navItems.map(item => (
-              <Link
-                key={item.key}
-                href={item.href}
-                className="text-foreground/80 transition-colors hover:text-foreground"
-              >
-                {t(item.key)}
-              </Link>
-            ))}
+            {navItems.map(item => {
+              return (
+                <motion.div
+                  key={item.key}
+                  whileHover={{ y: -2 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                >
+                  <Link
+                    href={item.href}
+                    className="relative pb-1 text-foreground/80 transition-colors hover:text-primary"
+                  >
+                    {t(item.key)}
+                    <span className="absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-0 transform bg-primary transition-transform duration-300 group-hover:scale-x-100" />
+                  </Link>
+                </motion.div>
+              );
+            })}
           </div>
 
-          {/* Theme and Language Controls */}
+          {/* Theme + Language */}
           <div className="hidden items-center space-x-2 md:flex">
             <Button
               variant="ghost"
@@ -138,16 +153,18 @@ export function Navigation() {
           className="border-t bg-background md:hidden"
         >
           <div className="space-y-4 px-4 py-4">
-            {navItems.map(item => (
-              <Link
-                key={item.key}
-                href={item.href}
-                className="block text-foreground/80 transition-colors hover:text-foreground"
-                onClick={() => setIsOpen(false)}
-              >
-                {t(item.key)}
-              </Link>
-            ))}
+            {navItems.map(item => {
+              return (
+                <Link
+                  key={item.key}
+                  href={item.href}
+                  className="block text-foreground/80 transition-colors hover:text-primary"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {t(item.key)}
+                </Link>
+              );
+            })}
             <div className="flex items-center justify-between border-t pt-4">
               <div className="flex items-center space-x-2">
                 <Button

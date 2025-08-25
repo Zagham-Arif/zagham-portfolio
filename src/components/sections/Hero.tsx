@@ -1,28 +1,19 @@
 'use client';
 
-import { motion, type Variants } from 'framer-motion';
-import {
-  FiDownload,
-  FiMail,
-  FiArrowDown,
-  FiMapPin,
-  FiCheck,
-} from 'react-icons/fi';
-import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { personalInfo } from '@/lib/data';
+import { motion, type Variants } from 'framer-motion';
+import { useTranslations } from 'next-intl';
+import { FiCheck, FiDownload, FiMail, FiMapPin } from 'react-icons/fi';
+
+import { ScrollButton } from '@/components/ScrollButton';
+import { useHeroInView } from '@/hooks/useHeroInView';
+import { useScrollTo } from '@/hooks/useScrollTo';
 
 export function Hero() {
   const t = useTranslations('hero');
-
-  const scrollToNextSection = () => {
-    const nextSection = document.querySelector(
-      '#about, #projects, #experience'
-    );
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const { scrollToNextSection } = useScrollTo();
+  const isHeroInView = useHeroInView();
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -110,7 +101,7 @@ export function Hero() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 1, duration: 0.8, type: 'spring' }}
             >
-              <div className="flex space-x-4">
+              <div className="flex flex-wrap justify-center gap-3">
                 <motion.div
                   className="flex items-center space-x-2 rounded-full border border-green-500/30 bg-gradient-to-r from-green-500/10 to-emerald-500/10 px-4 py-2 shadow-lg backdrop-blur-sm"
                   variants={pulseVariants}
@@ -131,7 +122,7 @@ export function Hero() {
                     }}
                   />
                   <FiCheck className="h-4 w-4 text-green-500" />
-                  <span className="text-sm font-medium text-green-600 dark:text-green-400">
+                  <span className="text-sm font-medium text-green-600 drop-shadow-sm dark:text-green-400">
                     {t('available')}
                   </span>
                 </motion.div>
@@ -143,18 +134,18 @@ export function Hero() {
                   whileHover={{ scale: 1.05, y: -2 }}
                 >
                   <FiMapPin className="h-4 w-4 text-primary" />
-                  <span className="text-sm font-medium text-primary">
+                  <span className="text-sm font-medium text-primary drop-shadow-sm">
                     {personalInfo.location}
                   </span>
                 </motion.div>
               </div>
             </motion.div>
 
-            <p className="mb-2 mt-8 text-lg text-muted-foreground">
+            <p className="mb-2 mt-8 pt-6 text-lg text-muted-foreground">
               {t('greeting')}
             </p>
             <motion.h1
-              className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-4xl font-bold text-transparent sm:text-6xl lg:text-7xl"
+              className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-4xl font-bold leading-tight text-transparent drop-shadow-md sm:text-6xl md:pb-3 lg:text-7xl"
               whileHover={{ scale: 1.05 }}
               transition={{ type: 'spring', stiffness: 300 }}
             >
@@ -254,34 +245,18 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="pt-8">
-            <motion.button
-              onClick={scrollToNextSection}
-              animate={{
-                y: [0, 15, 0],
-                opacity: [0.5, 1, 0.5],
-              }}
-              transition={{
-                duration: 2.5,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: 'easeInOut',
-              }}
-              className="group flex cursor-pointer flex-col items-center space-y-2"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span className="text-xs uppercase tracking-wider text-muted-foreground transition-colors group-hover:text-primary">
-                {t('scrollDown')}
-              </span>
-              <motion.div
-                whileHover={{ scale: 1.2 }}
-                transition={{ type: 'spring', stiffness: 400 }}
-                className="rounded-full border border-muted-foreground/20 p-2 transition-colors group-hover:border-primary/50"
-              >
-                <FiArrowDown className="h-6 w-6 text-muted-foreground transition-colors group-hover:text-primary" />
-              </motion.div>
-            </motion.button>
-          </motion.div>
+          {isHeroInView && (
+            <div className="pt-">
+              <ScrollButton
+                direction="down"
+                onClick={scrollToNextSection}
+                text={t('scrollDown')}
+                position="left"
+                withBackground
+                pulse
+              />
+            </div>
+          )}
         </motion.div>
       </div>
     </section>

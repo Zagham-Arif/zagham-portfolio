@@ -215,7 +215,7 @@ export function Projects() {
                                       }}
                                     >
                                       <CardTitle className="mb-3 text-xl transition-colors duration-300 group-hover:text-primary">
-                                        {tProjectData(project.title)}
+                                        {project.title}
                                       </CardTitle>
                                       <CardDescription className="text-sm leading-relaxed">
                                         {tProjectData(project.description)}

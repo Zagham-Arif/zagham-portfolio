@@ -1,4 +1,7 @@
 {
+  "main": {
+    "scrollUp": "Desplazarse hacia arriba"
+  },
   "nav": {
     "home": "Inicio",
     "projects": "Proyectos",
@@ -30,7 +33,8 @@
   "social": {
     "github": "GitHub",
     "linkedin": "LinkedIn",
-    "discord": "Discord"
+    "discord": "Discord",
+    "email": "Correo electrónico"
   },
   "projects": {
     "title": "Proyectos Destacados",
@@ -101,7 +105,6 @@
     "getInTouch": "Ponte en Contacto",
     "hireOnFiverr": "Contrátame en Fiverr",
     "hireOnUpwork": "Contrátame en Upwork",
-    "backToTop": "Volver arriba",
     "brandDescription": "Desarrollador Full Stack Senior con más de 4 años de experiencia en Python, ReactJS y el stack MERN. Apasionado por crear soluciones web innovadoras y liderar equipos de desarrollo para entregar resultados excepcionales."
   },
   "personalInfo": {
