@@ -122,19 +122,31 @@ export function Hero() {
                     }}
                   />
                   <FiCheck className="h-4 w-4 text-green-500" />
-                  <span className="text-sm font-medium text-green-600 drop-shadow-sm dark:text-green-400">
+                  <span className="text-sm font-medium text-green-600 dark:text-green-400">
                     {t('available')}
                   </span>
                 </motion.div>
                 <motion.div
-                  className="flex items-center space-x-2 rounded-full border border-primary/30 bg-gradient-to-r from-primary/10 to-blue-500/10 px-4 py-2 shadow-lg backdrop-blur-sm"
+                  className="flex items-center space-x-2 rounded-full border border-primary/30 bg-gradient-to-r from-primary/10 to-primary/5 px-4 py-2 shadow-lg backdrop-blur-sm"
                   variants={pulseVariants}
                   animate="animate"
                   transition={{ delay: 0.5 }}
                   whileHover={{ scale: 1.05, y: -2 }}
                 >
+                  <motion.div
+                    className="h-2 w-2 rounded-full bg-primary"
+                    animate={{
+                      scale: [1, 1.2, 1],
+                      opacity: [0.7, 1, 0.7],
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Number.POSITIVE_INFINITY,
+                      ease: 'easeInOut',
+                    }}
+                  />
                   <FiMapPin className="h-4 w-4 text-primary" />
-                  <span className="text-sm font-medium text-primary drop-shadow-sm">
+                  <span className="text-sm font-medium text-primary">
                     {personalInfo.location}
                   </span>
                 </motion.div>
@@ -145,7 +157,7 @@ export function Hero() {
               {t('greeting')}
             </p>
             <motion.h1
-              className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-4xl font-bold leading-tight text-transparent drop-shadow-md sm:text-6xl md:pb-3 lg:text-7xl"
+              className="text-4xl font-bold leading-tight text-primary drop-shadow-md sm:text-6xl md:pb-3 lg:text-7xl"
               whileHover={{ scale: 1.05 }}
               transition={{ type: 'spring', stiffness: 300 }}
             >

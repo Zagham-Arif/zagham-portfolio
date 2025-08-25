@@ -12,7 +12,7 @@ export default function GlobalNotFound() {
             align-items: center;
             justify-content: center;
             padding: 12px 24px;
-            background-color: #4F46E5;
+            background-color: #2563EB;
             color: white;
             text-decoration: none;
             border-radius: 6px;
@@ -22,7 +22,7 @@ export default function GlobalNotFound() {
             border: none;
           }
           .homepage-link:hover {
-            background-color: #3730a3;
+            background-color: #1d4ed8;
           }
         `}</style>
       </head>
@@ -50,7 +50,7 @@ export default function GlobalNotFound() {
               style={{
                 fontSize: '4rem',
                 margin: '0 0 1rem 0',
-                background: 'linear-gradient(135deg, #4F46E5, #7C3AED)',
+                background: 'linear-gradient(135deg, #2563EB, #7C3AED)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
