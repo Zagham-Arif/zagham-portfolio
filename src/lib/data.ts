@@ -63,7 +63,7 @@ export const projects: Project[] = [
     title: 'CivaSource',
     description: 'projectsData.civasource.description',
     technologies: ['FastAPI', 'Python', 'Redis', 'AI/ML', 'Authentication'],
-    liveUrl: '#',
+    liveUrl: '',
     imageUrl: '',
     featured: true,
   },
