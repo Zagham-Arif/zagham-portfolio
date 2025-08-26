@@ -50,7 +50,9 @@
     "subtitle": "My professional journey",
     "present": "Present",
     "keyAchievements": "Key Achievements",
-    "technologiesUsed": "Technologies Used"
+    "technologiesUsed": "Technologies Used",
+    "expand": "Expand",
+    "collapse": "Collapse"
   },
   "skills": {
     "title": "Skills & Technologies",

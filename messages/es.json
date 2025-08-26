@@ -50,7 +50,9 @@
     "subtitle": "Mi trayectoria profesional",
     "present": "Presente",
     "keyAchievements": "Logros Clave",
-    "technologiesUsed": "Tecnologías Utilizadas"
+    "technologiesUsed": "Tecnologías Utilizadas",
+    "expand": "Expandir",
+    "collapse": "Colapsar"
   },
   "skills": {
     "title": "Habilidades y Tecnologías",
