@@ -4,7 +4,7 @@ import { Card } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { ExperienceDetails } from './ExperienceDetails';
 import { ExperienceHeader } from './ExperienceHeader';
-import { dotVariants, itemVariants } from './variants';
+import { dotVariants, itemVariants } from '../animations/experience';
 import { Experience } from '@/lib/types';
 
 export function ExperienceCard({

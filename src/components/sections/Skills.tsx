@@ -3,24 +3,11 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { Card, CardContent } from '@/components/ui/card';
-import { IconRenderer } from '@/components/ui/icon-renderer';
+import { SkillsMarquee } from '@/components/skills/SkillsMarquee';
 import { skills } from '@/lib/data';
 
 export function Skills() {
   const t = useTranslations('skills');
-
-  // Motion variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1 },
-    },
-  };
-  const itemVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-  };
 
   // Categories mapping
   const categories = {
@@ -72,33 +59,14 @@ export function Skills() {
           </p>
         </motion.div>
 
-        {/* Skills Grid */}
+        {/* Skills Marquee per Category */}
         <div className="space-y-12">
           {sortedCategories.map(([category, categorySkills]) => (
             <div key={category}>
               <h3 className="mb-6 text-center text-xl font-semibold">
                 {categories[category as keyof typeof categories]}
               </h3>
-              <motion.div
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6"
-              >
-                {categorySkills.map(skill => (
-                  <motion.div key={skill.name} variants={itemVariants}>
-                    <Card className="group cursor-pointer p-4 transition-shadow hover:shadow-lg">
-                      <CardContent className="p-0 text-center">
-                        <div className="mb-2 flex justify-center transition-transform group-hover:scale-110">
-                          <IconRenderer iconName={skill.icon} size={32} />
-                        </div>
-                        <p className="text-sm font-medium">{skill.name}</p>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                ))}
-              </motion.div>
+              <SkillsMarquee skills={categorySkills} />
             </div>
           ))}
         </div>
