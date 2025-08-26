@@ -127,7 +127,7 @@ export function Hero() {
                   </span>
                 </motion.div>
                 <motion.div
-                  className="flex items-center space-x-2 rounded-full border border-primary/30 bg-gradient-to-r from-primary/10 to-primary/5 px-4 py-2 shadow-lg backdrop-blur-sm"
+                  className="hidden items-center space-x-2 rounded-full border border-primary/30 bg-gradient-to-r from-primary/10 to-primary/5 px-4 py-2 shadow-lg backdrop-blur-sm sm:flex"
                   variants={pulseVariants}
                   animate="animate"
                   transition={{ delay: 0.5 }}

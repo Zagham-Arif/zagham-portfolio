@@ -5,12 +5,26 @@ import { motion, AnimatePresence } from 'framer-motion';
 import clsx from 'clsx';
 
 type HoveredType = 'button' | 'text' | 'default';
-
 export function Cursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [hovered, setHovered] = useState<HoveredType>('default');
+  const [isTouch, setIsTouch] = useState(false);
 
   useEffect(() => {
+    const checkTouch = () => {
+      setIsTouch(
+        'ontouchstart' in window ||
+          navigator.maxTouchPoints > 0 ||
+          window.matchMedia('(pointer: coarse)').matches
+      );
+    };
+    checkTouch();
+    window.addEventListener('resize', checkTouch);
+    return () => window.removeEventListener('resize', checkTouch);
+  }, []);
+
+  useEffect(() => {
+    if (isTouch) return;
     const move = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
@@ -47,7 +61,11 @@ export function Cursor() {
         txt.removeEventListener('mouseleave', handleTextLeave);
       });
     };
-  }, []);
+  }, [isTouch]);
+
+  if (isTouch) {
+    return null;
+  }
 
   return (
     <AnimatePresence>
