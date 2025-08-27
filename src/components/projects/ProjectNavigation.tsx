@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 export function ProjectNavigation({
   totalSlides,
@@ -12,6 +13,7 @@ export function ProjectNavigation({
   currentSlide: number;
   setCurrentSlide: React.Dispatch<React.SetStateAction<number>>;
 }) {
+  const t = useTranslations();
   const prevSlide = () =>
     setCurrentSlide((prev: number) => (prev - 1 + totalSlides) % totalSlides);
   const nextSlide = () =>
@@ -25,7 +27,7 @@ export function ProjectNavigation({
         transition={{ duration: 0.6, delay: 0.2 }}
         className="text-xl font-semibold"
       >
-        Featured
+        {t('projects.title')}
       </motion.h3>
       <motion.div
         className="flex space-x-2"

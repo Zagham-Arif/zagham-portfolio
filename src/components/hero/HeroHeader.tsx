@@ -10,7 +10,7 @@ export function HeroHeader() {
   return (
     <motion.div variants={pulseVariants} className="relative">
       <motion.div
-        className="absolute -top-8 left-1/2 -translate-x-1/2 transform"
+        className="absolute -top-8 flex w-full -translate-x-1/2 transform justify-center sm:mt-2"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1, duration: 0.8, type: 'spring' }}
@@ -41,7 +41,7 @@ export function HeroHeader() {
             </span>
           </motion.div>
           <motion.div
-            className="hidden items-center space-x-2 rounded-full border border-primary/30 bg-gradient-to-r from-primary/10 to-primary/5 px-4 py-2 shadow-lg backdrop-blur-sm sm:flex"
+            className="flex items-center space-x-2 rounded-full border border-primary/30 bg-gradient-to-r from-primary/10 to-primary/5 px-4 py-2 shadow-lg backdrop-blur-sm"
             variants={pulseVariants}
             animate="animate"
             transition={{ delay: 0.5 }}
