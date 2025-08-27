@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, type Variants } from 'framer-motion';
-import { FiArrowUp, FiArrowDown } from 'react-icons/fi';
+import { FiArrowDown, FiArrowUp } from 'react-icons/fi';
 
 interface ScrollButtonProps {
   direction: 'up' | 'down';

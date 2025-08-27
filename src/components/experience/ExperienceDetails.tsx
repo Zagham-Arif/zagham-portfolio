@@ -1,10 +1,10 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
-import { CardContent } from '@/components/ui/card';
-import { FiTrendingUp, FiMapPin } from 'react-icons/fi';
-import { Experience } from '@/lib/types';
+import { Experience } from 'lib/types';
+import { FiMapPin, FiTrendingUp } from 'react-icons/fi';
+import { CardContent } from 'ui/card';
 
 export function ExperienceDetails({
   isOpen,

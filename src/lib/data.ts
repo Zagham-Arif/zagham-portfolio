@@ -1,4 +1,4 @@
-import { Links } from '@/constants/links';
+import { Links } from 'constants/links';
 import type {
   Education,
   Experience,

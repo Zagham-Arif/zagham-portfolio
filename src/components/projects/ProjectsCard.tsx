@@ -1,11 +1,11 @@
 'use client';
 
-import { Card, CardContent } from '@/components/ui/card';
-import { Project } from '@/lib/types';
 import { motion } from 'framer-motion';
+import { Project } from 'lib/types';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
+import { Card, CardContent } from 'ui/card';
 
 type ProjectCardProps = {
   project: Project;

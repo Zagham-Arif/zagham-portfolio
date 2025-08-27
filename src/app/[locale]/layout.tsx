@@ -1,6 +1,6 @@
-import { Cursor } from '@/components/CustomCursor';
-import { personalInfo } from '@/lib/data';
-import '@/lib/dev-suppressions';
+import { Cursor } from 'components/CustomCursor';
+import { personalInfo } from 'lib/data';
+import 'lib/dev-suppressions';
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${personalInfo.name} - Software Engineer`,
     description: `Portfolio of ${personalInfo.name}, an experienced Software Engineer specializing in full-stack development and cloud engineering.`,
-    creator: '@zagham',
+    creator: '@zaghamarif',
     images: ['/og-image.png'],
   },
 };

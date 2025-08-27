@@ -1,4 +1,4 @@
-import { itemVariants } from '@/components/animations/hero';
+import { itemVariants } from 'animations/hero';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 

@@ -1,16 +1,13 @@
 'use client';
 
-import {
-  containerVariants,
-  itemVariants,
-} from '@/components/animations/projects';
-import { ProjectsSlider } from '@/components/projects/ProjectsSlider';
-import { Button } from '@/components/ui/button';
-import { Links } from '@/constants/links';
-import { projects } from '@/lib/data';
+import { containerVariants, itemVariants } from 'animations/projects';
+import { ProjectsSlider } from 'components/projects/ProjectsSlider';
+import { Links } from 'constants/links';
 import { motion } from 'framer-motion';
+import { projects } from 'lib/data';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
+import { Button } from 'ui/button';
 
 export function Projects() {
   const t = useTranslations('projects');

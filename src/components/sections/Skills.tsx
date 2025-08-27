@@ -1,10 +1,10 @@
 'use client';
 
+import { SkillsMarquee } from 'components/skills/SkillsMarquee';
 import { motion } from 'framer-motion';
+import { skills } from 'lib/data';
 import { useTranslations } from 'next-intl';
-import { Card, CardContent } from '@/components/ui/card';
-import { SkillsMarquee } from '@/components/skills/SkillsMarquee';
-import { skills } from '@/lib/data';
+import { Card, CardContent } from 'ui/card';
 
 export function Skills() {
   const t = useTranslations('skills');

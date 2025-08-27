@@ -1,7 +1,7 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { IconRenderer } from '@/components/ui/icon-renderer';
 import { motion } from 'framer-motion';
-import React, { useRef } from 'react';
+import { useRef } from 'react';
+import { Card, CardContent } from 'ui/card';
+import { IconRenderer } from 'ui/icon-renderer';
 
 interface Skill {
   name: string;

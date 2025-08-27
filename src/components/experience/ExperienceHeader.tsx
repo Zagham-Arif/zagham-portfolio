@@ -1,10 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { CardHeader } from '@/components/ui/card';
+import { Experience } from 'lib/types';
+import { formatDate, getCompanyInitials } from 'lib/utils';
 import { FiBriefcase, FiCalendar, FiChevronDown } from 'react-icons/fi';
-import { getCompanyInitials, formatDate } from '@/lib/utils';
-import { Experience } from '@/lib/types';
+import { CardHeader } from 'ui/card';
 
 export function ExperienceHeader({
   experience,

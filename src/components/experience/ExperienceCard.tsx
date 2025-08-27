@@ -1,9 +1,9 @@
 'use client';
 
-import { dotVariants, itemVariants } from '@/components/animations/experience';
-import { Card } from '@/components/ui/card';
-import { Experience } from '@/lib/types';
+import { dotVariants, itemVariants } from 'animations/experience';
 import { motion } from 'framer-motion';
+import { Experience } from 'lib/types';
+import { Card } from 'ui/card';
 import { ExperienceDetails } from './ExperienceDetails';
 import { ExperienceHeader } from './ExperienceHeader';
 

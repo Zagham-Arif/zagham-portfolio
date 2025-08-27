@@ -1,24 +1,24 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
+import { useForm as useFormspree, ValidationError } from '@formspree/react';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { motion } from 'framer-motion';
+import { personalInfo, socialLinks } from 'lib/data';
+import { useTranslations } from 'next-intl';
+import { useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+import { FiLoader, FiMail, FiMapPin, FiPhone, FiSend } from 'react-icons/fi';
+import { Button } from 'ui/button';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
-import { IconRenderer } from '@/components/ui/icon-renderer';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { personalInfo, socialLinks } from '@/lib/data';
-import { useForm as useFormspree, ValidationError } from '@formspree/react';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { motion } from 'framer-motion';
-import { useTranslations } from 'next-intl';
-import { useEffect } from 'react';
-import { useForm } from 'react-hook-form';
-import { FiLoader, FiMail, FiMapPin, FiPhone, FiSend } from 'react-icons/fi';
+} from 'ui/card';
+import { IconRenderer } from 'ui/icon-renderer';
+import { Input } from 'ui/input';
+import { Textarea } from 'ui/textarea';
 import { z } from 'zod';
 
 type ContactFormData = {

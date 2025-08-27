@@ -1,11 +1,11 @@
 'use client';
 
-import { IconRenderer } from '@/components/ui/icon-renderer';
-import { Links } from '@/constants/links';
-import { freelanceLinks, personalInfo, socialLinks } from '@/lib/data';
+import { Links } from 'constants/links';
 import { motion } from 'framer-motion';
+import { freelanceLinks, personalInfo, socialLinks } from 'lib/data';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { IconRenderer } from 'ui/icon-renderer';
 
 export function Footer() {
   const tNav = useTranslations('nav');

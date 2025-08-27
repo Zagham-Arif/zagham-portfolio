@@ -1,17 +1,16 @@
-// page.tsx
 'use client';
 
-import { Navigation } from '@/components/Navigation';
-import { ScrollButton } from '@/components/ScrollButton';
-import { Contact } from '@/components/sections/Contact';
-import { Experience } from '@/components/sections/Experience';
-import { Footer } from '@/components/sections/Footer';
-import { Hero } from '@/components/sections/Hero';
-import { Projects } from '@/components/sections/Projects';
-import { Skills } from '@/components/sections/Skills';
-import { useScrollTo } from '@/hooks/useScrollTo';
-import { useScrollVisibility } from '@/hooks/useScrollVisibility';
+import { Navigation } from 'components/Navigation';
+import { ScrollButton } from 'components/ScrollButton';
+import { useScrollTo } from 'hooks/useScrollTo';
+import { useScrollVisibility } from 'hooks/useScrollVisibility';
 import { useTranslations } from 'next-intl';
+import { Contact } from 'sections/Contact';
+import { Experience } from 'sections/Experience';
+import { Footer } from 'sections/Footer';
+import { Hero } from 'sections/Hero';
+import { Projects } from 'sections/Projects';
+import { Skills } from 'sections/Skills';
 
 export default function Home({}: { params: { locale: string } }) {
   const t = useTranslations('main');

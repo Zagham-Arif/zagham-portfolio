@@ -1,9 +1,9 @@
-import { Button } from '@/components/ui/button';
-import { personalInfo } from '@/lib/data';
+import { itemVariants } from 'animations/hero';
+import { Button } from 'ui/button';
 import { motion } from 'framer-motion';
+import { personalInfo } from 'lib/data';
 import { useTranslations } from 'next-intl';
 import { FiDownload, FiMail } from 'react-icons/fi';
-import { itemVariants } from '@/components/animations/hero';
 
 export function HeroActions() {
   const t = useTranslations('hero');

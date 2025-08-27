@@ -1,15 +1,15 @@
 'use client';
 
-import { floatingVariants } from '@/components/animations/hero';
-import { HeroActions } from '@/components/hero/HeroActions';
-import { HeroBio } from '@/components/hero/HeroBio';
-import { HeroHeader } from '@/components/hero/HeroHeader';
-import { HeroSubtitle } from '@/components/hero/HeroSubtitle';
-import { HeroTitle } from '@/components/hero/HeroTitle';
-import { ScrollButton } from '@/components/ScrollButton';
-import { useHeroInView } from '@/hooks/useHeroInView';
-import { useScrollTo } from '@/hooks/useScrollTo';
+import { floatingVariants } from 'animations/hero';
+import { HeroActions } from 'components/hero/HeroActions';
+import { HeroBio } from 'components/hero/HeroBio';
+import { HeroHeader } from 'components/hero/HeroHeader';
+import { HeroSubtitle } from 'components/hero/HeroSubtitle';
+import { HeroTitle } from 'components/hero/HeroTitle';
+import { ScrollButton } from 'components/ScrollButton';
 import { motion } from 'framer-motion';
+import { useHeroInView } from 'hooks/useHeroInView';
+import { useScrollTo } from 'hooks/useScrollTo';
 import { useTranslations } from 'next-intl';
 
 export function Hero() {

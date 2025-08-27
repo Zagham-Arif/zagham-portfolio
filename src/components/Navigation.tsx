@@ -1,20 +1,20 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { personalInfo } from '@/lib/data';
 import { motion } from 'framer-motion';
+import { personalInfo } from 'lib/data';
 import { useTranslations } from 'next-intl';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { FiChevronDown, FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
+import { Button } from 'ui/button';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from 'ui/dropdown-menu';
 
 const navItems = [
   { key: 'home', href: '#hero' },

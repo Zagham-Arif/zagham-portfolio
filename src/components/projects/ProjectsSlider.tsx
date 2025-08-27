@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 import { ProjectNavigation } from './ProjectNavigation';
 import { ProjectCard } from './ProjectsCard';
 
-import { containerVariants } from '@/components/animations/projects';
-import { useIsMobile } from '@/hooks/useIsMobile';
-import { Project } from '@/lib/types';
+import { containerVariants } from 'animations/projects';
+import { useIsMobile } from 'hooks/useIsMobile';
+import { Project } from 'lib/types';
 import { ProjectPaginationDots } from './ProjectPaginationDots';
 
 interface ProjectsSliderProps {

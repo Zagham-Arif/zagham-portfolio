@@ -1,6 +1,6 @@
-import { pulseVariants } from '@/components/animations/hero';
-import { personalInfo } from '@/lib/data';
+import { pulseVariants } from 'animations/hero';
 import { motion } from 'framer-motion';
+import { personalInfo } from 'lib/data';
 import { useTranslations } from 'next-intl';
 import { FiCheck, FiMapPin } from 'react-icons/fi';
 
