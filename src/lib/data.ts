@@ -255,8 +255,8 @@ export const experiences: Experience[] = [
     title: 'experiencesData.memberhood.title',
     company: 'experiencesData.memberhood.company',
     duration: {
-      start: '2021-07',
-      end: '2022-07',
+      start: '2022-03',
+      end: '2023-03',
     },
     responsibilitiesKey: 'experiencesData.memberhood.responsibilities',
     technologies: [
@@ -273,8 +273,8 @@ export const experiences: Experience[] = [
     title: 'experiencesData.gulzarsoft.title',
     company: 'experiencesData.gulzarsoft.company',
     duration: {
-      start: '2020-04',
-      end: '2021-07',
+      start: '2021-02',
+      end: '2022-02',
     },
     responsibilitiesKey: 'experiencesData.gulzarsoft.responsibilities',
     technologies: ['Node.js', 'React.js', 'MySQL', 'MongoDB', 'REST APIs'],
