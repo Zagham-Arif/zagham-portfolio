@@ -51,13 +51,13 @@ export function Navigation() {
       animate={{ y: 0 }}
       className="fixed left-0 right-0 top-0 z-50 border-b bg-background/80 backdrop-blur-md"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-2 sm:px-3 md:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo / Name */}
           <motion.div whileHover={{ scale: 1.05 }}>
             <Link
               href="/"
-              className="relative text-xl font-bold transition-colors hover:text-primary"
+              className="relative px-3 text-xl font-bold transition-colors hover:text-primary"
             >
               {personalInfo.name}
               <motion.span
@@ -152,7 +152,7 @@ export function Navigation() {
           exit={{ opacity: 0, height: 0 }}
           className="border-t bg-background md:hidden"
         >
-          <div className="space-y-4 px-4 py-4">
+          <div className="space-y-4 px-6 py-4">
             {navItems.map(item => {
               return (
                 <Link

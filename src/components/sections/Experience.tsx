@@ -29,9 +29,9 @@ export function Experience() {
   return (
     <section
       id="experience"
-      className="bg-gradient-to-br from-muted/30 via-background to-muted/50 px-4 py-20 sm:px-6 lg:px-8"
+      className="bg-gradient-to-br from-muted/30 via-background to-muted/50 px-2 py-8 sm:px-6 sm:py-20 lg:px-8"
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto px-1 sm:px-3 md:px-6 lg:px-8">
         {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -50,7 +50,7 @@ export function Experience() {
             {t('experience.title')}
           </motion.h2>
           <motion.p
-            className="mx-auto max-w-2xl text-lg text-muted-foreground"
+            className="mx-auto max-w-full text-lg text-muted-foreground sm:max-w-2xl"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

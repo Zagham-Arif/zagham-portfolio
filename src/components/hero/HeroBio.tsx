@@ -9,9 +9,9 @@ export function HeroBio() {
     <motion.div variants={itemVariants}>
       <motion.p
         className="mx-auto max-w-3xl text-base leading-relaxed text-muted-foreground"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 2 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: [0.42, 0, 0.58, 1] }}
       >
         {t('bio')}
       </motion.p>

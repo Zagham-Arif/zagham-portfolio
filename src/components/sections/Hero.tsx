@@ -20,7 +20,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-  className="relative flex min-h-screen items-center justify-center overflow-hidden px-2 pt-16 sm:px-6 lg:px-8"
+      className="relative flex min-h-screen items-center justify-center overflow-hidden px-2 pt-16 sm:px-6 lg:px-8"
     >
       <div className="absolute inset-0 -z-10">
         <motion.div
@@ -41,7 +41,7 @@ export function Hero() {
           transition={{ delay: 2 }}
         />
       </div>
-  <div className="container mx-auto px-2 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-1 sm:px-3 md:px-6 lg:px-8">
         <div className="space-y-8 text-center">
           <HeroHeader />
           <HeroTitle />

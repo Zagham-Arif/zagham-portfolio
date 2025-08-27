@@ -44,7 +44,7 @@ export function Skills() {
 
   return (
     <section id="skills" className="px-4 py-20 sm:px-6 lg:px-8">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-1 sm:px-3 md:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -54,7 +54,7 @@ export function Skills() {
           className="mb-16 text-center"
         >
           <h2 className="mb-4 text-3xl font-bold sm:text-4xl">{t('title')}</h2>
-          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+          <p className="mx-auto max-w-full text-lg text-muted-foreground sm:max-w-2xl">
             {t('subtitle')}
           </p>
         </motion.div>

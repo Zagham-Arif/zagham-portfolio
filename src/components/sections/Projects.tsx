@@ -23,7 +23,7 @@ export function Projects() {
 
   return (
     <section id="projects" className="bg-muted/30 px-4 py-20 sm:px-6 lg:px-8">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-1 sm:px-3 md:px-6 lg:px-8">
         <motion.div
           className="mb-16 text-center"
           initial="hidden"
@@ -38,7 +38,7 @@ export function Projects() {
             {t('title')}
           </motion.h2>
           <motion.p
-            className="mx-auto max-w-2xl text-lg text-muted-foreground"
+            className="mx-auto max-w-full text-lg text-muted-foreground sm:max-w-2xl"
             variants={itemVariants}
           >
             {t('subtitle')}
