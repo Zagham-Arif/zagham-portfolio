@@ -10,8 +10,10 @@ import { ScrollButton } from '@/components/ScrollButton';
 import { useHeroInView } from '@/hooks/useHeroInView';
 import { useScrollTo } from '@/hooks/useScrollTo';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 export function Hero() {
+  const t = useTranslations('hero');
   const { scrollToNextSection } = useScrollTo();
   const isHeroInView = useHeroInView();
 
@@ -51,7 +53,7 @@ export function Hero() {
               <ScrollButton
                 direction="down"
                 onClick={scrollToNextSection}
-                text={'' /* t('scrollDown') handled in ScrollButton */}
+                text={t('scrollDown')}
                 position="left"
                 withBackground
                 pulse
