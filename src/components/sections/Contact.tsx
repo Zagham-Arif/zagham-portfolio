@@ -8,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { IconRenderer } from '@/components/ui/icon-renderer';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { personalInfo, socialLinks } from '@/lib/data';
@@ -19,7 +20,6 @@ import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { FiLoader, FiMail, FiMapPin, FiPhone, FiSend } from 'react-icons/fi';
 import { z } from 'zod';
-import { IconRenderer } from '../ui/icon-renderer';
 
 type ContactFormData = {
   name: string;

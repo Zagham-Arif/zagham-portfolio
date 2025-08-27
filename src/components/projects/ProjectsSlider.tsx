@@ -1,12 +1,12 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ProjectCard } from '../projects/ProjectsCard';
 import { ProjectNavigation } from './ProjectNavigation';
+import { ProjectCard } from './ProjectsCard';
 
+import { containerVariants } from '@/components/animations/projects';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { Project } from '@/lib/types';
-import { containerVariants } from '../animations/projects';
 import { ProjectPaginationDots } from './ProjectPaginationDots';
 
 interface ProjectsSliderProps {

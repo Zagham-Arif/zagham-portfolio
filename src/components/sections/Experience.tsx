@@ -1,12 +1,12 @@
 'use client';
 
+import { containerVariants } from '@/components/animations/experience';
+import { ExperienceCard } from '@/components/experience/ExperienceCard';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { experiences } from '@/lib/data';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { useMemo, useState } from 'react';
-import { containerVariants } from '../animations/experience';
-import { ExperienceCard } from '../experience/ExperienceCard';
 
 export function Experience() {
   const t = useTranslations();

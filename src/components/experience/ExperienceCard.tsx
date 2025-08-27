@@ -1,11 +1,11 @@
 'use client';
 
+import { dotVariants, itemVariants } from '@/components/animations/experience';
 import { Card } from '@/components/ui/card';
+import { Experience } from '@/lib/types';
 import { motion } from 'framer-motion';
 import { ExperienceDetails } from './ExperienceDetails';
 import { ExperienceHeader } from './ExperienceHeader';
-import { dotVariants, itemVariants } from '../animations/experience';
-import { Experience } from '@/lib/types';
 
 export function ExperienceCard({
   index,
