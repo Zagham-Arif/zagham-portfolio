@@ -17,14 +17,14 @@
   },
   "hero": {
     "greeting": "Hola, soy",
-    "title": "Ingeniero de Software",
-    "subtitle": "Desarrollo increíbles experiencias web con tecnologías modernas.",
+    "title": "Ingeniero Full Stack",
+    "subtitle": "Transformo ideas complejas en aplicaciones web simples y usables.",
     "description": "Apasionado por construir aplicaciones escalables y dar vida a las ideas a través del código.",
     "downloadCV": "Descargar CV",
     "contactMe": "Contáctame",
     "available": "Disponible",
     "scrollDown": "Desplazarse hacia abajo",
-    "bio": "Desarrollador Full Stack Senior con más de 4 años de experiencia especializado en Javascript, Python, ReactJS y Next.js. Experto en despliegues en AWS, arquitectura de microservicios y liderazgo de equipos. Historial comprobado en la optimización de aplicaciones web, implementación de soluciones en la nube con Terraform y dirección de equipos de desarrollo. Reconocimiento como Empleado del Mes por contribuciones destacadas.",
+    "bio": "Soy un Desarrollador Full Stack Senior con más de 4 años de experiencia creando productos que a la gente le encanta usar. Desde interfaces elegantes en React y Next.js hasta backends escalables en Node.js y Python, disfruto resolviendo problemas de principio a fin. He trabajado en todo, desde sistemas de pago con PayPal y Stripe hasta canalizaciones de datos de alto volumen en AWS. Ya sea desplegando con Terraform, escalando con Redis o mentorando compañeros de equipo, me apasiona crear software rápido, confiable y con impacto.",
     "cv": {
       "europass": "CV Europass",
       "traditional": "CV Tradicional"
@@ -101,13 +101,12 @@
   },
   "footer": {
     "rights": "Todos los derechos reservados.",
-    "madeWith": "Hecho con ❤️ usando Next.js",
-    "builtWith": "Construido con Next.js y TypeScript",
     "quickLinks": "Enlaces Rápidos",
     "getInTouch": "Ponte en Contacto",
     "hireOnFiverr": "Contrátame en Fiverr",
     "hireOnUpwork": "Contrátame en Upwork",
-    "brandDescription": "Desarrollador Full Stack Senior con más de 4 años de experiencia en Python, ReactJS y el stack MERN. Apasionado por crear soluciones web innovadoras y liderar equipos de desarrollo para entregar resultados excepcionales."
+    "brandTagline": "Del concepto a la nube: yo lo implemento",
+    "brandDescription": "Desarrollador Full Stack Senior con más de 4 años de experiencia especializado en JavaScript, TypeScript, Python y el stack MERN. Experto en la construcción de aplicaciones web escalables, en el diseño de backends nativos en la nube y en la integración de sistemas de pago. Apasionado por entregar soluciones de alto impacto y por guiar equipos hacia la excelencia técnica."
   },
   "personalInfo": {
     "bio": "Desarrollador Full Stack Senior con más de 4 años de experiencia especializado en Javascript, Python, ReactJS y Next.js. Experto en despliegues en AWS, arquitectura de microservicios y liderazgo de equipos. Historial comprobado en optimización de aplicaciones web, implementación de soluciones en la nube con Terraform y dirección de equipos de desarrollo. Reconocimiento como Empleado del Mes por contribuciones destacadas.",

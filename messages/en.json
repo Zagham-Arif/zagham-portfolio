@@ -17,14 +17,14 @@
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "title": "Software Engineer",
-    "subtitle": "I develop amazing web experiences with modern technologies",
+    "title": "Full Stack Engineer",
+    "subtitle": "I turn complex ideas into simple, usable web apps.",
     "description": "Passionate about building scalable applications and bringing ideas to life through code.",
     "downloadCV": "Download CV",
     "contactMe": "Contact Me",
     "available": "Available",
     "scrollDown": "Scroll Down",
-    "bio": "Senior Full Stack Developer with 4+ years of experience specializing in Javascript, Python, ReactJS, and Next.js. Expert in AWS deployments, microservices architecture, and team leadership. Proven track record of optimizing web applications, implementing cloud solutions with Terraform, and leading development teams. Employee of the Month recognition for outstanding contributions.",
+    "bio": "I’m a Senior Full Stack Developer with 4+ years of experience building products that people love to use. From sleek frontends in React and Next.js to scalable backends in Node.js and Python, I enjoy solving problems end-to-end. I’ve worked on everything from payment systems with PayPal and Stripe to high-volume data pipelines on AWS. Whether it’s deploying with Terraform, scaling with Redis, or mentoring teammates, I’m passionate about creating software that’s fast, reliable, and impactful.",
     "cv": {
       "europass": "Europass CV",
       "traditional": "Traditional CV"
@@ -101,13 +101,12 @@
   },
   "footer": {
     "rights": "All rights reserved.",
-    "madeWith": "Made with ❤️ using Next.js",
-    "builtWith": "Built with Next.js & TypeScript",
     "quickLinks": "Quick Links",
     "getInTouch": "Get In Touch",
     "hireOnFiverr": "Hire me on Fiverr",
     "hireOnUpwork": "Hire me on Upwork",
-    "brandDescription": "Senior Full Stack Developer with 4+ years of experience in Python, ReactJS, and the MERN stack. Passionate about creating innovative web solutions and leading development teams to deliver exceptional results."
+    "brandTagline": "From concept to cloud - I ship it",
+    "brandDescription": "Senior Full Stack Developer with 4+ years of experience specializing in JavaScript, TypeScript, Python, and the MERN stack. Skilled in building scalable web applications, architecting cloud-native backends, and integrating payment systems. Passionate about delivering high-impact solutions and mentoring teams to achieve technical excellence."
   },
   "projectsData": {
     "givingfridays": {

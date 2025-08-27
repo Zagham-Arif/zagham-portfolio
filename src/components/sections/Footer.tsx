@@ -40,7 +40,7 @@ export function Footer() {
 
   return (
     <footer className="border-t bg-muted/50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-2 sm:px-6 lg:px-8">
         <div className="py-12">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {/* Brand Section */}
@@ -51,8 +51,11 @@ export function Footer() {
               transition={{ duration: 0.6 }}
               className="lg:col-span-2"
             >
-              <h3 className="mb-4 text-2xl font-bold">{personalInfo.name}</h3>
-              <p className="mb-6 max-w-md text-muted-foreground">
+              <h3 className="mb-2 text-2xl font-bold">{personalInfo.name}</h3>
+              <p className="mb-3 text-sm italic text-primary">
+                {tFooter('brandTagline')}
+              </p>
+              <p className="mb-4 max-w-md text-justify text-muted-foreground">
                 {tFooter('brandDescription')}
                 <br />
                 <sub>© {new Date().getFullYear()}</sub>
