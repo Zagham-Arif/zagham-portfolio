@@ -10,7 +10,7 @@ export function HeroHeader() {
   return (
     <motion.div variants={pulseVariants} className="relative">
       <motion.div
-        className="absolute -top-8 flex w-full -translate-x-1/2 transform justify-center sm:mt-2"
+        className="absolute -top-8 mt-1 flex w-full -translate-x-1/2 transform justify-center sm:mt-2"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 1, duration: 0.8, type: 'spring' }}
