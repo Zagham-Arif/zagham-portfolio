@@ -116,7 +116,7 @@
     }
   },
   "projectsData": {
-    "givingfridays": {
+    "donationPlatform": {
       "description": "Migración de Strapi a Supabase, reconstrucción de APIs con Next.js + Deno. Lideré un equipo de 3-4 desarrolladores durante el proceso."
     },
     "civasource": {
@@ -180,7 +180,7 @@
         "Implementación de funciones AWS Lambda y arquitectura de microservicios frontends para soluciones escalables",
         "Administración de despliegues en AWS usando Terraform como infraestructura como código",
         "Reconocimiento como Empleado del Mes por contribuciones destacadas y liderazgo de equipo",
-        "Liderazgo de equipos de desarrollo en proyectos de alto impacto incluyendo CivaSource, GivingFridays y AlteraApp",
+        "Liderazgo de equipos de desarrollo en proyectos de alto impacto incluyendo CivaSource, Donation Platform y AlteraApp",
         "Desarrollo de APIs FAST para gestión de productos, autenticación y soluciones impulsadas por IA",
         "Gestión de colas Redis para procesamiento concurrente y manejo de datos en tiempo real",
         "Dirección de equipos para implementar listas de verificación de seguridad y gestión de tareas DevOps para Forwood Safety",

@@ -109,7 +109,7 @@
     "brandDescription": "Senior Full Stack Developer with 4+ years of experience specializing in JavaScript, TypeScript, Python, and the MERN stack. Skilled in building scalable web applications, architecting cloud-native backends, and integrating payment systems. Passionate about delivering high-impact solutions and mentoring teams to achieve technical excellence."
   },
   "projectsData": {
-    "givingfridays": {
+    "donationPlatform": {
       "description": "Migrated from Strapi to Supabase, rebuilt APIs with Next.js + Deno. Led a team of 3-4 developers in the migration process."
     },
     "civasource": {
@@ -173,7 +173,7 @@
         "Implemented AWS Lambda functions and architected microservices frontends for scalable solutions",
         "Administered AWS deployments using Terraform for infrastructure as code",
         "Earned recognition as Employee of the Month for outstanding contributions and team leadership",
-        "Led development teams on multiple high-impact projects including CivaSource, GivingFridays, and AlteraApp",
+        "Led development teams on multiple high-impact projects including CivaSource, Donation Platform, and AlteraApp",
         "Developed FAST APIs for product management, authentication, and AI-driven solutions",
         "Managed Redis Queues for concurrent processing and real-time data handling",
         "Directed teams to implement safety checklists and managed DevOps tasks for Forwood Safety",

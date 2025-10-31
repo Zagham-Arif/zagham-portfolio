@@ -44,9 +44,9 @@ export const freelanceLinks: SocialLink[] = [
 // -----------------------------
 export const projects: Project[] = [
   {
-    id: 'givingfridays',
-    title: 'GivingFridays',
-    description: 'projectsData.givingfridays.description',
+    id: 'donation-platform',
+    title: 'Donation Platform',
+    description: 'projectsData.donationPlatform.description',
     technologies: [
       'Next.js',
       'Supabase',
@@ -54,7 +54,7 @@ export const projects: Project[] = [
       'TypeScript',
       'Team Leadership',
     ],
-    liveUrl: 'https://app.givingfridays.com',
+    liveUrl: '',
     imageUrl: '',
     featured: true,
   },
