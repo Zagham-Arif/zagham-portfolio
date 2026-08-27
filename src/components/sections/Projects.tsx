@@ -1,18 +1,18 @@
 'use client';
 
 import { containerVariants, itemVariants } from 'animations/projects';
-import { ProjectsSlider } from 'components/projects/ProjectsSlider';
+import { ProjectCard } from 'components/projects/ProjectsCard';
 import { Links } from 'constants/links';
 import { motion } from 'framer-motion';
 import { projects } from 'lib/data';
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
 import { Button } from 'ui/button';
 
 export function Projects() {
   const t = useTranslations('projects');
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const featuredProjects = projects.filter(project => project.featured);
+  const orderedProjects = [...projects].sort(
+    (a, b) => Number(b.featured) - Number(a.featured)
+  );
 
   const handleViewAllProjects = () => {
     window.open(Links.github, '_blank');
@@ -41,13 +41,31 @@ export function Projects() {
             {t('subtitle')}
           </motion.p>
         </motion.div>
-        <div className="relative">
-          <ProjectsSlider
-            featuredProjects={featuredProjects}
-            currentSlide={currentSlide}
-            setCurrentSlide={setCurrentSlide}
-          />
-        </div>
+        <motion.div
+          className="grid auto-rows-[14rem] grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-flow-dense lg:grid-cols-4"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {orderedProjects.map((project, index) => (
+            <motion.div
+              key={project.id}
+              variants={itemVariants}
+              className={
+                project.featured
+                  ? 'sm:col-span-2 lg:col-span-2 lg:row-span-2'
+                  : ''
+              }
+            >
+              <ProjectCard
+                project={project}
+                globalIndex={index}
+                size={project.featured ? 'featured' : 'compact'}
+              />
+            </motion.div>
+          ))}
+        </motion.div>
         <div className="mt-12 text-center">
           <Button
             variant="outline"

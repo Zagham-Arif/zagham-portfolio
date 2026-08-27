@@ -1,10 +1,11 @@
 'use client';
 
-import { SkillsMarquee } from 'components/skills/SkillsMarquee';
+import { containerVariants, itemVariants } from 'animations/projects';
 import { motion } from 'framer-motion';
 import { skills } from 'lib/data';
 import { useTranslations } from 'next-intl';
 import { Card, CardContent } from 'ui/card';
+import { IconRenderer } from 'ui/icon-renderer';
 
 export function Skills() {
   const t = useTranslations('skills');
@@ -59,17 +60,43 @@ export function Skills() {
           </p>
         </motion.div>
 
-        {/* Skills Marquee per Category */}
-        <div className="space-y-12">
+        {/* Skills Bento Grid */}
+        <motion.div
+          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {sortedCategories.map(([category, categorySkills]) => (
-            <div key={category}>
-              <h3 className="mb-6 text-center text-xl font-semibold">
-                {categories[category as keyof typeof categories]}
-              </h3>
-              <SkillsMarquee skills={categorySkills} />
-            </div>
+            <motion.div
+              key={category}
+              variants={itemVariants}
+              className={
+                categorySkills.length > 12 ? 'sm:col-span-2' : undefined
+              }
+            >
+              <Card className="h-full p-6">
+                <CardContent className="p-0">
+                  <h3 className="mb-4 text-center text-lg font-semibold">
+                    {categories[category as keyof typeof categories]}
+                  </h3>
+                  <div className="flex flex-wrap justify-center gap-2">
+                    {categorySkills.map(skill => (
+                      <span
+                        key={skill.name}
+                        className="flex cursor-default items-center gap-1.5 rounded-full border border-primary/20 bg-primary/10 px-3 py-1.5 text-xs font-medium text-primary transition-all hover:border-primary/40 hover:bg-primary/20"
+                      >
+                        <IconRenderer iconName={skill.icon} size={14} />
+                        {skill.name}
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Additional Stats */}
         <motion.div
