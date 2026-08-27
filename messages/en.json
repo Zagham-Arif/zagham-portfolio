@@ -1,4 +1,9 @@
 {
+  "seo": {
+    "title": "Zagham Arif - Senior Full Stack Developer",
+    "description": "Portfolio of Zagham Arif, a Senior Full Stack Developer specializing in React, Next.js, Node.js, and cloud-native architecture. Explore projects, experience, and technical skills.",
+    "keywords": "Senior Full Stack Developer, Software Engineer, React, Next.js, TypeScript, Node.js, Python, AWS, Cloud Engineering, Portfolio"
+  },
   "main": {
     "scrollUp": "Scroll to Top"
   },
@@ -110,43 +115,34 @@
   },
   "projectsData": {
     "donationPlatform": {
-      "description": "Migrated from Strapi to Supabase, rebuilt APIs with Next.js + Deno. Led a team of 3-4 developers in the migration process."
+      "description": "Led a 3-4 person team migrating a donation platform's backend from Strapi to Supabase, rebuilding its API layer with Next.js and Deno for better performance and maintainability."
     },
     "civasource": {
-      "description": "Scraped product data with integrated Redis Queues and AI product matching system. Built using FastAPI with authentication."
+      "description": "Built an AI-powered product-matching system in Python and FastAPI, using Redis queues to process scraped product data at scale, with authentication throughout."
     },
     "playertotals": {
-      "description": "Real-time player statistics system built with Node.js (TypeScript), Redis Queues, and MongoDB for high-performance data processing."
+      "description": "A real-time player statistics platform built with Node.js and TypeScript, using Redis queues and MongoDB to process high-volume sports data with low latency."
     },
     "forwood-safety": {
-      "description": "Developed a safety checklist management system with microservices architecture using Node.js and TypeScript. Managed DevOps tasks and AWS deployments."
+      "description": "A safety-checklist management system built on a Node.js/TypeScript microservices architecture, including its AWS deployment pipeline and DevOps workflow."
     },
     "alteraapp": {
-      "description": "Built JavaScript libraries and WebSocket connections for Minecraft bot behavior and communication. Devised UI and command libraries for bot control."
+      "description": "Built the WebSocket communication layer and command/UI libraries powering AI agent behavior inside Minecraft, for Altera's AI research platform."
     },
     "tradefundrr": {
-      "description": "Worked on a CRM system using Python, Flask, Django, and ReactJS. Conducted API testing and actively participated in agile methodology."
+      "description": "A CRM platform built with Python, Flask, Django, and React - contributed core features, API testing, and sprint-based delivery in an agile team."
     },
     "autotempest": {
-      "description": "Developed a responsive web app to filter and display scraped cars stored in a MySQL database. Designed with React.js and REST APIs for searching and filtering."
+      "description": "A responsive car-search web app that filters and displays scraped listings from a MySQL database, built with React.js and a REST API for fast, flexible searching."
     },
     "points-app": {
-      "description": "Created a web-based points redemption app for customers to redeem top-up codes. Comprehensive customer loyalty solution."
-    },
-    "sicp": {
-      "description": "Built an e-presentations web app for managing research events (authors, dates, promotional videos, event durations, etc.) deployed on AWS."
-    },
-    "vehicles-extension": {
-      "description": "Engineered a web app to scrape vehicle data using CRON jobs and store it in MongoDB. Frontend designed with React.js and backend services using Node.js."
+      "description": "A web-based customer loyalty platform where users redeem points for mobile top-up codes, built with Node.js, React, and MySQL, with integrated payment processing."
     },
     "al-khair-traders-pos": {
-      "description": "Built a web-based management system for a local store to handle sales, purchases, and bookkeeping operations. Deployed on Namecheap for enhanced store management efficiency."
-    },
-    "modern-pos": {
-      "description": "Developed a web-based POS system to manage various business operations, including sales, purchases, user management, and accounting. Streamlined solution for retail management."
+      "description": "A full inventory and retail management system covering products, suppliers, purchases, sales, returns, and quotations, with role-based permissions down to the module level. Built with Node.js, Express, and TypeORM on the backend and React with TanStack Query on the frontend, including JWT authentication, versioned database migrations, and auto-generated API documentation."
     },
     "deployment-tool": {
-      "description": "Created an automation tool for converting N1QL queries into Firebase functions, improving system reliability and user experience. Facilitated seamless integration between N1QL (Couchbase) and Firebase."
+      "description": "A final-year automation tool that converts N1QL (Couchbase) queries into Firebase Cloud Functions, streamlining data integration between the two platforms."
     }
   },
   "experiencesData": {

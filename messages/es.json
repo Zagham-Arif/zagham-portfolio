@@ -1,4 +1,9 @@
 {
+  "seo": {
+    "title": "Zagham Arif - Desarrollador Full Stack Senior",
+    "description": "Portafolio de Zagham Arif, un Desarrollador Full Stack Senior especializado en React, Next.js, Node.js y arquitectura nativa de la nube. Explora proyectos, experiencia y habilidades técnicas.",
+    "keywords": "Desarrollador Full Stack Senior, Ingeniero de Software, React, Next.js, TypeScript, Node.js, Python, AWS, Ingeniería en la Nube, Portafolio"
+  },
   "main": {
     "scrollUp": "Desplazarse hacia arriba"
   },
@@ -117,43 +122,34 @@
   },
   "projectsData": {
     "donationPlatform": {
-      "description": "Migración de Strapi a Supabase, reconstrucción de APIs con Next.js + Deno. Lideré un equipo de 3-4 desarrolladores durante el proceso."
+      "description": "Lideré un equipo de 3-4 personas en la migración del backend de una plataforma de donaciones de Strapi a Supabase, reconstruyendo su capa de API con Next.js y Deno para mejorar el rendimiento y la mantenibilidad."
     },
     "civasource": {
-      "description": "Extracción de datos de productos con colas Redis integradas y sistema de coincidencia de productos con IA. Construido con FastAPI y autenticación."
+      "description": "Construí un sistema de coincidencia de productos impulsado por IA en Python y FastAPI, usando colas Redis para procesar datos de productos extraídos a gran escala, con autenticación en todo el sistema."
     },
     "playertotals": {
-      "description": "Sistema de estadísticas de jugadores en tiempo real construido con Node.js (TypeScript), colas Redis y MongoDB para procesamiento de datos de alto rendimiento."
+      "description": "Una plataforma de estadísticas de jugadores en tiempo real construida con Node.js y TypeScript, usando colas Redis y MongoDB para procesar datos deportivos de alto volumen con baja latencia."
     },
     "forwood-safety": {
-      "description": "Desarrollo de un sistema de gestión de listas de verificación de seguridad con arquitectura de microservicios usando Node.js y TypeScript. Gestión de tareas DevOps y despliegues en AWS."
+      "description": "Un sistema de gestión de listas de verificación de seguridad construido sobre una arquitectura de microservicios en Node.js/TypeScript, incluyendo su pipeline de despliegue en AWS y flujo de trabajo DevOps."
     },
     "alteraapp": {
-      "description": "Desarrollo de librerías JavaScript y conexiones WebSocket para el comportamiento y comunicación de bots en Minecraft. Creación de bibliotecas de UI y comandos para control de bots."
+      "description": "Construí la capa de comunicación WebSocket y las bibliotecas de comandos/UI que impulsan el comportamiento de agentes de IA dentro de Minecraft, para la plataforma de investigación de IA de Altera."
     },
     "tradefundrr": {
-      "description": "Trabajo en un sistema CRM usando Python, Flask, Django y ReactJS. Pruebas de API y participación activa en metodología ágil."
+      "description": "Una plataforma CRM construida con Python, Flask, Django y React - contribuí con funcionalidades clave, pruebas de API y entregas por sprints en un equipo ágil."
     },
     "autotempest": {
-      "description": "Desarrollo de una aplicación web responsiva para filtrar y mostrar autos extraídos y almacenados en una base de datos MySQL. Diseñada con React.js y APIs REST para búsqueda y filtrado."
+      "description": "Una aplicación web responsiva de búsqueda de autos que filtra y muestra anuncios extraídos desde una base de datos MySQL, construida con React.js y una API REST para una búsqueda rápida y flexible."
     },
     "points-app": {
-      "description": "Creación de una aplicación web de canje de puntos para que los clientes puedan canjear códigos de recarga. Solución integral de fidelización de clientes."
-    },
-    "sicp": {
-      "description": "Desarrollo de una aplicación web de e-presentaciones para gestionar eventos de investigación (autores, fechas, videos promocionales, duración de eventos, etc.) desplegada en AWS."
-    },
-    "vehicles-extension": {
-      "description": "Desarrollo de una aplicación web para extraer datos de vehículos usando trabajos CRON y almacenarlos en MongoDB. Frontend con React.js y servicios backend usando Node.js."
+      "description": "Una plataforma de fidelización basada en web donde los clientes canjean puntos por códigos de recarga móvil, construida con Node.js, React y MySQL, con procesamiento de pagos integrado."
     },
     "al-khair-traders-pos": {
-      "description": "Creación de un sistema de gestión web para una tienda local para manejar ventas, compras y operaciones contables. Desplegado en Namecheap para mejorar la eficiencia de la gestión."
-    },
-    "modern-pos": {
-      "description": "Desarrollo de un sistema POS web para gestionar diversas operaciones comerciales, incluyendo ventas, compras, gestión de usuarios y contabilidad. Solución optimizada para gestión minorista."
+      "description": "Un sistema completo de gestión de inventario y ventas al por menor que cubre productos, proveedores, compras, ventas, devoluciones y cotizaciones, con permisos basados en roles a nivel de módulo. Construido con Node.js, Express y TypeORM en el backend y React con TanStack Query en el frontend, incluyendo autenticación JWT, migraciones de base de datos versionadas y documentación de API generada automáticamente."
     },
     "deployment-tool": {
-      "description": "Creación de una herramienta de automatización para convertir consultas N1QL en funciones de Firebase, mejorando la confiabilidad del sistema y la experiencia del usuario. Facilitó la integración entre N1QL (Couchbase) y Firebase."
+      "description": "Una herramienta de automatización de proyecto final que convierte consultas N1QL (Couchbase) en funciones de Firebase Cloud, simplificando la integración de datos entre ambas plataformas."
     }
   },
   "experiencesData": {
