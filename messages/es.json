@@ -141,7 +141,8 @@
       "imageAlt": "Diagrama de arquitectura del backend de auditoría de precios: fuente externa, cola Redis, pool de workers Node.js e inserción por lotes sobre AWS ECS Fargate"
     },
     "recurring-donations-platform": {
-      "description": "Plataforma de donaciones recurrentes y pagos para un cliente directo. Construí transacciones recurrentes programadas, con autenticación, almacenamiento y edge functions en Supabase y un front end en Next.js y TypeScript. Nombre del cliente y del producto reservados."
+      "description": "Plataforma de donaciones recurrentes y pagos para un cliente directo. Construí transacciones recurrentes programadas, con autenticación, almacenamiento y edge functions en Supabase y un front end en Next.js y TypeScript. Nombre del cliente y del producto reservados.",
+      "imageAlt": "Diagrama de arquitectura de la plataforma de donaciones recurrentes: registro de donantes en Supabase, APIs de Next.js y edge functions, proveedor de pagos con autorización guardada, cobros recurrentes programados"
     },
     "playertotals": {
       "description": "Plataforma de estadísticas deportivas en vivo que cubre NBA, NFL y MLB, con marcadores y estadísticas actualizados cada 5 minutos. Construida sobre Node.js y TypeScript con colas Redis y MongoDB para procesamiento de datos de alto rendimiento.",

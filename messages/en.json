@@ -141,7 +141,8 @@
       "imageAlt": "Architecture diagram of the retail price auditing backend: external feed to Redis queue to Node.js worker pool to batch insert, on AWS ECS Fargate"
     },
     "recurring-donations-platform": {
-      "description": "Recurring donations and payments platform for a direct client. Built scheduled recurring transactions, with authentication, storage and edge functions on Supabase and a Next.js and TypeScript front end. Client and product name withheld."
+      "description": "Recurring donations and payments platform for a direct client. Built scheduled recurring transactions, with authentication, storage and edge functions on Supabase and a Next.js and TypeScript front end. Client and product name withheld.",
+      "imageAlt": "Architecture diagram of the recurring donations platform: supporter signup on Supabase, Next.js APIs and edge functions, payment provider with saved authorization, scheduled recurring charges"
     },
     "playertotals": {
       "description": "Live sports statistics platform covering NBA, NFL and MLB, with scores and stats refreshed every 5 minutes. Built on Node.js and TypeScript with Redis queues and MongoDB for high-throughput data processing.",

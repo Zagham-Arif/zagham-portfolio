@@ -62,17 +62,14 @@ export const projects: Project[] = [
     imageAlt: 'projectsData.price-auditing-backend.imageAlt',
     featured: true,
   },
-  // TODO(zagham): the architecture diagram for this project names PayPal and
-  // "billing agreements" directly in its rendered text, which is no longer
-  // allowed. Supply a redrawn diagram without those terms, then restore
-  // imageUrl/imageAlt below.
   {
     id: 'recurring-donations-platform',
     title: 'Recurring Donations Platform',
     description: 'projectsData.recurring-donations-platform.description',
     technologies: ['Next.js', 'Supabase', 'Deno', 'TypeScript', 'PostgreSQL'],
     liveUrl: '',
-    imageUrl: '',
+    imageUrl: '/projects/recurring-donations-platform.webp',
+    imageAlt: 'projectsData.recurring-donations-platform.imageAlt',
     featured: true,
   },
   {
