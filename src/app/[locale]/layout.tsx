@@ -1,10 +1,15 @@
 import { Cursor } from 'components/CustomCursor';
 import { Links } from 'constants/links';
-import { personalInfo, socialLinks } from 'lib/data';
+import { locales } from 'i18n/config';
+import { education, personalInfo, skills } from 'lib/data';
 import 'lib/dev-suppressions';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from 'next-intl/server';
 import { ThemeProvider } from 'next-themes';
 import localFont from 'next/font/local';
 import '../globals.css';
@@ -21,6 +26,17 @@ const geistMono = localFont({
 });
 
 const ogLocales = { en: 'en_US', es: 'es_ES' } as const;
+
+export function generateStaticParams() {
+  return locales.map(locale => ({ locale }));
+}
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
+  ],
+};
 
 export async function generateMetadata({
   params: { locale },
@@ -40,7 +56,12 @@ export async function generateMetadata({
     creator: personalInfo.name,
     alternates: {
       canonical: `/${locale}`,
-      languages: { en: '/en', es: '/es' },
+      languages: { en: '/en', es: '/es', 'x-default': '/en' },
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
     },
     icons: {
       icon: [
@@ -67,7 +88,7 @@ export async function generateMetadata({
           url: '/og-image.png',
           width: 1200,
           height: 630,
-          alt: 'Portfolio Preview',
+          alt: `${personalInfo.name}, ${personalInfo.title}`,
         },
       ],
     },
@@ -75,27 +96,33 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title,
       description,
-      creator: '@zaghamarif',
       images: ['/og-image.png'],
     },
   };
 }
 
-function personJsonLd() {
+function personJsonLd(locale: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: personalInfo.name,
     jobTitle: personalInfo.title,
-    url: Links.siteUrl,
+    url: `${Links.siteUrl}/${locale}`,
     email: `mailto:${personalInfo.email}`,
+    telephone: personalInfo.phone,
+    description:
+      'Senior full-stack engineer specializing in backend architecture, data pipelines and payment systems with Node.js, TypeScript and AWS.',
     address: {
       '@type': 'PostalAddress',
-      addressCountry: personalInfo.location,
+      addressLocality: 'Lahore',
+      addressCountry: 'PK',
     },
-    sameAs: socialLinks
-      .filter(link => link.url.startsWith('http'))
-      .map(link => link.url),
+    alumniOf: {
+      '@type': 'CollegeOrUniversity',
+      name: education[0].institution,
+    },
+    knowsAbout: skills.map(skill => skill.name),
+    sameAs: [Links.github, Links.linkedIn, Links.upwork, Links.fiverr],
   };
 }
 
@@ -106,6 +133,7 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
+  setRequestLocale(locale);
   const messages = await getMessages({ locale });
 
   return (
@@ -115,7 +143,9 @@ export default async function LocaleLayout({
       >
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd()) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personJsonLd(locale)),
+          }}
         />
         <ThemeProvider
           attribute="class"

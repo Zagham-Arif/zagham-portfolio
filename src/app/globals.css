@@ -69,9 +69,24 @@ html {
   scroll-behavior: smooth;
 }
 
-html,
-body {
-  cursor: none; /* Hide default cursor */
+/* Keep the fixed navbar from covering the heading an anchor lands on */
+section[id],
+main [id] {
+  scroll-margin-top: 6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* The custom cursor only runs on devices with a real pointer */
+@media (pointer: fine) {
+  html,
+  body {
+    cursor: none;
+  }
 }
 
 /* Custom scrollbar */
