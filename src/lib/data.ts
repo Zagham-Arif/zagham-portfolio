@@ -12,13 +12,15 @@ import type {
 // -----------------------------
 export const personalInfo = {
   name: 'Zagham Arif',
-  title: 'Senior Full Stack Developer',
+  title: 'Senior Full-Stack Software Engineer',
   email: 'zaghamarif@gmail.com',
-  phone: '+92 (314) 758435',
-  location: 'Pakistan',
+  phone: '+92 314 7585435',
+  location: 'Lahore, Pakistan',
+  // TODO(zagham): re-add anonymized CV PDFs to public/ and restore these paths.
+  // The hero CV buttons stay hidden while both values are empty.
   cvUrls: {
-    europass: '/Zagham-Arif_Europass-CV.pdf',
-    traditional: '/Zagham-Arif_Traditional-CV.pdf',
+    europass: '',
+    traditional: '',
   },
 };
 
@@ -44,25 +46,32 @@ export const freelanceLinks: SocialLink[] = [
 // -----------------------------
 export const projects: Project[] = [
   {
-    id: 'donation-platform',
-    title: 'Donation Platform',
-    description: 'projectsData.donationPlatform.description',
+    id: 'price-auditing-backend',
+    title: 'Retail Price-Auditing Backend',
+    description: 'projectsData.price-auditing-backend.description',
     technologies: [
-      'Next.js',
-      'Supabase',
-      'Deno',
+      'Node.js',
+      'Express',
       'TypeScript',
-      'Team Leadership',
+      'TypeORM',
+      'AWS ECS Fargate',
+      'Terraform',
+      'Redis',
     ],
     liveUrl: '',
-    imageUrl: '',
+    imageUrl: '/projects/price-auditing-backend.webp',
+    imageAlt: 'projectsData.price-auditing-backend.imageAlt',
     featured: true,
   },
+  // TODO(zagham): the architecture diagram for this project names PayPal and
+  // "billing agreements" directly in its rendered text, which is no longer
+  // allowed. Supply a redrawn diagram without those terms, then restore
+  // imageUrl/imageAlt below.
   {
-    id: 'civasource',
-    title: 'CivaSource',
-    description: 'projectsData.civasource.description',
-    technologies: ['FastAPI', 'Python', 'Redis', 'AI/ML', 'Authentication'],
+    id: 'recurring-donations-platform',
+    title: 'Recurring Donations Platform',
+    description: 'projectsData.recurring-donations-platform.description',
+    technologies: ['Next.js', 'Supabase', 'Deno', 'TypeScript', 'PostgreSQL'],
     liveUrl: '',
     imageUrl: '',
     featured: true,
@@ -72,26 +81,62 @@ export const projects: Project[] = [
     title: 'PlayerTotals',
     description: 'projectsData.playertotals.description',
     technologies: ['Node.js', 'TypeScript', 'Redis', 'MongoDB', 'Real-time'],
-    liveUrl: 'https://playertotals.com',
-    imageUrl: '',
-    featured: true,
-  },
-
-  {
-    id: 'forwood-safety',
-    title: 'Forwood Safety',
-    description: 'projectsData.forwood-safety.description',
-    technologies: ['Node.js', 'TypeScript', 'AWS', 'Microservices', 'DevOps'],
-    liveUrl: 'https://forwoodsafety.com',
-    imageUrl: '',
+    // TODO(zagham): playertotals.com now serves an unrelated site. Restore if the
+    // project moves to a live URL again.
+    liveUrl: '',
+    imageUrl: '/projects/playertotals.webp',
+    imageAlt: 'projectsData.playertotals.imageAlt',
     featured: true,
   },
   {
-    id: 'alteraapp',
-    title: 'AlteraApp (Minecraft)',
-    description: 'projectsData.alteraapp.description',
-    technologies: ['JavaScript', 'WebSocket', 'UI Libraries', 'Minecraft'],
-    liveUrl: 'https://playlabs.altera.al/discover',
+    id: 'memberstore',
+    title: 'Memberstore',
+    description: 'projectsData.memberstore.description',
+    technologies: [
+      'KeystoneJS',
+      'GraphQL',
+      'MongoDB',
+      'Next.js',
+      'TypeScript',
+      'Stripe',
+    ],
+    liveUrl: '',
+    imageUrl: '/projects/memberstore.webp',
+    imageAlt: 'projectsData.memberstore.imageAlt',
+    featured: true,
+  },
+  {
+    id: 'civasource',
+    title: 'CivaSource',
+    description: 'projectsData.civasource.description',
+    technologies: ['FastAPI', 'Python', 'Redis', 'AI/ML', 'Authentication'],
+    liveUrl: '',
+    imageUrl: '/projects/civasource.webp',
+    imageAlt: 'projectsData.civasource.imageAlt',
+    featured: true,
+  },
+  {
+    id: 'safety-compliance-platform',
+    title: 'Safety Compliance Platform',
+    description: 'projectsData.safety-compliance-platform.description',
+    technologies: [
+      'Node.js',
+      'TypeScript',
+      'AWS Lambda',
+      'Terraform',
+      'Microservices',
+    ],
+    liveUrl: '',
+    imageUrl: '/projects/safety-compliance-platform.webp',
+    imageAlt: 'projectsData.safety-compliance-platform.imageAlt',
+    featured: true,
+  },
+  {
+    id: 'real-time-gaming-platform',
+    title: 'Real Time Gaming Platform',
+    description: 'projectsData.real-time-gaming-platform.description',
+    technologies: ['JavaScript', 'Node.js', 'WebSocket', 'UI Libraries'],
+    liveUrl: '',
     imageUrl: '',
     featured: false,
   },
@@ -103,22 +148,6 @@ export const projects: Project[] = [
     liveUrl: 'https://tradefundrr.com',
     imageUrl: '',
     featured: false,
-  },
-  {
-    id: 'autotempest',
-    title: 'Autotempest',
-    description: 'projectsData.autotempest.description',
-    technologies: ['React.js', 'Node.js', 'MySQL', 'REST APIs', 'Web Scraping'],
-    imageUrl: '',
-    featured: true,
-  },
-  {
-    id: 'points-app',
-    title: 'Points App',
-    description: 'projectsData.points-app.description',
-    technologies: ['Node.js', 'React.js', 'MySQL', 'Payment Integration'],
-    imageUrl: '',
-    featured: true,
   },
   {
     id: 'al-khair-traders-pos',
@@ -133,6 +162,23 @@ export const projects: Project[] = [
       'MySQL',
       'JWT Auth',
     ],
+    imageUrl: '',
+    featured: false,
+  },
+  {
+    id: 'autotempest',
+    title: 'Autotempest',
+    description: 'projectsData.autotempest.description',
+    technologies: ['React.js', 'Node.js', 'MySQL', 'REST APIs', 'Web Scraping'],
+    imageUrl: '/projects/autotempest.webp',
+    imageAlt: 'projectsData.autotempest.imageAlt',
+    featured: false,
+  },
+  {
+    id: 'points-app',
+    title: 'Points App',
+    description: 'projectsData.points-app.description',
+    technologies: ['Node.js', 'React.js', 'MySQL', 'Payment Integration'],
     imageUrl: '',
     featured: false,
   },
@@ -156,12 +202,33 @@ export const projects: Project[] = [
 // -----------------------------
 // Experiences
 // -----------------------------
+// TODO(zagham): fill in the remaining `location` values (city and country, or
+// "Remote"). An empty string simply hides the location on that card.
 export const experiences: Experience[] = [
+  {
+    id: 'freelance-full-stack-developer',
+    title: 'experiencesData.freelance.title',
+    company: 'experiencesData.freelance.company',
+    duration: { start: '2025-08', end: null },
+    location: 'Lahore, Pakistan',
+    summaryKey: 'experiencesData.freelance.summary',
+    responsibilitiesKey: 'experiencesData.freelance.responsibilities',
+    technologies: [
+      'Next.js',
+      'TypeScript',
+      'Supabase',
+      'Deno',
+      'PostgreSQL',
+      'Node.js',
+    ],
+  },
   {
     id: 'senior-software-engineer-xavor',
     title: 'experiencesData.xavor.title',
     company: 'experiencesData.xavor.company',
     duration: { start: '2025-05', end: '2025-07' },
+    location: '',
+    summaryKey: 'experiencesData.xavor.summary',
     responsibilitiesKey: 'experiencesData.xavor.responsibilities',
     technologies: [
       'Node.js',
@@ -185,6 +252,8 @@ export const experiences: Experience[] = [
     title: 'experiencesData.hashlogics.title',
     company: 'experiencesData.hashlogics.company',
     duration: { start: '2022-08', end: '2025-02' },
+    location: '',
+    summaryKey: 'experiencesData.hashlogics.summary',
     responsibilitiesKey: 'experiencesData.hashlogics.responsibilities',
     technologies: [
       'Python',
@@ -208,6 +277,8 @@ export const experiences: Experience[] = [
       start: '2022-06',
       end: '2022-08',
     },
+    location: '',
+    summaryKey: 'experiencesData.skupreme.summary',
     responsibilitiesKey: 'experiencesData.skupreme.responsibilities',
     technologies: ['Next.js', 'React', 'TypeScript', 'Frontend Development'],
   },
@@ -219,6 +290,8 @@ export const experiences: Experience[] = [
       start: '2022-03',
       end: '2022-06',
     },
+    location: '',
+    summaryKey: 'experiencesData.homeats.summary',
     responsibilitiesKey: 'experiencesData.homeats.responsibilities',
     technologies: ['Next.js', 'TypeScript', 'Node.js', 'REST API', 'Swagger'],
   },
@@ -230,6 +303,8 @@ export const experiences: Experience[] = [
       start: '2022-03',
       end: '2023-03',
     },
+    location: '',
+    summaryKey: 'experiencesData.memberhood.summary',
     responsibilitiesKey: 'experiencesData.memberhood.responsibilities',
     technologies: [
       'KeystoneJS',
@@ -248,6 +323,8 @@ export const experiences: Experience[] = [
       start: '2021-02',
       end: '2022-02',
     },
+    location: 'Gujrat, Pakistan',
+    summaryKey: 'experiencesData.gulzarsoft.summary',
     responsibilitiesKey: 'experiencesData.gulzarsoft.responsibilities',
     technologies: ['Node.js', 'React.js', 'MySQL', 'MongoDB', 'REST APIs'],
   },
@@ -265,7 +342,7 @@ export const skills: Skill[] = [
   { name: 'Material UI', icon: 'SiMui', category: 'frontend' },
   { name: 'Tailwind CSS', icon: 'SiTailwindcss', category: 'frontend' },
   { name: 'Ant Design', icon: 'SiAntdesign', category: 'frontend' },
-  { name: 'shadcn/ui', icon: 'SiReact', category: 'frontend' },
+  { name: 'shadcn/ui', icon: 'SiShadcnui', category: 'frontend' },
   { name: 'Bootstrap', icon: 'SiBootstrap', category: 'frontend' },
 
   // Backend Technologies
@@ -323,6 +400,21 @@ export const skills: Skill[] = [
   { name: 'PyCharm', icon: 'SiPycharm', category: 'other' },
   { name: 'Postman', icon: 'SiPostman', category: 'other' },
   { name: 'Figma', icon: 'SiFigma', category: 'other' },
+];
+
+// The technologies worth leading with. Rendered as the highlighted row above the
+// full skill categories, so "AWS" stands in for the individual AWS services below.
+export const coreSkills: Pick<Skill, 'name' | 'icon'>[] = [
+  { name: 'Node.js', icon: 'SiNodedotjs' },
+  { name: 'TypeScript', icon: 'SiTypescript' },
+  { name: 'React', icon: 'SiReact' },
+  { name: 'Next.js', icon: 'SiNextdotjs' },
+  { name: 'Python', icon: 'SiPython' },
+  { name: 'PostgreSQL', icon: 'SiPostgresql' },
+  { name: 'Redis', icon: 'SiRedis' },
+  { name: 'AWS', icon: 'SiAmazonaws' },
+  { name: 'Terraform', icon: 'SiTerraform' },
+  { name: 'Docker', icon: 'SiDocker' },
 ];
 
 // -----------------------------

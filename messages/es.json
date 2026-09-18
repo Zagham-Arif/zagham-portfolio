@@ -1,8 +1,8 @@
 {
   "seo": {
-    "title": "Zagham Arif - Desarrollador Full Stack Senior",
-    "description": "Portafolio de Zagham Arif, un Desarrollador Full Stack Senior especializado en React, Next.js, Node.js y arquitectura nativa de la nube. Explora proyectos, experiencia y habilidades técnicas.",
-    "keywords": "Desarrollador Full Stack Senior, Ingeniero de Software, React, Next.js, TypeScript, Node.js, Python, AWS, Ingeniería en la Nube, Portafolio"
+    "title": "Zagham Arif | Ingeniero Full-Stack Senior, Node.js y AWS",
+    "description": "Ingeniero full-stack senior en Lahore, Pakistán, con más de 5 años en Node.js, TypeScript, React, Next.js y AWS. Arquitectura backend, pipelines de datos y pagos.",
+    "keywords": "Ingeniero Full-Stack Senior, Desarrollador Node.js, TypeScript, NestJS, React, Next.js, Python, FastAPI, PostgreSQL, Redis, AWS, Terraform, Arquitectura Backend, Integración de Pagos, Desarrollador Remoto, Lahore Pakistán"
   },
   "main": {
     "scrollUp": "Desplazarse hacia arriba"
@@ -13,23 +13,25 @@
     "experience": "Experiencia",
     "skills": "Habilidades",
     "contact": "Contacto",
+    "allProjects": "Todos los Proyectos",
     "toggleTheme": "Cambiar tema",
     "toggleLanguage": "Cambiar idioma",
     "languages": {
       "en": "Inglés",
       "es": "Español"
-    }
+    },
+    "toggleMenu": "Abrir menú"
   },
   "hero": {
     "greeting": "Hola, soy",
-    "title": "Ingeniero Full Stack",
-    "subtitle": "Transformo ideas complejas en aplicaciones web simples y usables.",
+    "title": "Ingeniero de Software Full-Stack Senior",
+    "subtitle": "Node.js, TypeScript, React y Next.js. Arquitectura backend, pipelines de datos y pagos en AWS.",
     "description": "Apasionado por construir aplicaciones escalables y dar vida a las ideas a través del código.",
     "downloadCV": "Descargar CV",
     "contactMe": "Contáctame",
     "available": "Disponible",
     "scrollDown": "Desplazarse hacia abajo",
-    "bio": "Soy un Desarrollador Full Stack Senior con más de 4 años de experiencia creando productos que a la gente le encanta usar. Desde interfaces elegantes en React y Next.js hasta backends escalables en Node.js y Python, disfruto resolviendo problemas de principio a fin. He trabajado en todo, desde sistemas de pago con PayPal y Stripe hasta canalizaciones de datos de alto volumen en AWS. Ya sea desplegando con Terraform, escalando con Redis o mentorando compañeros de equipo, me apasiona crear software rápido, confiable y con impacto.",
+    "bio": "Soy un Ingeniero de Software Full-Stack Senior con más de 5 años de experiencia creando productos que a la gente le encanta usar. Desde interfaces elegantes en React y Next.js hasta backends escalables en Node.js y Python, disfruto resolviendo problemas de principio a fin. He trabajado en todo, desde sistemas de pago con Stripe hasta canalizaciones de datos de alto volumen en AWS. Ya sea desplegando con Terraform, escalando con Redis o mentorando compañeros de equipo, me apasiona crear software rápido, confiable y con impacto.",
     "cv": {
       "europass": "CV Europass",
       "traditional": "CV Tradicional"
@@ -43,16 +45,30 @@
   },
   "projects": {
     "title": "Proyectos Destacados",
-    "subtitle": "Aquí están algunos de mis trabajos recientes",
+    "subtitle": "Trabajo reciente: arquitectura backend, pipelines de datos y sistemas de pago que llegaron a producción.",
     "viewCode": "Ver Código",
     "liveDemo": "Demo en Vivo",
     "viewProject": "Ver Proyecto",
     "code": "Código",
-    "demo": "Demostración"
+    "demo": "Demostración",
+    "viewAll": "Ver Todos los Proyectos",
+    "viewAllCount": "Ver los {count} proyectos"
+  },
+  "projectsPage": {
+    "title": "Todos los Proyectos",
+    "subtitle": "Arquitectura backend, pipelines de datos y sistemas de pago, desde el trabajo reciente con clientes hasta productos anteriores.",
+    "metaTitle": "Proyectos | Zagham Arif, Ingeniero de Software Full-Stack Senior",
+    "metaDescription": "Arquitectura backend, pipelines de datos y sistemas de pago construidos en Node.js, TypeScript, Python y AWS, incluyendo auditoría de precios minoristas, donaciones recurrentes y estadísticas deportivas en tiempo real.",
+    "backToHome": "Volver al inicio",
+    "featuredHeading": "Trabajo reciente y destacado",
+    "featuredSubheading": "Sistemas en producción construidos en los últimos tres años, en su mayoría de backend.",
+    "earlierHeading": "Trabajo anterior",
+    "earlierSubheading": "Productos y herramientas construidos en el camino de junior a senior, aquí como registro completo.",
+    "contactCta": "¿Tienes algo parecido que construir? Hablemos."
   },
   "experience": {
     "title": "Experiencia Laboral",
-    "subtitle": "Mi trayectoria profesional",
+    "subtitle": "Cinco años de trabajo full-stack, desde un primer puesto en JavaScript hasta liderar la entrega de backend, datos y pagos para clientes internacionales.",
     "present": "Presente",
     "keyAchievements": "Logros Clave",
     "technologiesUsed": "Tecnologías Utilizadas",
@@ -61,7 +77,7 @@
   },
   "skills": {
     "title": "Habilidades y Tecnologías",
-    "subtitle": "Tecnologías con las que trabajo",
+    "subtitle": "Las herramientas con las que construyo sistemas en producción, desde la API y la capa de datos hasta la infraestructura cloud.",
     "categories": {
       "backend": "Backend y APIs",
       "frontend": "Tecnologías Frontend",
@@ -73,7 +89,8 @@
       "yearsExperience": "Años de Experiencia",
       "projectsCompleted": "Proyectos Completados",
       "technologies": "Tecnologías"
-    }
+    },
+    "coreStack": "Stack principal"
   },
   "contact": {
     "title": "Ponte en Contacto",
@@ -97,7 +114,13 @@
     "send": "Enviar Mensaje",
     "sending": "Enviando...",
     "success": "¡Mensaje enviado con éxito!",
-    "error": "Error al enviar el mensaje. Por favor intenta de nuevo."
+    "error": "Error al enviar el mensaje. Por favor intenta de nuevo.",
+    "timezone": "Hora estándar de Pakistán (UTC+5), con solapamiento con el horario laboral de Reino Unido y la UE",
+    "hireMe": "Contrátame en una plataforma freelance",
+    "metaTitle": "Contacto | Zagham Arif, Ingeniero de Software Full-Stack Senior",
+    "metaDescription": "Contacta con Zagham Arif, ingeniero full-stack senior en Lahore, Pakistán, para trabajo remoto por contrato o a tiempo completo en Node.js, TypeScript, React, Next.js y AWS.",
+    "detailsTitle": "Datos de contacto",
+    "pageIntro": "Disponible para trabajo remoto por contrato o a tiempo completo. Arquitectura backend, pipelines de datos, integraciones de pago y producto full-stack en Node.js, TypeScript, Python, React, Next.js y AWS. Envía una nota breve sobre lo que estás construyendo y los plazos, y te responderé con cómo lo abordaría."
   },
   "notFound": {
     "title": "404 - Página No Encontrada",
@@ -111,123 +134,145 @@
     "hireOnFiverr": "Contrátame en Fiverr",
     "hireOnUpwork": "Contrátame en Upwork",
     "brandTagline": "Del concepto a la nube: yo lo implemento",
-    "brandDescription": "Desarrollador Full Stack Senior con más de 4 años de experiencia especializado en JavaScript, TypeScript, Python y el stack MERN. Experto en la construcción de aplicaciones web escalables, en el diseño de backends nativos en la nube y en la integración de sistemas de pago. Apasionado por entregar soluciones de alto impacto y por guiar equipos hacia la excelencia técnica."
-  },
-  "personalInfo": {
-    "bio": "Desarrollador Full Stack Senior con más de 4 años de experiencia especializado en Javascript, Python, ReactJS y Next.js. Experto en despliegues en AWS, arquitectura de microservicios y liderazgo de equipos. Historial comprobado en optimización de aplicaciones web, implementación de soluciones en la nube con Terraform y dirección de equipos de desarrollo. Reconocimiento como Empleado del Mes por contribuciones destacadas.",
-    "cv": {
-      "europass": "CV Europass",
-      "traditional": "CV Tradicional"
-    }
+    "brandDescription": "Ingeniero de Software Full-Stack Senior con más de 5 años de experiencia especializado en JavaScript, TypeScript, Python y el stack MERN. Experto en la construcción de aplicaciones web escalables, en el diseño de backends nativos en la nube y en la integración de sistemas de pago. Apasionado por entregar soluciones de alto impacto y por guiar equipos hacia la excelencia técnica."
   },
   "projectsData": {
-    "donationPlatform": {
-      "description": "Lideré un equipo de 3-4 personas en la migración del backend de una plataforma de donaciones de Strapi a Supabase, reconstruyendo su capa de API con Next.js y Deno para mejorar el rendimiento y la mantenibilidad."
+    "price-auditing-backend": {
+      "description": "Auditoría de precios minoristas para un retailer estadounidense, operada desde una app móvil en el propio pasillo. Diseñé el backend desde cero: más de 2 millones de registros por ejecución desde una fuente externa, encolados con Redis y escritos en paralelo con worker threads de Node.js, y devueltos paginados y consultables. Node.js, Express, TypeScript y TypeORM sobre AWS ECS Fargate, con infraestructura en Terraform y logging en Datadog.",
+      "imageAlt": "Diagrama de arquitectura del backend de auditoría de precios: fuente externa, cola Redis, pool de workers Node.js e inserción por lotes sobre AWS ECS Fargate"
     },
-    "civasource": {
-      "description": "Construí un sistema de coincidencia de productos impulsado por IA en Python y FastAPI, usando colas Redis para procesar datos de productos extraídos a gran escala, con autenticación en todo el sistema."
+    "recurring-donations-platform": {
+      "description": "Plataforma de donaciones recurrentes y pagos para un cliente directo. Construí transacciones recurrentes programadas, con autenticación, almacenamiento y edge functions en Supabase y un front end en Next.js y TypeScript. Nombre del cliente y del producto reservados."
     },
     "playertotals": {
-      "description": "Una plataforma de estadísticas de jugadores en tiempo real construida con Node.js y TypeScript, usando colas Redis y MongoDB para procesar datos deportivos de alto volumen con baja latencia."
+      "description": "Plataforma de estadísticas deportivas en vivo que cubre NBA, NFL y MLB, con marcadores y estadísticas actualizados cada 5 minutos. Construida sobre Node.js y TypeScript con colas Redis y MongoDB para procesamiento de datos de alto rendimiento.",
+      "imageAlt": "Diagrama de arquitectura de la plataforma en tiempo real PlayerTotals: extracción programada de datos de partidos, cola Redis, API Node.js con MongoDB y panel React en vivo"
     },
-    "forwood-safety": {
-      "description": "Un sistema de gestión de listas de verificación de seguridad construido sobre una arquitectura de microservicios en Node.js/TypeScript, incluyendo su pipeline de despliegue en AWS y flujo de trabajo DevOps."
+    "memberstore": {
+      "description": "Un único storefront para varios comerciantes independientes, cada uno vendiendo bajo su propia marca. Stripe gestiona pagos, alta de comerciantes y conciliación de webhooks tras una API KeystoneJS con GraphQL sobre MongoDB, con un front end en Next.js y TypeScript.",
+      "imageAlt": "Captura del sitio de Memberstore mostrando el producto de storefront multicomerciante"
     },
-    "alteraapp": {
-      "description": "Construí la capa de comunicación WebSocket y las bibliotecas de comandos/UI que impulsan el comportamiento de agentes de IA dentro de Minecraft, para la plataforma de investigación de IA de Altera."
+    "civasource": {
+      "description": "Coincidencia de productos asistida por IA para un marketplace de proveedores. Extrae hasta 1.000 productos por minuto usando asyncio con caché en Redis, tras un servicio FastAPI con autenticación.",
+      "imageAlt": "Diagrama de arquitectura del pipeline de datos de CivaSource: scrapers concurrentes, cola Redis, motor de coincidencia con IA y servicios FastAPI"
+    },
+    "safety-compliance-platform": {
+      "description": "Listas de verificación de seguridad y flujos de cumplimiento en varias plantas industriales, con trazabilidad de auditoría entre sedes. Migré APIs monolíticas a microservicios serverless en AWS Lambda con Terraform y reduje el coste de infraestructura en torno al 30 por ciento. Dirigí al equipo en arquitectura frontend e infraestructura cloud. Nombre del cliente y del producto reservados.",
+      "imageAlt": "Diagrama de arquitectura de la plataforma de seguridad y cumplimiento: frontend React de microservicios, capa de API, lógica de cumplimiento en AWS Lambda e informes multisede"
+    },
+    "real-time-gaming-platform": {
+      "description": "Plataforma de juego en tiempo real. Construí bibliotecas de bots en JavaScript y conexiones WebSocket para el comportamiento y la comunicación de bots dentro del juego, además de las bibliotecas de UI y comandos usadas para controlarlos. Nombre del cliente y del producto reservados."
     },
     "tradefundrr": {
-      "description": "Una plataforma CRM construida con Python, Flask, Django y React - contribuí con funcionalidades clave, pruebas de API y entregas por sprints en un equipo ágil."
+      "description": "Plataforma de formación en trading con un CRM integrado que usa su propio equipo comercial. Contribuí con funcionalidades clave, pruebas de API y entrega por sprints en un equipo ágil. Python, Flask, Django y React."
     },
     "autotempest": {
-      "description": "Una aplicación web responsiva de búsqueda de autos que filtra y muestra anuncios extraídos desde una base de datos MySQL, construida con React.js y una API REST para una búsqueda rápida y flexible."
+      "description": "Búsqueda de coches en muchos portales a la vez, filtrada desde un único formulario. Construí el front end responsivo en React y la API REST que consulta los anuncios extraídos desde MySQL.",
+      "imageAlt": "Captura de la página de inicio de AutoTempest mostrando el formulario de búsqueda agregada de coches usados"
     },
     "points-app": {
-      "description": "Una plataforma de fidelización basada en web donde los clientes canjean puntos por códigos de recarga móvil, construida con Node.js, React y MySQL, con procesamiento de pagos integrado."
+      "description": "Programa de fidelización donde los puntos se convierten en códigos de recarga móvil. Construí el flujo de canje y el procesamiento de pagos sobre Node.js, React y MySQL."
     },
     "al-khair-traders-pos": {
-      "description": "Un sistema completo de gestión de inventario y ventas al por menor que cubre productos, proveedores, compras, ventas, devoluciones y cotizaciones, con permisos basados en roles a nivel de módulo. Construido con Node.js, Express y TypeORM en el backend y React con TanStack Query en el frontend, incluyendo autenticación JWT, migraciones de base de datos versionadas y documentación de API generada automáticamente."
+      "description": "Sustituyó un proceso en papel para un mayorista: productos, proveedores, compras, ventas, devoluciones y cotizaciones en un solo sistema, con permisos por rol hasta el nivel de módulo. Node.js, Express y TypeORM tras React con TanStack Query, incluyendo autenticación JWT, migraciones versionadas y documentación de API generada."
     },
     "deployment-tool": {
-      "description": "Una herramienta de automatización de proyecto final que convierte consultas N1QL (Couchbase) en funciones de Firebase Cloud, simplificando la integración de datos entre ambas plataformas."
+      "description": "Proyecto de fin de carrera que elimina la traducción manual entre Couchbase y Firebase: convierte consultas N1QL en Firebase Cloud Functions y las despliega."
     }
   },
   "experiencesData": {
+    "freelance": {
+      "title": "Desarrollador Full-Stack Freelance",
+      "company": "Autónomo",
+      "summary": "Construyo una plataforma de donaciones recurrentes y pagos para un cliente directo, de principio a fin.",
+      "responsibilities": [
+        "Construyo una plataforma de donaciones recurrentes y pagos para un cliente directo, trabajando directamente con él en alcance, arquitectura y publicaciones",
+        "Diseñé el manejo de transacciones recurrentes programadas con reintentos, idempotencia y conciliación para que un cargo fallido nunca duplique el cobro al donante",
+        "Construí autenticación, seguridad a nivel de fila, almacenamiento y edge functions en Deno sobre Supabase, con PostgreSQL por detrás",
+        "Implementé el front end en Next.js App Router y TypeScript, renderizado en servidor, con validación de formularios y contratos de API tipados",
+        "Monté el planificador con cron que ejecuta los cargos recurrentes y escribe un historial de transacciones auditable",
+        "Gestiono la entrega completa: requisitos, arquitectura, despliegue y comunicación con el cliente"
+      ]
+    },
     "xavor": {
       "title": "Ingeniero de Software Senior",
       "company": "Xavor Corporation",
+      "summary": "Diseñé desde cero el backend de un producto de auditoría de precios minoristas para un retailer estadounidense, sobre AWS.",
       "responsibilities": [
-        "Diseño y desarrollo de arquitectura backend desde cero para proyecto de auditoría de precios móvil enfocado en retail",
-        "Construcción de sistema escalable usando Node.js, Express, TypeScript y TypeORM con despliegue en contenedores Docker",
-        "Despliegue de la aplicación en AWS ECS Fargate con infraestructura gestionada mediante Terraform",
-        "Integración de autenticación Okta, documentación Swagger, validación Zod y logging Datadog mediante FireLens sidecars",
-        "Procesamiento y cacheo de más de 2 millones de registros desde AccessVia usando cron jobs y Redis para acceso optimizado",
-        "Implementación de inserciones de datos de alto volumen mediante colas de trabajo Redis y Node.js Worker Threads para procesamiento paralelo",
-        "Acceso paginado y consultable para cliente móvil con mecanismos eficientes de recuperación de datos",
-        "Colaboración directa con cliente en EE.UU. y trabajo bajo liderazgo técnico experimentado",
-        "Soporte en incorporación de desarrolladores junior y gestión de tareas mediante JIRA"
+        "Diseñé desde cero el backend de un producto de auditoría de precios minoristas, trabajando directamente con el cliente estadounidense y bajo dirección técnica experimentada",
+        "Procesé y almacené en caché más de 2 millones de registros por ejecución desde una fuente de datos externa, con cron jobs y Redis para que el cliente móvil no dependa del sistema origen",
+        "Sostuve inserciones de alto volumen con colas de trabajo Redis y worker threads de Node.js en paralelo, con control de contrapresión para que una escritura lenta no detenga la ingesta",
+        "Construí la API REST en Node.js, Express, TypeScript y TypeORM, sirviendo al cliente móvil datos paginados, filtrables y ordenables",
+        "Contenericé el servicio con Docker y lo ejecuté en AWS ECS Fargate, con todo el entorno definido en Terraform",
+        "Integré Okta para autenticación, Zod para validación de peticiones y Swagger para la documentación de API que usaba el equipo del cliente",
+        "Añadí logging y monitorización en Datadog mediante sidecars FireLens, de modo que los fallos del pipeline fueran visibles y no silenciosos",
+        "Acompañé la incorporación de desarrolladores junior, revisé sus pull requests y coordiné la entrega en JIRA"
       ]
     },
     "hashlogics": {
-      "title": "Ingeniero de Software Senior",
+      "title": "Desarrollador de Software Senior",
       "company": "Hashlogics",
+      "summary": "Lideré equipos de entrega en cuatro productos, desde coincidencia de productos con IA hasta plataformas de cumplimiento serverless.",
       "responsibilities": [
-        "Mejora de habilidades en Python, ReactJS y stack MERN optimizando el rendimiento de aplicaciones web",
-        "Implementación de funciones AWS Lambda y arquitectura de microservicios frontends para soluciones escalables",
-        "Administración de despliegues en AWS usando Terraform como infraestructura como código",
-        "Reconocimiento como Empleado del Mes por contribuciones destacadas y liderazgo de equipo",
-        "Liderazgo de equipos de desarrollo en proyectos de alto impacto incluyendo CivaSource, Donation Platform y AlteraApp",
-        "Desarrollo de APIs FAST para gestión de productos, autenticación y soluciones impulsadas por IA",
-        "Gestión de colas Redis para procesamiento concurrente y manejo de datos en tiempo real",
-        "Dirección de equipos para implementar listas de verificación de seguridad y gestión de tareas DevOps para Forwood Safety",
-        "Desarrollo de sistemas CRM usando Python, Flask, Django y ReactJS para TradeFundrr",
-        "Ingeniería de actualizaciones de estadísticas de jugadores en tiempo real usando Node.js, TypeScript y MongoDB para Playertotals"
+        "Lideré equipos de desarrollo en múltiples proyectos de alto impacto incluyendo CivaSource, PlayerTotals y una plataforma de juego en tiempo real",
+        "Dirigí un equipo que construyó una plataforma de seguridad y cumplimiento, migrando APIs monolíticas a microservicios serverless en AWS Lambda con infraestructura como código en Terraform",
+        "Construí servicios de coincidencia de productos con IA, autenticación y gestión de productos en Python y FastAPI, sobre PostgreSQL y Redis",
+        "Diseñé micro-frontends para que varios equipos pudieran entregar en un mismo producto sin bloquearse entre sí",
+        "Mantuve en movimiento pipelines de alto volumen con colas Redis para scraping, coincidencia y procesamiento en tiempo real",
+        "Entregué estadísticas de jugadores en tiempo real sobre Node.js, TypeScript y MongoDB, con trabajos de extracción programados alimentando paneles en vivo",
+        "Construí un CRM de formación en trading en Python, Flask, Django y React, desde la captación de leads hasta el flujo del equipo comercial",
+        "Gestioné despliegues en AWS y CI/CD, y participé en estimación, planificación de sprints y llamadas técnicas con clientes",
+        "Reconocido como Empleado del Mes por la entrega y el liderazgo de equipo"
       ]
     },
     "skupreme": {
       "title": "Ingeniero de Software",
-      "company": "Skupreme",
+      "company": "SKUPREME",
+      "summary": "Trabajo de front end en el panel web de un producto estadounidense de cadena de suministro e inventario.",
       "responsibilities": [
-        "Mejora de características del panel web usando tecnologías frontend modernas",
-        "Desarrollo de interfaces responsivas con Next.js y TypeScript",
-        "Colaboración con equipo remoto para entregar soluciones frontend de alta calidad",
-        "Optimización del rendimiento de la aplicación e implementación de patrones modernos de React",
-        "Mantenimiento de la calidad del código y buenas prácticas para desarrollo escalable"
+        "Amplié el panel web de un producto de cadena de suministro e inventario usado por su equipo de operaciones",
+        "Construí interfaces responsivas y accesibles en Next.js y TypeScript con patrones modernos de React y composición de componentes",
+        "Integré el panel contra APIs REST existentes, tratando correctamente los estados de carga, vacío y error",
+        "Mejoré el rendimiento percibido reduciendo re-renderizados y aplazando datos no críticos",
+        "Trabajé con un equipo totalmente remoto entre zonas horarias, manteniendo el código en sus estándares de revisión"
       ]
     },
     "homeats": {
       "title": "Ingeniero de Software",
       "company": "Homeats",
+      "summary": "Trabajo full-stack en el panel y las APIs de un marketplace de comida saludable online.",
       "responsibilities": [
-        "Mejora y refinamiento de funciones del panel web para un marketplace líder de comida saludable en línea",
-        "Desarrollo de soluciones frontend con Next.js y TypeScript para mejor experiencia de usuario",
-        "Construcción y mantenimiento de APIs REST robustas usando Node.js",
-        "Gestión de documentación API completa con Swagger para mejor colaboración de equipo",
-        "Optimización del rendimiento de la aplicación e implementación de patrones de diseño responsivo"
+        "Amplié el panel web de un marketplace de comida saludable online, cubriendo menús, pedidos y gestión de vendedores",
+        "Construí el front end en Next.js y TypeScript, y las APIs REST en Node.js que lo sostienen",
+        "Modelé y consulté la capa de datos para que las vistas de listado y detalle siguieran siendo rápidas al crecer el catálogo",
+        "Mantuve la documentación Swagger para que el resto del equipo y los desarrolladores móviles pudieran trabajar contra la API",
+        "Resolví los diseños responsivos hasta anchos de móvil pequeños, que era de donde venía la mayor parte del tráfico"
       ]
     },
     "memberhood": {
       "title": "Ingeniero de Software",
       "company": "Memberhood Inc.",
+      "summary": "Construí el backend y el storefront de una plataforma de comercio por membresía multicomerciante con Stripe.",
       "responsibilities": [
-        "Participación en desarrollo de APIs GraphQL y RESTful para soluciones backend completas",
-        "Implementación de frontend Next.js usando TypeScript para desarrollo con tipado seguro",
-        "Desarrollo de sistemas backend con KeystoneJS, GraphQL y MongoDB para arquitectura escalable",
-        "Integración de pagos y onboarding con Stripe usando webhooks",
-        "Coordinación de múltiples etapas de despliegue y mantenimiento de pipelines CI/CD",
-        "Colaboración con miembros del equipo internacional en diferentes zonas horarias"
+        "Construí el backend de una plataforma de comercio por membresía sobre KeystoneJS, GraphQL y MongoDB, sirviendo a varios comerciantes independientes desde un mismo storefront",
+        "Integré Stripe para pagos por suscripción, alta de comerciantes y flujos de liquidación",
+        "Implementé la gestión de webhooks con verificación de firma y procesamiento idempotente, de modo que un evento reintentado nunca cobrara dos veces",
+        "Implementé el storefront en Next.js y TypeScript contra APIs GraphQL y REST",
+        "Coordiné despliegues por etapas entre entornos y mantuve los pipelines de CI/CD",
+        "Trabajé con un equipo internacional entre zonas horarias, en inglés, con una cadencia de entrega diaria"
       ]
     },
     "gulzarsoft": {
       "title": "Ingeniero de Software Asociado",
-      "company": "GulzarSoft",
+      "company": "GulzarSoft Software House",
+      "summary": "Primer puesto profesional: JavaScript full-stack en varias aplicaciones web de clientes.",
       "responsibilities": [
-        "Adquisición de experiencia profesional básica como Desarrollador Full-Stack JavaScript",
-        "Creación de aplicaciones web responsivas usando React.js y Node.js",
-        "Demostración de habilidades en desarrollo independiente y trabajo en equipo",
-        "Desarrollo de APIs REST para filtrado, búsqueda y gestión de bases de datos",
-        "Construcción de soluciones web completas desde interfaces frontend hasta servicios backend",
-        "Participación en metodologías ágiles y planificación de sprints"
+        "Primer puesto profesional, trabajando en todo el stack con JavaScript en aplicaciones web de clientes",
+        "Construí aplicaciones web responsivas en React.js y Node.js, de forma autónoma y en equipo",
+        "Escribí APIs REST para filtrado, búsqueda, paginación y gestión de bases de datos sobre MySQL y MongoDB",
+        "Construí un producto de fidelización donde los puntos se convierten en códigos de recarga móvil, incluyendo el paso de pago",
+        "Construí el front end de una búsqueda de coches sobre anuncios extraídos, con un formulario de filtros que seguía siendo rápido con muchos resultados",
+        "Entregué por sprints, participé en la planificación ágil y adopté la revisión de código como hábito, no como trámite"
       ]
     }
   }

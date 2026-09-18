@@ -16,7 +16,8 @@
     "type-check": "tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "check-all": "yarn type-check && yarn lint && yarn format:check"
+    "check-all": "yarn type-check && yarn check-i18n && yarn lint && yarn format:check",
+    "check-i18n": "node scripts/check-i18n-keys.mjs"
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",
