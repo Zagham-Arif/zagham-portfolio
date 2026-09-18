@@ -3,7 +3,7 @@
 import { Links } from 'constants/links';
 import { motion } from 'framer-motion';
 import { freelanceLinks, personalInfo, socialLinks } from 'lib/data';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { IconRenderer } from 'ui/icon-renderer';
 
@@ -11,12 +11,14 @@ export function Footer() {
   const tNav = useTranslations('nav');
   const tFooter = useTranslations('footer');
 
+  const home = `/${useLocale()}`;
+
   const quickLinks = [
-    { name: tNav('home'), href: '#hero' },
-    { name: tNav('projects'), href: '#projects' },
-    { name: tNav('experience'), href: '#experience' },
-    { name: tNav('skills'), href: '#skills' },
-    { name: tNav('contact'), href: '#contact' },
+    { name: tNav('home'), href: home },
+    { name: tNav('experience'), href: `${home}#experience` },
+    { name: tNav('skills'), href: `${home}#skills` },
+    { name: tNav('allProjects'), href: `${home}/projects` },
+    { name: tNav('contact'), href: `${home}/contact` },
   ];
 
   const renderIconLink = (link: {

@@ -11,7 +11,8 @@ import { useMemo, useState } from 'react';
 export function Experience() {
   const t = useTranslations();
   const isMobile = useIsMobile();
-  const [openIndexes, setOpenIndexes] = useState<number[]>([]);
+  // The two most recent roles start expanded.
+  const [openIndexes, setOpenIndexes] = useState<number[]>([0, 1]);
   const tRaw = (key: string): string[] => t.raw(key);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const totalExperiences = useMemo(() => experiences.length, [experiences]);

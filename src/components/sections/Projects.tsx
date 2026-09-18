@@ -2,27 +2,23 @@
 
 import { containerVariants, itemVariants } from 'animations/projects';
 import { ProjectCard } from 'components/projects/ProjectsCard';
-import { Links } from 'constants/links';
 import { motion } from 'framer-motion';
 import { projects } from 'lib/data';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
+import Link from 'next/link';
+import { FiArrowRight } from 'react-icons/fi';
 import { Button } from 'ui/button';
 
 export function Projects() {
   const t = useTranslations('projects');
-  const orderedProjects = [...projects].sort(
-    (a, b) => Number(b.featured) - Number(a.featured)
-  );
-
-  const handleViewAllProjects = () => {
-    window.open(Links.github, '_blank');
-  };
+  const locale = useLocale();
+  const featured = projects.filter(project => project.featured);
 
   return (
-    <section id="projects" className="bg-muted/30 px-4 py-20 sm:px-6 lg:px-8">
+    <section id="projects" className="bg-muted/30 px-4 py-24 sm:px-6 lg:px-8">
       <div className="container mx-auto px-1 sm:px-3 md:px-6 lg:px-8">
         <motion.div
-          className="mb-16 text-center"
+          className="mb-14 text-center"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -41,39 +37,28 @@ export function Projects() {
             {t('subtitle')}
           </motion.p>
         </motion.div>
-        <motion.div
-          className="grid auto-rows-[14rem] grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-flow-dense lg:grid-cols-4"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          {orderedProjects.map((project, index) => (
-            <motion.div
+
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {featured.map((project, index) => (
+            <ProjectCard
               key={project.id}
-              variants={itemVariants}
-              className={
-                project.featured
-                  ? 'sm:col-span-2 lg:col-span-2 lg:row-span-2'
-                  : ''
-              }
-            >
-              <ProjectCard
-                project={project}
-                globalIndex={index}
-                size={project.featured ? 'featured' : 'compact'}
-              />
-            </motion.div>
+              project={project}
+              globalIndex={index}
+            />
           ))}
-        </motion.div>
-        <div className="mt-12 text-center">
+        </div>
+
+        <div className="mt-14 text-center">
           <Button
-            variant="outline"
+            asChild
             size="lg"
+            variant="outline"
             className="group bg-transparent transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20"
-            onClick={handleViewAllProjects}
           >
-            {t('viewCode')}
+            <Link href={`/${locale}/projects`}>
+              {t('viewAllCount', { count: projects.length })}
+              <FiArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
           </Button>
         </div>
       </div>

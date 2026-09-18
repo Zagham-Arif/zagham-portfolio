@@ -60,7 +60,7 @@ export function ExperienceCard({
 
       <div className="relative mb-16 ml-8 md:ml-16">
         <motion.div
-          whileHover={{ y: -8, scale: 1.02 }}
+          whileHover={{ y: -4 }}
           transition={{ duration: 0.3, type: 'spring', stiffness: 200 }}
         >
           <Card className="group overflow-hidden border-0 bg-gradient-to-br from-background via-background to-muted/30 shadow-lg transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
