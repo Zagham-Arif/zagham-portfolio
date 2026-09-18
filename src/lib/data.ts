@@ -38,7 +38,6 @@ export const socialLinks: SocialLink[] = [
 // Freelance Links
 // -----------------------------
 export const freelanceLinks: SocialLink[] = [
-  { name: 'Fiverr', url: Links.fiverr, icon: 'SiFiverr' },
   { name: 'Upwork', url: Links.upwork, icon: 'SiUpwork' },
 ];
 // -----------------------------
@@ -81,8 +80,6 @@ export const projects: Project[] = [
     title: 'PlayerTotals',
     description: 'projectsData.playertotals.description',
     technologies: ['Node.js', 'TypeScript', 'Redis', 'MongoDB', 'Real-time'],
-    // TODO(zagham): playertotals.com now serves an unrelated site. Restore if the
-    // project moves to a live URL again.
     liveUrl: '',
     imageUrl: '/projects/playertotals.webp',
     imageAlt: 'projectsData.playertotals.imageAlt',

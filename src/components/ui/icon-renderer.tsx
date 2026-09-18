@@ -71,7 +71,6 @@ const brandColors: Record<string, string> = {
   SiLinkedin: '#0A66C2',
   SiGmail: '#EA4335',
   SiCloudflare: '#F38020',
-  SiFiverr: '#1DBF73',
   SiUpwork: '#14A800',
   SiShadcnui: '#000000',
   FiMail: '#EA4335',

@@ -220,9 +220,7 @@ export function Contact({ standalone = false }: { standalone?: boolean }) {
                             size={18}
                             className="mr-2"
                           />
-                          {link.name === 'Upwork'
-                            ? footer('hireOnUpwork')
-                            : footer('hireOnFiverr')}
+                          {footer('hireOnUpwork')}
                         </a>
                       </Button>
                     ))}

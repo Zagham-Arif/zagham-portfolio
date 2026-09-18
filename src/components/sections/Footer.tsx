@@ -119,21 +119,6 @@ export function Footer() {
                 </li>
                 <li className="flex items-center">
                   <IconRenderer
-                    iconName="SiFiverr"
-                    size={16}
-                    className="mr-2"
-                  />
-                  <a
-                    href={Links.fiverr}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="transition-colors hover:text-foreground"
-                  >
-                    {tFooter('hireOnFiverr')}
-                  </a>
-                </li>
-                <li className="flex items-center">
-                  <IconRenderer
                     iconName="SiUpwork"
                     size={16}
                     className="mr-2"
