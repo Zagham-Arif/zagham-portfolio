@@ -161,23 +161,28 @@
       "imageAlt": "Diagrama de arquitectura de la plataforma de seguridad y cumplimiento: frontend React de microservicios, capa de API, lógica de cumplimiento en AWS Lambda e informes multisede"
     },
     "real-time-gaming-platform": {
-      "description": "Plataforma de juego en tiempo real. Construí bibliotecas de bots en JavaScript y conexiones WebSocket para el comportamiento y la comunicación de bots dentro del juego, además de las bibliotecas de UI y comandos usadas para controlarlos. Nombre del cliente y del producto reservados."
+      "description": "Plataforma de juego en tiempo real. Construí bibliotecas de bots en JavaScript y conexiones WebSocket para el comportamiento y la comunicación de bots dentro del juego, además de las bibliotecas de UI y comandos usadas para controlarlos. Nombre del cliente y del producto reservados.",
+      "imageAlt": "Diagrama de arquitectura de la plataforma de juego en tiempo real: interfaz de control y librerías de comandos, mensajería WebSocket, librerías de bots en JavaScript, acciones dentro del juego"
     },
     "tradefundrr": {
-      "description": "Plataforma de formación en trading con un CRM integrado que usa su propio equipo comercial. Contribuí con funcionalidades clave, pruebas de API y entrega por sprints en un equipo ágil. Python, Flask, Django y React."
+      "description": "Plataforma de formación en trading con un CRM integrado que usa su propio equipo comercial. Contribuí con funcionalidades clave, pruebas de API y entrega por sprints en un equipo ágil. Python, Flask, Django y React.",
+      "imageAlt": "Diagrama de arquitectura de TradeFundrr: front end en React, APIs en Python con Flask y Django, CRM integrado, seguimiento del equipo de ventas"
     },
     "autotempest": {
       "description": "Búsqueda de coches en muchos portales a la vez, filtrada desde un único formulario. Construí el front end responsivo en React y la API REST que consulta los anuncios extraídos desde MySQL.",
       "imageAlt": "Captura de la página de inicio de AutoTempest mostrando el formulario de búsqueda agregada de coches usados"
     },
     "points-app": {
-      "description": "Programa de fidelización donde los puntos se convierten en códigos de recarga móvil. Construí el flujo de canje y el procesamiento de pagos sobre Node.js, React y MySQL."
+      "description": "Programa de fidelización donde los puntos se convierten en códigos de recarga móvil. Construí el flujo de canje y el procesamiento de pagos sobre Node.js, React y MySQL.",
+      "imageAlt": "Diagrama de arquitectura de Points App: saldo de puntos de fidelidad, canje en React, procesamiento de pagos en Node.js y MySQL, emisión del código de recarga móvil"
     },
     "al-khair-traders-pos": {
-      "description": "Sustituyó un proceso en papel para un mayorista: productos, proveedores, compras, ventas, devoluciones y cotizaciones en un solo sistema, con permisos por rol hasta el nivel de módulo. Node.js, Express y TypeORM tras React con TanStack Query, incluyendo autenticación JWT, migraciones versionadas y documentación de API generada."
+      "description": "Sustituyó un proceso en papel para un mayorista: productos, proveedores, compras, ventas, devoluciones y cotizaciones en un solo sistema, con permisos por rol hasta el nivel de módulo. Node.js, Express y TypeORM tras React con TanStack Query, incluyendo autenticación JWT, migraciones versionadas y documentación de API generada.",
+      "imageAlt": "Diagrama de arquitectura del POS de Al Khair Traders: cliente React con TanStack Query, autenticación JWT por roles, API Express con TypeORM, base de datos MySQL"
     },
     "deployment-tool": {
-      "description": "Proyecto de fin de carrera que elimina la traducción manual entre Couchbase y Firebase: convierte consultas N1QL en Firebase Cloud Functions y las despliega."
+      "description": "Proyecto de fin de carrera que elimina la traducción manual entre Couchbase y Firebase: convierte consultas N1QL en Firebase Cloud Functions y las despliega.",
+      "imageAlt": "Diagrama del flujo de la herramienta N1QL a Firebase: consultas N1QL de Couchbase traducidas a Firebase Cloud Functions y desplegadas"
     }
   },
   "experiencesData": {

@@ -131,7 +131,8 @@ export const projects: Project[] = [
     description: 'projectsData.real-time-gaming-platform.description',
     technologies: ['JavaScript', 'Node.js', 'WebSocket', 'UI Libraries'],
     liveUrl: '',
-    imageUrl: '',
+    imageUrl: '/projects/real-time-gaming-platform.webp',
+    imageAlt: 'projectsData.real-time-gaming-platform.imageAlt',
     featured: false,
   },
   {
@@ -140,7 +141,8 @@ export const projects: Project[] = [
     description: 'projectsData.tradefundrr.description',
     technologies: ['Python', 'Flask', 'Django', 'ReactJS', 'CRM'],
     liveUrl: 'https://tradefundrr.com',
-    imageUrl: '',
+    imageUrl: '/projects/tradefundrr.webp',
+    imageAlt: 'projectsData.tradefundrr.imageAlt',
     featured: false,
   },
   {
@@ -156,7 +158,8 @@ export const projects: Project[] = [
       'MySQL',
       'JWT Auth',
     ],
-    imageUrl: '',
+    imageUrl: '/projects/al-khair-traders-pos.webp',
+    imageAlt: 'projectsData.al-khair-traders-pos.imageAlt',
     featured: false,
   },
   {
@@ -164,6 +167,7 @@ export const projects: Project[] = [
     title: 'Autotempest',
     description: 'projectsData.autotempest.description',
     technologies: ['React.js', 'Node.js', 'MySQL', 'REST APIs', 'Web Scraping'],
+    liveUrl: 'https://www.autotempest.com',
     imageUrl: '/projects/autotempest.webp',
     imageAlt: 'projectsData.autotempest.imageAlt',
     featured: false,
@@ -173,7 +177,8 @@ export const projects: Project[] = [
     title: 'Points App',
     description: 'projectsData.points-app.description',
     technologies: ['Node.js', 'React.js', 'MySQL', 'Payment Integration'],
-    imageUrl: '',
+    imageUrl: '/projects/points-app.webp',
+    imageAlt: 'projectsData.points-app.imageAlt',
     featured: false,
   },
   {
@@ -188,7 +193,8 @@ export const projects: Project[] = [
       'Javascript',
       'HTML/CSS',
     ],
-    imageUrl: '',
+    imageUrl: '/projects/deployment-tool.webp',
+    imageAlt: 'projectsData.deployment-tool.imageAlt',
     featured: false,
   },
 ];

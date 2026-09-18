@@ -161,23 +161,28 @@
       "imageAlt": "Architecture diagram of the safety compliance platform: React microservices frontend, API layer, AWS Lambda compliance logic and multi-site reporting"
     },
     "real-time-gaming-platform": {
-      "description": "Real-time gaming platform. Built JavaScript bot libraries and WebSocket connections for in-game bot behavior and communication, plus the UI and command libraries used to control them. Client and product name withheld."
+      "description": "Real-time gaming platform. Built JavaScript bot libraries and WebSocket connections for in-game bot behavior and communication, plus the UI and command libraries used to control them. Client and product name withheld.",
+      "imageAlt": "Architecture diagram of the real-time gaming platform: control UI and command libraries, WebSocket messaging, JavaScript bot libraries, in-game actions"
     },
     "tradefundrr": {
-      "description": "Trading education platform with an integrated CRM used by its own sales team. Contributed core features, API testing and sprint delivery in an agile team. Python, Flask, Django and React."
+      "description": "Trading education platform with an integrated CRM used by its own sales team. Contributed core features, API testing and sprint delivery in an agile team. Python, Flask, Django and React.",
+      "imageAlt": "Architecture diagram of TradeFundrr: React front end, Python APIs on Flask and Django, integrated CRM, sales team follow-up"
     },
     "autotempest": {
       "description": "Car search across many listing sites at once, filtered in a single form. Built the responsive React front end and the REST API that queries scraped listings out of MySQL.",
       "imageAlt": "Screenshot of the AutoTempest home page showing the aggregated used car search form"
     },
     "points-app": {
-      "description": "Customer loyalty scheme where points convert into mobile top-up codes. Built the redemption flow and payment processing on Node.js, React and MySQL."
+      "description": "Customer loyalty scheme where points convert into mobile top-up codes. Built the redemption flow and payment processing on Node.js, React and MySQL.",
+      "imageAlt": "Architecture diagram of the Points App: loyalty points balance, redemption in React, payment processing on Node.js and MySQL, mobile top-up code issued"
     },
     "al-khair-traders-pos": {
-      "description": "Replaced a paper process for a wholesale trader: products, suppliers, purchases, sales, returns and quotations in one system, with role-based permissions down to the module level. Node.js, Express and TypeORM behind React with TanStack Query, including JWT authentication, versioned migrations and generated API documentation."
+      "description": "Replaced a paper process for a wholesale trader: products, suppliers, purchases, sales, returns and quotations in one system, with role-based permissions down to the module level. Node.js, Express and TypeORM behind React with TanStack Query, including JWT authentication, versioned migrations and generated API documentation.",
+      "imageAlt": "Architecture diagram of the Al Khair Traders POS: React client with TanStack Query, JWT role-based auth, Express API with TypeORM, MySQL database"
     },
     "deployment-tool": {
-      "description": "Final year project that removes the hand translation step between Couchbase and Firebase: it converts N1QL queries into Firebase Cloud Functions and deploys them."
+      "description": "Final year project that removes the hand translation step between Couchbase and Firebase: it converts N1QL queries into Firebase Cloud Functions and deploys them.",
+      "imageAlt": "Pipeline diagram of the N1QL-to-Firebase tool: Couchbase N1QL queries translated into Firebase Cloud Functions and deployed"
     }
   },
   "experiencesData": {

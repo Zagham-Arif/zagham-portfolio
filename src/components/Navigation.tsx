@@ -107,7 +107,7 @@ export function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden items-center gap-6 lg:flex">
-            {[...navLinks, contact].map(item => (
+            {[...navLinks, allProjects, contact].map(item => (
               <motion.div
                 key={item.key}
                 whileHover={{ y: -2 }}
@@ -119,14 +119,6 @@ export function Navigation() {
                 </Link>
               </motion.div>
             ))}
-            <Button
-              asChild
-              variant={allProjects.isActive ? 'default' : 'outline'}
-              size="sm"
-              className="ml-1"
-            >
-              <Link href={allProjects.href}>{t('allProjects')}</Link>
-            </Button>
           </div>
 
           {/* Theme + Language */}
@@ -196,7 +188,7 @@ export function Navigation() {
           className="border-t bg-background lg:hidden"
         >
           <div className="space-y-4 px-6 py-4">
-            {[...navLinks, contact, allProjects].map(item => (
+            {[...navLinks, allProjects, contact].map(item => (
               <Link
                 key={item.key}
                 href={item.href}
