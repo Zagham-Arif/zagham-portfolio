@@ -55,3 +55,11 @@ node_modules/
 # package-lock.json
 # yarn.lock
 # pnpm-lock.yaml
+
+# generated / vendored assets
+public/animations/
+
+# reference docs, kept verbatim
+PORTFOLIO_UPDATE_BRIEF.md
+Portfolio site review*.md
+UPDATES_*.md

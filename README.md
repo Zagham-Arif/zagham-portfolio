@@ -11,7 +11,7 @@ A modern, responsive portfolio website built with Next.js 14, TypeScript, and Ta
 - **Interactive Sections**: Hero, Projects, Experience, Skills, and Contact sections
 - **Form Validation**: Contact form with proper validation using React Hook Form + Zod
 - **Performance Optimized**: Built with Next.js 14 App Router and TypeScript
-- **SEO Friendly**: Proper metadata, structured data, and internationalized URLs
+- **SEO Friendly**: Server-rendered content, per-locale metadata with canonical and hreflang, `Person` JSON-LD, sitemap, robots and web manifest
 - **Dual CV Support**: Traditional and Europass CV download options
 - **Project Slider**: Interactive project showcase with navigation controls
 
@@ -102,15 +102,20 @@ The development server supports hot reload for:
 src/
 ├── app/
 │   ├── [locale]/          # Locale-based routing (en/es)
-│   │   ├── layout.tsx     # Locale layout with NextIntlClientProvider
-│   │   └── page.tsx       # Main portfolio page
+│   │   ├── layout.tsx     # Locale layout with metadata and Person JSON-LD
+│   │   ├── page.tsx       # Main portfolio page (server component)
+│   │   ├── projects/      # /[locale]/projects, all projects grouped by recency
+│   │   └── contact/       # /[locale]/contact, contact details and form
+│   ├── manifest.ts        # Web app manifest route
+│   ├── robots.ts          # robots.txt route
+│   ├── sitemap.ts         # sitemap.xml route
 │   ├── fonts/             # Custom fonts (Geist Sans/Mono)
 │   ├── globals.css        # Global styles and CSS variables
 │   └── layout.tsx         # Root layout with ThemeProvider
 ├── components/
 │   ├── ui/                # shadcn/ui components
 │   ├── sections/          # Page sections
-│   │   ├── Hero.tsx       # Hero section with dual CV downloads
+│   │   ├── Hero.tsx       # Hero section (CV buttons hidden while cvUrls are empty)
 │   │   ├── Projects.tsx   # Projects with slider functionality
 │   │   ├── Experience.tsx # Work experience timeline
 │   │   ├── Skills.tsx     # Skills and technologies
@@ -118,13 +123,16 @@ src/
 │   │   └── Footer.tsx     # Footer with social links
 │   └── Navigation.tsx     # Navigation with theme toggle
 ├── i18n/
-│   └── request.ts         # next-intl configuration
+│   ├── config.ts          # Supported locales and the default
+│   └── request.ts         # next-intl request configuration
 ├── lib/
 │   ├── data.ts           # Portfolio data (projects, experience, skills)
+│   ├── icons.ts          # Explicit icon registry (only these icons are bundled)
 │   ├── types.ts          # TypeScript type definitions
 │   └── utils.ts          # Utility functions
 ├── middleware.ts         # Locale middleware for routing
-└── public/               # Static assets and CV files
+└── public/
+    └── projects/         # Project card images (architecture diagrams, screenshots)
 messages/
 ├── en.json              # English translations
 └── es.json              # Spanish translations
@@ -161,11 +169,17 @@ export const projects: Project[] = [
     description: 'Project description',
     technologies: ['Next.js', 'TypeScript'],
     liveUrl: 'https://your-project.com',
+    imageUrl: '/projects/project-id.webp',
+    imageAlt: 'projectsData.project-id.imageAlt',
     featured: true,
   },
   // ... more projects
 ];
 ```
+
+`description` and `imageAlt` are translation keys, not literal text, and must exist
+in every file under `messages/`. `yarn check-i18n` (part of `yarn check-all`) fails
+the build if a key referenced here is missing from a locale.
 
 ### Experience & Skills
 
@@ -247,15 +261,18 @@ The project is compatible with any platform supporting Next.js:
 
 ### SEO Optimization
 
-- Meta tags configuration
-- Open Graph support
-- Twitter Card support
-- Structured data
+- Every section is server-rendered, so crawlers see the content without running JavaScript
+- Per-locale `generateMetadata` with `metadataBase`, canonical URLs and `en` / `es` / `x-default` hreflang
+- Open Graph and Twitter Card tags with an absolute image URL
+- `Person` JSON-LD in the locale layout
+- Three indexable routes per locale (home, `/projects`, `/contact`), each with its own title, description and canonical
+- `/sitemap.xml`, `/robots.txt` and `/manifest.webmanifest` as App Router routes
+- Both locales prerendered at build time via `generateStaticParams` and `setRequestLocale`
 
 ## 📞 Contact
 
 - **Email**: zaghamarif@gmail.com
-- **LinkedIn**: [linkedin.com/in/zagham-arif](https://linkedin.com/in/zagham-arif)
+- **LinkedIn**: [linkedin.com/in/zagham-arif](https://www.linkedin.com/in/zagham-arif)
 - **GitHub**: [github.com/Zagham-Arif](https://github.com/Zagham-Arif)
 
 ---
