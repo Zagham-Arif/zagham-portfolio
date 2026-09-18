@@ -150,7 +150,7 @@
     },
     "memberstore": {
       "description": "One storefront serving multiple independent merchants, each selling under their own brand. Stripe handles payments, merchant onboarding and webhook reconciliation behind a KeystoneJS and GraphQL API on MongoDB, with a Next.js and TypeScript front end.",
-      "imageAlt": "Screenshot of the Memberstore marketing site showing the multi-merchant storefront product"
+      "imageAlt": "Architecture diagram of the Memberstore multi-merchant storefront: Next.js frontend, GraphQL API on KeystoneJS, Stripe payments and onboarding, and webhook event handling"
     },
     "civasource": {
       "description": "AI-assisted product matching for a supply marketplace. Extracts up to 1,000 products per minute using asyncio with Redis caching, behind a FastAPI service with authentication.",

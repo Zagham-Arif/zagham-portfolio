@@ -150,7 +150,7 @@
     },
     "memberstore": {
       "description": "Un único storefront para varios comerciantes independientes, cada uno vendiendo bajo su propia marca. Stripe gestiona pagos, alta de comerciantes y conciliación de webhooks tras una API KeystoneJS con GraphQL sobre MongoDB, con un front end en Next.js y TypeScript.",
-      "imageAlt": "Captura del sitio de Memberstore mostrando el producto de storefront multicomerciante"
+      "imageAlt": "Diagrama de arquitectura del storefront multicomerciante de Memberstore: frontend en Next.js, API GraphQL sobre KeystoneJS, pagos y alta con Stripe, y gestión de eventos por webhook"
     },
     "civasource": {
       "description": "Coincidencia de productos asistida por IA para un marketplace de proveedores. Extrae hasta 1.000 productos por minuto usando asyncio con caché en Redis, tras un servicio FastAPI con autenticación.",
