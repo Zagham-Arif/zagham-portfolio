@@ -31,6 +31,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# graphify
+/graphify-out/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Source images for project cards (originals kept out of the bundle)
+project-pics/

@@ -3,11 +3,18 @@
 import { useForm as useFormspree, ValidationError } from '@formspree/react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { motion } from 'framer-motion';
-import { personalInfo, socialLinks } from 'lib/data';
+import { freelanceLinks, personalInfo, socialLinks } from 'lib/data';
 import { useTranslations } from 'next-intl';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { FiLoader, FiMail, FiMapPin, FiPhone, FiSend } from 'react-icons/fi';
+import {
+  FiClock,
+  FiLoader,
+  FiMail,
+  FiMapPin,
+  FiPhone,
+  FiSend,
+} from 'react-icons/fi';
 import { Button } from 'ui/button';
 import {
   Card,
@@ -28,8 +35,11 @@ type ContactFormData = {
   message: string;
 };
 
-export function Contact() {
+export function Contact({ standalone = false }: { standalone?: boolean }) {
   const t = useTranslations('contact');
+  const footer = useTranslations('footer');
+  // On /contact this section is the page, so its heading is the page's h1.
+  const Heading = standalone ? 'h1' : 'h2';
   const social = useTranslations('social');
   const [formspreeState, handleFormspreeSubmit] = useFormspree(
     process.env.NEXT_PUBLIC_FORMSPREE_ID!
@@ -105,7 +115,10 @@ export function Contact() {
   }, [formspreeState.succeeded, reset]);
 
   return (
-    <section id="contact" className="bg-muted/50 px-4 py-20 sm:px-6 lg:px-8">
+    <section
+      id="contact"
+      className={`bg-muted/50 px-4 sm:px-6 lg:px-8 ${standalone ? 'min-h-screen pb-24 pt-32' : 'py-24'}`}
+    >
       <div className="container mx-auto px-1 sm:px-3 md:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -114,10 +127,17 @@ export function Contact() {
           transition={{ duration: 0.6 }}
           className="mb-16 text-center"
         >
-          <h2 className="mb-4 text-3xl font-bold sm:text-4xl">{t('title')}</h2>
+          <Heading className="mb-4 text-3xl font-bold sm:text-4xl">
+            {t('title')}
+          </Heading>
           <p className="mx-auto max-w-full text-lg text-muted-foreground sm:max-w-2xl">
             {t('subtitle')}
           </p>
+          {standalone && (
+            <p className="mx-auto mt-4 max-w-full leading-relaxed text-muted-foreground sm:max-w-3xl">
+              {t('pageIntro')}
+            </p>
+          )}
         </motion.div>
 
         <motion.div
@@ -131,21 +151,31 @@ export function Contact() {
           <motion.div variants={itemVariants}>
             <Card>
               <CardHeader>
-                <CardTitle>{t('title')}</CardTitle>
+                <CardTitle>{t('detailsTitle')}</CardTitle>
                 <CardDescription>{t('description')}</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="flex items-center space-x-3">
+                <a
+                  href={`mailto:${personalInfo.email}`}
+                  className="flex items-center space-x-3 transition-colors hover:text-primary"
+                >
                   <FiMail className="h-5 w-5 text-primary" />
                   <span>{personalInfo.email}</span>
-                </div>
-                <div className="flex items-center space-x-3">
+                </a>
+                <a
+                  href={`tel:${personalInfo.phone.replace(/\s/g, '')}`}
+                  className="flex items-center space-x-3 transition-colors hover:text-primary"
+                >
                   <FiPhone className="h-5 w-5 text-primary" />
                   <span>{personalInfo.phone}</span>
-                </div>
+                </a>
                 <div className="flex items-center space-x-3">
                   <FiMapPin className="h-5 w-5 text-primary" />
                   <span>{personalInfo.location}</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <FiClock className="h-5 w-5 text-primary" />
+                  <span>{t('timezone')}</span>
                 </div>
 
                 <div className="pt-6">
@@ -169,6 +199,28 @@ export function Contact() {
                             size={20}
                             className="transition-colors duration-200 group-hover:text-primary"
                           />
+                        </a>
+                      </Button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="border-t pt-6">
+                  <h4 className="mb-4 font-semibold">{t('hireMe')}</h4>
+                  <div className="flex flex-wrap gap-3">
+                    {freelanceLinks.map(link => (
+                      <Button key={link.name} variant="outline" asChild>
+                        <a
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <IconRenderer
+                            iconName={link.icon}
+                            size={18}
+                            className="mr-2"
+                          />
+                          {footer('hireOnUpwork')}
                         </a>
                       </Button>
                     ))}

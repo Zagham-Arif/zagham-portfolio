@@ -7,43 +7,47 @@ import { FiDownload, FiMail } from 'react-icons/fi';
 
 export function HeroActions() {
   const t = useTranslations('hero');
+  const { europass, traditional } = personalInfo.cvUrls;
+  const hasCv = Boolean(europass || traditional);
 
   return (
     <motion.div
       variants={itemVariants}
       className="flex flex-col items-center justify-center gap-4 sm:flex-row"
     >
-      <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-        <motion.div
-          whileHover={{ scale: 1.05, y: -2 }}
-          whileTap={{ scale: 0.95 }}
-          transition={{ type: 'spring', stiffness: 400 }}
-        >
-          <Button asChild size="lg" className="group w-full sm:w-auto">
-            <a href={personalInfo.cvUrls.traditional} download>
-              <FiDownload className="mr-2 h-4 w-4 group-hover:animate-bounce" />
-              {t('cv.traditional')}
-            </a>
-          </Button>
-        </motion.div>
-        <motion.div
-          whileHover={{ scale: 1.05, y: -2 }}
-          whileTap={{ scale: 0.95 }}
-          transition={{ type: 'spring', stiffness: 400 }}
-        >
-          <Button
-            asChild
-            variant="outline"
-            size="lg"
-            className="group w-full bg-transparent sm:w-auto"
+      {hasCv && (
+        <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+          <motion.div
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: 'spring', stiffness: 400 }}
           >
-            <a href={personalInfo.cvUrls.europass} download>
-              <FiDownload className="mr-2 h-4 w-4 group-hover:animate-bounce" />
-              {t('cv.europass')}
-            </a>
-          </Button>
-        </motion.div>
-      </div>
+            <Button asChild size="lg" className="group w-full sm:w-auto">
+              <a href={personalInfo.cvUrls.traditional} download>
+                <FiDownload className="mr-2 h-4 w-4 group-hover:animate-bounce" />
+                {t('cv.traditional')}
+              </a>
+            </Button>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: 'spring', stiffness: 400 }}
+          >
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="group w-full bg-transparent sm:w-auto"
+            >
+              <a href={personalInfo.cvUrls.europass} download>
+                <FiDownload className="mr-2 h-4 w-4 group-hover:animate-bounce" />
+                {t('cv.europass')}
+              </a>
+            </Button>
+          </motion.div>
+        </div>
+      )}
       <motion.div
         whileHover={{ scale: 1.05, y: -2 }}
         whileTap={{ scale: 0.95 }}

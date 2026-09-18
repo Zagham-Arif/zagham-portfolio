@@ -1,9 +1,8 @@
 'use client';
 
 import { useTheme } from 'next-themes';
-import { IconType } from 'react-icons';
-import * as Fi from 'react-icons/fi';
-import * as Si from 'react-icons/si';
+import { icons } from 'lib/icons';
+import { FiCode } from 'react-icons/fi';
 
 interface IconRendererProps {
   iconName: string;
@@ -72,13 +71,14 @@ const brandColors: Record<string, string> = {
   SiLinkedin: '#0A66C2',
   SiGmail: '#EA4335',
   SiCloudflare: '#F38020',
-  SiFiverr: '#1DBF73',
   SiUpwork: '#14A800',
+  SiShadcnui: '#000000',
   FiMail: '#EA4335',
 };
 
 // Icons that are too dark to see in dark mode
 const darkModeSensitiveIcons = new Set([
+  'SiShadcnui',
   'SiNextdotjs',
   'SiExpress',
   'SiDjango',
@@ -97,22 +97,8 @@ export function IconRenderer({
 }: IconRendererProps) {
   const { theme } = useTheme();
 
-  // Look up across supported packs
-  const packs: Record<string, Record<string, IconType>> = { Si, Fi };
-  const IconComponent =
-    (packs.Si as Record<string, IconType>)[iconName] ||
-    (packs.Fi as Record<string, IconType>)[iconName];
-
-  if (!IconComponent) {
-    // sensible fallback
-    return (
-      <Si.SiReact
-        style={{ color: brandColors.SiReact }}
-        size={size}
-        className={className}
-      />
-    );
-  }
+  // Unknown names get a neutral glyph rather than another brand's logo.
+  const IconComponent = icons[iconName] ?? FiCode;
 
   let color = brandColors[iconName];
 

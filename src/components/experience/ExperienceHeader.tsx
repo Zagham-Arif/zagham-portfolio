@@ -3,7 +3,12 @@
 import { motion } from 'framer-motion';
 import { Experience } from 'lib/types';
 import { formatDate, getCompanyInitials } from 'lib/utils';
-import { FiBriefcase, FiCalendar, FiChevronDown } from 'react-icons/fi';
+import {
+  FiBriefcase,
+  FiCalendar,
+  FiChevronDown,
+  FiMapPin,
+} from 'react-icons/fi';
 import { CardHeader } from 'ui/card';
 
 export function ExperienceHeader({
@@ -56,13 +61,16 @@ export function ExperienceHeader({
               <FiBriefcase className="h-4 w-4 text-primary" />
               <span className="text-xl font-bold">{t(experience.title)}</span>
             </span>
-            <span className="text-lg font-medium text-primary">
+            <span className="block text-lg font-medium text-primary">
               {t(experience.company)}
             </span>
+            <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground">
+              {t(experience.summaryKey)}
+            </p>
           </div>
         </div>
 
-        <div className="flex items-center">
+        <div className="flex flex-wrap items-center gap-2">
           <motion.div
             className="flex items-center gap-1 rounded-full bg-background/80 px-4 py-2 text-sm text-muted-foreground shadow-sm backdrop-blur-sm"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -79,6 +87,20 @@ export function ExperienceHeader({
                 : t('experience.present')}
             </span>
           </motion.div>
+
+          {experience.location && (
+            <motion.div
+              className="flex items-center gap-1 rounded-full bg-background/80 px-4 py-2 text-sm text-muted-foreground shadow-sm backdrop-blur-sm"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <FiMapPin className="h-4 w-4 text-primary" />
+              <span className="font-medium">{experience.location}</span>
+            </motion.div>
+          )}
 
           <motion.button
             type="button"

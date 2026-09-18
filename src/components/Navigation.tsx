@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useActiveSection } from 'hooks/useActiveSection';
 import { personalInfo } from 'lib/data';
 import { useTranslations } from 'next-intl';
 import { useTheme } from 'next-themes';
@@ -16,12 +17,13 @@ import {
   DropdownMenuTrigger,
 } from 'ui/dropdown-menu';
 
-const navItems = [
-  { key: 'home', href: '#hero' },
-  { key: 'projects', href: '#projects' },
-  { key: 'experience', href: '#experience' },
-  { key: 'skills', href: '#skills' },
-  { key: 'contact', href: '#contact' },
+// Section links carry the locale so they also work from /projects and /contact,
+// where the target section lives on another route.
+const sectionItems = [
+  { key: 'home', hash: '' },
+  { key: 'projects', hash: '#projects' },
+  { key: 'experience', hash: '#experience' },
+  { key: 'skills', hash: '#skills' },
 ];
 
 export function Navigation() {
@@ -29,21 +31,60 @@ export function Navigation() {
   const { theme, setTheme } = useTheme();
   const t = useTranslations('nav');
   const pathname = usePathname();
-  const currentLocale = pathname.split('/')[1] || 'en';
   const router = useRouter();
+
+  const segments = pathname.split('/').filter(Boolean);
+  const currentLocale = segments[0] || 'en';
+  const currentPath = `/${segments.slice(1).join('/')}`;
+  const home = `/${currentLocale}`;
+
   const languages = [
     { code: 'en', name: t('languages.en'), flag: '🇺🇸' },
     { code: 'es', name: t('languages.es'), flag: '🇪🇸' },
   ];
 
+  const isHome = currentPath === '/';
+  const activeSection = useActiveSection(
+    sectionItems.filter(item => item.hash).map(item => item.hash.slice(1)),
+    isHome
+  );
+
+  const navLinks = sectionItems.map(item => ({
+    key: item.key,
+    href: `${home}${item.hash}`,
+    isActive: isHome && item.hash.slice(1) === activeSection,
+  }));
+
+  const allProjects = {
+    key: 'allProjects',
+    href: `${home}/projects`,
+    isActive: currentPath === '/projects',
+  };
+
+  const contact = {
+    key: 'contact',
+    href: `${home}/contact`,
+    isActive: currentPath === '/contact',
+  };
+
   const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark');
 
   const switchLanguage = (newLocale: string) => {
-    router.push(`/${newLocale}`);
+    router.push(`/${newLocale}${currentPath === '/' ? '' : currentPath}`);
   };
 
   const currentLanguage =
     languages.find(lang => lang.code === currentLocale) || languages[0];
+
+  const linkClass = (isActive: boolean) =>
+    `group relative pb-1 text-sm transition-colors ${
+      isActive ? 'text-primary' : 'text-foreground/80 hover:text-primary'
+    }`;
+
+  const underline = (isActive: boolean) =>
+    `absolute bottom-0 left-0 h-[2px] w-full origin-left bg-primary transition-transform duration-300 ${
+      isActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+    }`;
 
   return (
     <motion.nav
@@ -56,40 +97,32 @@ export function Navigation() {
           {/* Logo / Name */}
           <motion.div whileHover={{ scale: 1.05 }}>
             <Link
-              href="/"
-              className="relative px-3 text-xl font-bold transition-colors hover:text-primary"
+              href={home}
+              className="group relative px-3 text-xl font-bold transition-colors hover:text-primary"
             >
               {personalInfo.name}
-              <motion.span
-                layoutId="underline-name"
-                className="absolute -bottom-1 left-0 h-[2px] w-0 bg-primary transition-all group-hover:w-full"
-              />
+              <span className="absolute -bottom-1 left-3 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]" />
             </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden items-center space-x-8 md:flex">
-            {navItems.map(item => {
-              return (
-                <motion.div
-                  key={item.key}
-                  whileHover={{ y: -2 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                >
-                  <Link
-                    href={item.href}
-                    className="relative pb-1 text-foreground/80 transition-colors hover:text-primary"
-                  >
-                    {t(item.key)}
-                    <span className="absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-0 transform bg-primary transition-transform duration-300 group-hover:scale-x-100" />
-                  </Link>
-                </motion.div>
-              );
-            })}
+          <div className="hidden items-center gap-6 lg:flex">
+            {[...navLinks, allProjects, contact].map(item => (
+              <motion.div
+                key={item.key}
+                whileHover={{ y: -2 }}
+                transition={{ type: 'spring', stiffness: 300 }}
+              >
+                <Link href={item.href} className={linkClass(item.isActive)}>
+                  {t(item.key)}
+                  <span className={underline(item.isActive)} />
+                </Link>
+              </motion.div>
+            ))}
           </div>
 
           {/* Theme + Language */}
-          <div className="hidden items-center space-x-2 md:flex">
+          <div className="hidden items-center space-x-2 lg:flex">
             <Button
               variant="ghost"
               size="icon"
@@ -132,8 +165,10 @@ export function Navigation() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="lg:hidden"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={t('toggleMenu')}
+            aria-expanded={isOpen}
           >
             {isOpen ? (
               <FiX className="h-5 w-5" />
@@ -150,21 +185,23 @@ export function Navigation() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
-          className="border-t bg-background md:hidden"
+          className="border-t bg-background lg:hidden"
         >
           <div className="space-y-4 px-6 py-4">
-            {navItems.map(item => {
-              return (
-                <Link
-                  key={item.key}
-                  href={item.href}
-                  className="block text-foreground/80 transition-colors hover:text-primary"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {t(item.key)}
-                </Link>
-              );
-            })}
+            {[...navLinks, allProjects, contact].map(item => (
+              <Link
+                key={item.key}
+                href={item.href}
+                className={`block transition-colors ${
+                  item.isActive
+                    ? 'font-medium text-primary'
+                    : 'text-foreground/80 hover:text-primary'
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
+                {t(item.key)}
+              </Link>
+            ))}
             <div className="flex items-center justify-between border-t pt-4">
               <div className="flex items-center space-x-2">
                 <Button

@@ -1,4 +1,9 @@
 {
+  "seo": {
+    "title": "Zagham Arif | Senior Full-Stack Software Engineer | Node.js, TypeScript, React, Next.js, AWS",
+    "description": "Senior full-stack engineer in Lahore, Pakistan with 5+ years in Node.js, TypeScript, React, Next.js and AWS. Backend architecture, data pipelines and payments.",
+    "keywords": "Senior Full-Stack Software Engineer, Node.js Developer, TypeScript, NestJS, React, Next.js, Python, FastAPI, PostgreSQL, Redis, AWS, Terraform, Backend Architecture, Payment Integration, Remote Contract Developer, Lahore Pakistan"
+  },
   "main": {
     "scrollUp": "Scroll to Top"
   },
@@ -8,23 +13,25 @@
     "experience": "Experience",
     "skills": "Skills",
     "contact": "Contact",
+    "allProjects": "All Projects",
     "toggleTheme": "Toggle theme",
     "toggleLanguage": "Toggle language",
     "languages": {
       "en": "English",
       "es": "Español"
-    }
+    },
+    "toggleMenu": "Toggle menu"
   },
   "hero": {
     "greeting": "Hi, I'm",
-    "title": "Full Stack Engineer",
-    "subtitle": "I turn complex ideas into simple, usable web apps.",
+    "title": "Senior Full-Stack Software Engineer",
+    "subtitle": "Node.js, TypeScript, React and Next.js. Backend architecture, data pipelines and payments on AWS.",
     "description": "Passionate about building scalable applications and bringing ideas to life through code.",
     "downloadCV": "Download CV",
     "contactMe": "Contact Me",
     "available": "Available",
     "scrollDown": "Scroll Down",
-    "bio": "I’m a Senior Full Stack Developer with 4+ years of experience building products that people love to use. From sleek frontends in React and Next.js to scalable backends in Node.js and Python, I enjoy solving problems end-to-end. I’ve worked on everything from payment systems with PayPal and Stripe to high-volume data pipelines on AWS. Whether it’s deploying with Terraform, scaling with Redis, or mentoring teammates, I’m passionate about creating software that’s fast, reliable, and impactful.",
+    "bio": "I’m a Senior Full-Stack Software Engineer with 5+ years of experience building products that people love to use. From sleek frontends in React and Next.js to scalable backends in Node.js and Python, I enjoy solving problems end-to-end. I’ve worked on everything from payment systems with Stripe to high-volume data pipelines on AWS. Whether it’s deploying with Terraform, scaling with Redis, or mentoring teammates, I’m passionate about creating software that’s fast, reliable, and impactful.",
     "cv": {
       "europass": "Europass CV",
       "traditional": "Traditional CV"
@@ -38,16 +45,30 @@
   },
   "projects": {
     "title": "Featured Projects",
-    "subtitle": "Here are some of my recent works",
+    "subtitle": "Recent work: backend architecture, data pipelines and payment systems that went into production.",
     "viewCode": "View Code",
     "liveDemo": "Live Demo",
     "viewProject": "View Project",
     "code": "Code",
-    "demo": "Demo"
+    "demo": "Demo",
+    "viewAll": "View All Projects",
+    "viewAllCount": "View all {count} projects"
+  },
+  "projectsPage": {
+    "title": "All Projects",
+    "subtitle": "Backend architecture, data pipelines and payment systems, from recent client work back to earlier products.",
+    "metaTitle": "Projects | Zagham Arif, Senior Full-Stack Software Engineer",
+    "metaDescription": "Backend architecture, data pipelines and payment systems built in Node.js, TypeScript, Python and AWS, including retail price auditing, recurring donations and real-time sports statistics.",
+    "backToHome": "Back to home",
+    "featuredHeading": "Recent and featured work",
+    "featuredSubheading": "Production systems built in the last three years, most of them backend heavy.",
+    "earlierHeading": "Earlier work",
+    "earlierSubheading": "Products and tools built while moving from junior to senior, kept here as the full record.",
+    "contactCta": "Have something similar to build? Get in touch."
   },
   "experience": {
     "title": "Work Experience",
-    "subtitle": "My professional journey",
+    "subtitle": "Five years of full-stack work, from a first JavaScript role to leading backend, data and payments delivery for international clients.",
     "present": "Present",
     "keyAchievements": "Key Achievements",
     "technologiesUsed": "Technologies Used",
@@ -56,7 +77,7 @@
   },
   "skills": {
     "title": "Skills & Technologies",
-    "subtitle": "Technologies I work with",
+    "subtitle": "The tools I build production systems with, from API and data layer through to cloud infrastructure.",
     "categories": {
       "backend": "Backend & APIs",
       "frontend": "Frontend Technologies",
@@ -68,7 +89,8 @@
       "yearsExperience": "Years Experience",
       "projectsCompleted": "Projects Completed",
       "technologies": "Technologies"
-    }
+    },
+    "coreStack": "Core stack"
   },
   "contact": {
     "title": "Get In Touch",
@@ -92,7 +114,13 @@
     "send": "Send Message",
     "sending": "Sending...",
     "success": "Message sent successfully!",
-    "error": "Failed to send message. Please try again."
+    "error": "Failed to send message. Please try again.",
+    "timezone": "Pakistan Standard Time (UTC+5), overlapping with UK and EU working hours",
+    "hireMe": "Hire me on a freelance platform",
+    "metaTitle": "Contact | Zagham Arif, Senior Full-Stack Software Engineer",
+    "metaDescription": "Get in touch with Zagham Arif, a senior full-stack engineer in Lahore, Pakistan, about remote contract or full-time work in Node.js, TypeScript, React, Next.js and AWS.",
+    "detailsTitle": "Contact details",
+    "pageIntro": "Available for remote contract and full-time work. Backend architecture, data pipelines, payment integrations and full-stack product work in Node.js, TypeScript, Python, React, Next.js and AWS. Send a short note on what you are building and the timeline, and I will reply with how I would approach it."
   },
   "notFound": {
     "title": "404 - Page Not Found",
@@ -103,128 +131,153 @@
     "rights": "All rights reserved.",
     "quickLinks": "Quick Links",
     "getInTouch": "Get In Touch",
-    "hireOnFiverr": "Hire me on Fiverr",
     "hireOnUpwork": "Hire me on Upwork",
     "brandTagline": "From concept to cloud - I ship it",
-    "brandDescription": "Senior Full Stack Developer with 4+ years of experience specializing in JavaScript, TypeScript, Python, and the MERN stack. Skilled in building scalable web applications, architecting cloud-native backends, and integrating payment systems. Passionate about delivering high-impact solutions and mentoring teams to achieve technical excellence."
+    "brandDescription": "Senior Full-Stack Software Engineer with 5+ years of experience specializing in JavaScript, TypeScript, Python, and the MERN stack. Skilled in building scalable web applications, architecting cloud-native backends, and integrating payment systems. Passionate about delivering high-impact solutions and mentoring teams to achieve technical excellence."
   },
   "projectsData": {
-    "donationPlatform": {
-      "description": "Migrated from Strapi to Supabase, rebuilt APIs with Next.js + Deno. Led a team of 3-4 developers in the migration process."
+    "price-auditing-backend": {
+      "description": "Retail price auditing for a US retailer, driven from a mobile app in the aisle. Designed the backend from scratch: over 2 million records per run pulled from an external feed, queued through Redis and written in parallel by Node.js worker threads, then served back paginated and queryable. Node.js, Express, TypeScript and TypeORM on AWS ECS Fargate, with Terraform-managed infrastructure and Datadog logging.",
+      "imageAlt": "Architecture diagram of the retail price auditing backend: external feed to Redis queue to Node.js worker pool to batch insert, on AWS ECS Fargate"
     },
-    "civasource": {
-      "description": "Scraped product data with integrated Redis Queues and AI product matching system. Built using FastAPI with authentication."
+    "recurring-donations-platform": {
+      "description": "Recurring donations and payments platform for a direct client. Built scheduled recurring transactions, with authentication, storage and edge functions on Supabase and a Next.js and TypeScript front end. Client and product name withheld.",
+      "imageAlt": "Architecture diagram of the recurring donations platform: supporter signup on Supabase, Next.js APIs and edge functions, payment provider with saved authorization, scheduled recurring charges"
     },
     "playertotals": {
-      "description": "Real-time player statistics system built with Node.js (TypeScript), Redis Queues, and MongoDB for high-performance data processing."
+      "description": "Live sports statistics platform covering NBA, NFL and MLB, with scores and stats refreshed every 5 minutes. Built on Node.js and TypeScript with Redis queues and MongoDB for high-throughput data processing.",
+      "imageAlt": "Architecture diagram of the PlayerTotals real-time platform: scheduled game data extraction, Redis queue, Node.js and MongoDB API, React live stats dashboard"
     },
-    "forwood-safety": {
-      "description": "Developed a safety checklist management system with microservices architecture using Node.js and TypeScript. Managed DevOps tasks and AWS deployments."
+    "memberstore": {
+      "description": "One storefront serving multiple independent merchants, each selling under their own brand. Stripe handles payments, merchant onboarding and webhook reconciliation behind a KeystoneJS and GraphQL API on MongoDB, with a Next.js and TypeScript front end.",
+      "imageAlt": "Architecture diagram of the Memberstore multi-merchant storefront: Next.js frontend, GraphQL API on KeystoneJS, Stripe payments and onboarding, and webhook event handling"
     },
-    "alteraapp": {
-      "description": "Built JavaScript libraries and WebSocket connections for Minecraft bot behavior and communication. Devised UI and command libraries for bot control."
+    "civasource": {
+      "description": "AI-assisted product matching for a supply marketplace. Extracts up to 1,000 products per minute using asyncio with Redis caching, behind a FastAPI service with authentication.",
+      "imageAlt": "Architecture diagram of the CivaSource data pipeline: concurrent source scrapers, Redis queue, AI product matching engine and FastAPI services"
+    },
+    "safety-compliance-platform": {
+      "description": "Safety checklists and compliance workflows running across multiple industrial sites, with a multi-site audit trail. Moved monolithic APIs to serverless microservices on AWS Lambda with Terraform and cut infrastructure cost by around 30 percent. Directed the team across frontend architecture and cloud infrastructure. Client and product name withheld.",
+      "imageAlt": "Architecture diagram of the safety compliance platform: React microservices frontend, API layer, AWS Lambda compliance logic and multi-site reporting"
+    },
+    "real-time-gaming-platform": {
+      "description": "Real-time gaming platform. Built JavaScript bot libraries and WebSocket connections for in-game bot behavior and communication, plus the UI and command libraries used to control them. Client and product name withheld.",
+      "imageAlt": "Architecture diagram of the real-time gaming platform: control UI and command libraries, WebSocket messaging, JavaScript bot libraries, in-game actions"
     },
     "tradefundrr": {
-      "description": "Worked on a CRM system using Python, Flask, Django, and ReactJS. Conducted API testing and actively participated in agile methodology."
+      "description": "Trading education platform with an integrated CRM used by its own sales team. Contributed core features, API testing and sprint delivery in an agile team. Python, Flask, Django and React.",
+      "imageAlt": "Architecture diagram of TradeFundrr: React front end, Python APIs on Flask and Django, integrated CRM, sales team follow-up"
     },
     "autotempest": {
-      "description": "Developed a responsive web app to filter and display scraped cars stored in a MySQL database. Designed with React.js and REST APIs for searching and filtering."
+      "description": "Car search across many listing sites at once, filtered in a single form. Built the responsive React front end and the REST API that queries scraped listings out of MySQL.",
+      "imageAlt": "Screenshot of the AutoTempest home page showing the aggregated used car search form"
     },
     "points-app": {
-      "description": "Created a web-based points redemption app for customers to redeem top-up codes. Comprehensive customer loyalty solution."
-    },
-    "sicp": {
-      "description": "Built an e-presentations web app for managing research events (authors, dates, promotional videos, event durations, etc.) deployed on AWS."
-    },
-    "vehicles-extension": {
-      "description": "Engineered a web app to scrape vehicle data using CRON jobs and store it in MongoDB. Frontend designed with React.js and backend services using Node.js."
+      "description": "Customer loyalty scheme where points convert into mobile top-up codes. Built the redemption flow and payment processing on Node.js, React and MySQL.",
+      "imageAlt": "Architecture diagram of the Points App: loyalty points balance, redemption in React, payment processing on Node.js and MySQL, mobile top-up code issued"
     },
     "al-khair-traders-pos": {
-      "description": "Built a web-based management system for a local store to handle sales, purchases, and bookkeeping operations. Deployed on Namecheap for enhanced store management efficiency."
-    },
-    "modern-pos": {
-      "description": "Developed a web-based POS system to manage various business operations, including sales, purchases, user management, and accounting. Streamlined solution for retail management."
+      "description": "Replaced a paper process for a wholesale trader: products, suppliers, purchases, sales, returns and quotations in one system, with role-based permissions down to the module level. Node.js, Express and TypeORM behind React with TanStack Query, including JWT authentication, versioned migrations and generated API documentation.",
+      "imageAlt": "Architecture diagram of the Al Khair Traders POS: React client with TanStack Query, JWT role-based auth, Express API with TypeORM, MySQL database"
     },
     "deployment-tool": {
-      "description": "Created an automation tool for converting N1QL queries into Firebase functions, improving system reliability and user experience. Facilitated seamless integration between N1QL (Couchbase) and Firebase."
+      "description": "Final year project that removes the hand translation step between Couchbase and Firebase: it converts N1QL queries into Firebase Cloud Functions and deploys them.",
+      "imageAlt": "Pipeline diagram of the N1QL-to-Firebase tool: Couchbase N1QL queries translated into Firebase Cloud Functions and deployed"
     }
   },
   "experiencesData": {
+    "freelance": {
+      "title": "Freelance Full-Stack Developer",
+      "company": "Self-employed",
+      "summary": "Building a recurring donations and payments platform for a direct client, end to end.",
+      "responsibilities": [
+        "Building a recurring donations and payments platform for a direct client, working directly with them on scope, architecture and releases",
+        "Designed scheduled recurring transaction handling with retry, idempotency and reconciliation logic so a failed charge never double-bills a supporter",
+        "Built authentication, row-level security, storage and Deno edge functions on Supabase with PostgreSQL behind them",
+        "Implemented the front end in Next.js App Router and TypeScript, server-rendered, with form validation and typed API contracts",
+        "Set up the cron-driven scheduler that runs recurring charges and writes an auditable transaction history",
+        "Own delivery end to end, from requirements and architecture through deployment and client communication"
+      ]
+    },
     "xavor": {
       "title": "Senior Software Engineer",
       "company": "Xavor Corporation",
+      "summary": "Designed the backend of a retail price auditing product from scratch, for a US retailer, on AWS.",
       "responsibilities": [
-        "Designed and developed backend architecture from scratch for retail-focused mobile price auditing project",
-        "Built scalable system using Node.js, Express, TypeScript, and TypeORM with containerized Docker deployment",
-        "Deployed application on AWS ECS Fargate with infrastructure managed via Terraform",
-        "Integrated Okta authentication, Swagger documentation, Zod validation, and Datadog logging via FireLens sidecars",
-        "Processed and cached over 2 million records from AccessVia using cron jobs and Redis for optimized data access",
-        "Implemented high-volume data inserts through Redis-based job queues and Node.js Worker Threads for parallel processing",
-        "Enabled paginated and queryable access for mobile client with efficient data retrieval mechanisms",
-        "Collaborated directly with US-based client and worked under experienced technical leadership",
-        "Supported onboarding for junior developers and managed tasks using JIRA for project coordination"
+        "Designed the backend for a retail price auditing product from scratch, working directly with the US client and under experienced technical leadership",
+        "Processed and cached over 2 million records per run from an external data feed, using scheduled cron jobs and Redis so the mobile client never waits on the source system",
+        "Sustained high-volume inserts through Redis job queues and Node.js worker threads running in parallel, with backpressure so a slow write never stalls ingestion",
+        "Built the REST API in Node.js, Express, TypeScript and TypeORM, serving the mobile client paginated, filterable and sortable data",
+        "Containerised the service with Docker and ran it on AWS ECS Fargate, with the whole environment defined in Terraform",
+        "Integrated Okta for authentication, Zod for request validation, and Swagger for API documentation the client team worked against",
+        "Shipped Datadog logging and monitoring through FireLens sidecars, so failures in the ingestion pipeline were visible rather than silent",
+        "Onboarded junior developers, reviewed their pull requests, and coordinated delivery in JIRA"
       ]
     },
     "hashlogics": {
-      "title": "Senior Software Engineer",
+      "title": "Senior Software Developer",
       "company": "Hashlogics",
+      "summary": "Led delivery teams across four products, from AI product matching to serverless compliance platforms.",
       "responsibilities": [
-        "Enhanced skills in Python, ReactJS, and the MERN stack while optimizing web app performance",
-        "Implemented AWS Lambda functions and architected microservices frontends for scalable solutions",
-        "Administered AWS deployments using Terraform for infrastructure as code",
-        "Earned recognition as Employee of the Month for outstanding contributions and team leadership",
-        "Led development teams on multiple high-impact projects including CivaSource, Donation Platform, and AlteraApp",
-        "Developed FAST APIs for product management, authentication, and AI-driven solutions",
-        "Managed Redis Queues for concurrent processing and real-time data handling",
-        "Directed teams to implement safety checklists and managed DevOps tasks for Forwood Safety",
-        "Built CRM systems using Python, Flask, Django, and ReactJS for TradeFundrr",
-        "Engineered real-time player statistics updates using Node.js, TypeScript, and MongoDB for Playertotals"
+        "Led development teams on multiple high-impact projects including CivaSource, PlayerTotals, and a real-time gaming platform",
+        "Directed a team building a site safety and compliance platform, moving monolithic APIs to serverless microservices on AWS Lambda with infrastructure as code in Terraform",
+        "Built AI-driven product matching, authentication and product management services in Python and FastAPI, backed by PostgreSQL and Redis",
+        "Architected micro-frontends so several teams could ship into one product without blocking each other",
+        "Kept high-volume pipelines moving with Redis queues for concurrent scraping, matching and real-time processing",
+        "Delivered real-time player statistics on Node.js, TypeScript and MongoDB, with scheduled extraction jobs feeding live dashboards",
+        "Built a trading education CRM in Python, Flask, Django and React, covering lead capture through to the sales team workflow",
+        "Ran AWS deployments and CI/CD, and took part in estimation, sprint planning and client-facing technical calls",
+        "Named Employee of the Month for delivery and team leadership"
       ]
     },
     "skupreme": {
       "title": "Software Engineer",
-      "company": "Skupreme",
+      "company": "SKUPREME",
+      "summary": "Front-end work on the web dashboard of a US supply chain and inventory product.",
       "responsibilities": [
-        "Enhanced web dashboard features using modern frontend technologies",
-        "Developed responsive user interfaces with Next.js and TypeScript",
-        "Collaborated with remote team to deliver high-quality frontend solutions",
-        "Optimized application performance and implemented modern React patterns",
-        "Maintained code quality and followed best practices for scalable development"
+        "Extended the web dashboard of a supply chain and inventory product used by its operations team",
+        "Built responsive, accessible interfaces in Next.js and TypeScript using modern React patterns and component composition",
+        "Integrated the dashboard against existing REST APIs, handling loading, empty and error states properly",
+        "Improved perceived performance by trimming re-renders and deferring non-critical data",
+        "Worked with a fully remote team across time zones and kept the codebase to its review standards"
       ]
     },
     "homeats": {
       "title": "Software Engineer",
       "company": "Homeats",
+      "summary": "Full-stack work on the dashboard and APIs of an online healthy food marketplace.",
       "responsibilities": [
-        "Enhanced and refined web dashboard features for leading online healthy food marketplace",
-        "Developed frontend solutions using Next.js with TypeScript for improved user experience",
-        "Built and maintained robust REST APIs using Node.js backend architecture",
-        "Managed comprehensive API documentation using Swagger for better team collaboration",
-        "Optimized application performance and implemented responsive design patterns"
+        "Extended the web dashboard of an online healthy food marketplace, covering menus, orders and vendor management",
+        "Built the front end in Next.js and TypeScript, and the REST APIs behind it in Node.js",
+        "Modelled and queried the data layer so list and detail views stayed fast as the catalogue grew",
+        "Maintained Swagger documentation so the wider team and mobile developers could work against the API",
+        "Handled responsive layouts down to small phone widths, which is where most of the traffic was"
       ]
     },
     "memberhood": {
       "title": "Software Engineer",
       "company": "Memberhood Inc.",
+      "summary": "Built the backend and storefront of a multi-merchant membership commerce platform with Stripe.",
       "responsibilities": [
-        "Engaged in both GraphQL and RESTful API development for comprehensive backend solutions",
-        "Implemented Next.js frontend using TypeScript for type-safe development",
-        "Developed backend systems with KeystoneJS, GraphQL, and MongoDB for scalable architecture",
-        "Integrated Stripe payment processing and onboarding systems with webhook management",
-        "Coordinated multiple deployment stages and maintained CI/CD pipelines",
-        "Collaborated with international team members across different time zones"
+        "Built the backend of a membership commerce platform on KeystoneJS, GraphQL and MongoDB, serving multiple independent merchants from one storefront",
+        "Integrated Stripe for subscription payments, merchant onboarding and payout flows",
+        "Implemented webhook handling with signature verification and idempotent processing, so a retried event never charged twice",
+        "Implemented the Next.js and TypeScript storefront against both GraphQL and REST APIs",
+        "Coordinated staged deployments across environments and kept the CI/CD pipelines running",
+        "Worked across time zones with an international team, in English, on a daily delivery cadence"
       ]
     },
     "gulzarsoft": {
       "title": "Associate Software Engineer",
-      "company": "GulzarSoft",
+      "company": "GulzarSoft Software House",
+      "summary": "First professional role: full-stack JavaScript across several client web applications.",
       "responsibilities": [
-        "Acquired foundational professional experience as Full-Stack JavaScript Developer",
-        "Crafted responsive web applications using React.js and Node.js technologies",
-        "Demonstrated proficiency in both independent development and collaborative team environments",
-        "Developed REST APIs for data filtering, searching, and database management",
-        "Built comprehensive web solutions from frontend interfaces to backend services",
-        "Participated in agile development methodologies and sprint planning"
+        "First professional role, working across the stack in JavaScript on client web applications",
+        "Built responsive web applications in React.js and Node.js, both independently and as part of a team",
+        "Wrote REST APIs for filtering, search, pagination and database management over MySQL and MongoDB",
+        "Built a customer loyalty product where points convert into mobile top-up codes, including the payment step",
+        "Built a car search front end over scraped listings, with a filter form that stayed fast on large result sets",
+        "Delivered in sprints, took part in agile planning, and learned code review as a habit rather than a gate"
       ]
     }
   }
