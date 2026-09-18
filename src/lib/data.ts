@@ -202,15 +202,13 @@ export const projects: Project[] = [
 // -----------------------------
 // Experiences
 // -----------------------------
-// TODO(zagham): fill in the remaining `location` values (city and country, or
-// "Remote"). An empty string simply hides the location on that card.
 export const experiences: Experience[] = [
   {
     id: 'freelance-full-stack-developer',
     title: 'experiencesData.freelance.title',
     company: 'experiencesData.freelance.company',
     duration: { start: '2025-08', end: null },
-    location: 'Lahore, Pakistan',
+    location: 'Remote',
     summaryKey: 'experiencesData.freelance.summary',
     responsibilitiesKey: 'experiencesData.freelance.responsibilities',
     technologies: [
@@ -227,7 +225,7 @@ export const experiences: Experience[] = [
     title: 'experiencesData.xavor.title',
     company: 'experiencesData.xavor.company',
     duration: { start: '2025-05', end: '2025-07' },
-    location: '',
+    location: 'Lahore, Pakistan',
     summaryKey: 'experiencesData.xavor.summary',
     responsibilitiesKey: 'experiencesData.xavor.responsibilities',
     technologies: [
@@ -252,7 +250,7 @@ export const experiences: Experience[] = [
     title: 'experiencesData.hashlogics.title',
     company: 'experiencesData.hashlogics.company',
     duration: { start: '2022-08', end: '2025-02' },
-    location: '',
+    location: 'Lahore, Pakistan',
     summaryKey: 'experiencesData.hashlogics.summary',
     responsibilitiesKey: 'experiencesData.hashlogics.responsibilities',
     technologies: [
@@ -277,7 +275,7 @@ export const experiences: Experience[] = [
       start: '2022-06',
       end: '2022-08',
     },
-    location: '',
+    location: 'Remote (US)',
     summaryKey: 'experiencesData.skupreme.summary',
     responsibilitiesKey: 'experiencesData.skupreme.responsibilities',
     technologies: ['Next.js', 'React', 'TypeScript', 'Frontend Development'],
@@ -290,7 +288,7 @@ export const experiences: Experience[] = [
       start: '2022-03',
       end: '2022-06',
     },
-    location: '',
+    location: 'Remote (Turkey)',
     summaryKey: 'experiencesData.homeats.summary',
     responsibilitiesKey: 'experiencesData.homeats.responsibilities',
     technologies: ['Next.js', 'TypeScript', 'Node.js', 'REST API', 'Swagger'],
@@ -303,7 +301,7 @@ export const experiences: Experience[] = [
       start: '2022-03',
       end: '2023-03',
     },
-    location: '',
+    location: 'Remote (Germany)',
     summaryKey: 'experiencesData.memberhood.summary',
     responsibilitiesKey: 'experiencesData.memberhood.responsibilities',
     technologies: [
