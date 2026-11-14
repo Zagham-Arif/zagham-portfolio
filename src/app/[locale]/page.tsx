@@ -1,34 +1,40 @@
-import LottieAnimation from 'components/LottieAnimation';
-import { Navigation } from 'components/Navigation';
-import { ScrollToTopButton } from 'components/ScrollToTopButton';
+import { Nav } from 'components/shell/Nav';
 import { setRequestLocale } from 'next-intl/server';
-import { Contact } from 'sections/Contact';
-import { Experience } from 'sections/Experience';
-import { Footer } from 'sections/Footer';
-import { Hero } from 'sections/Hero';
-import { Projects } from 'sections/Projects';
-import { Skills } from 'sections/Skills';
+import { Capabilities } from 'components/home/Capabilities';
+import { ContactBlock } from 'components/home/ContactBlock';
+import { HowIWork } from 'components/home/HowIWork';
+import { Marquee } from 'components/home/Marquee';
+import { SiteFooter } from 'components/home/SiteFooter';
+import { Timeline } from 'components/timeline/Timeline';
+import { Hero } from 'components/hero/Hero';
+import { WorkSection } from 'components/work/WorkSection';
+import { StackMap } from 'components/stack/StackMap';
 
-export default function Home({
-  params: { locale },
+// Re-render daily so "years of experience" and the © year stay current.
+export const revalidate = 86400;
+
+export default async function Home({
+  params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
   setRequestLocale(locale);
 
   return (
-    <div className="min-h-screen bg-background">
-      <LottieAnimation />
-      <Navigation />
-      <main>
+    <>
+      <Nav />
+      <main id="main">
         <Hero />
-        <Projects />
-        <Experience />
-        <Skills />
-        <Contact />
+        <Marquee />
+        <Capabilities />
+        <WorkSection locale={locale} />
+        <StackMap />
+        <Timeline />
+        <HowIWork />
+        <ContactBlock />
       </main>
-      <Footer />
-      <ScrollToTopButton />
-    </div>
+      <SiteFooter />
+    </>
   );
 }

@@ -1,58 +1,39 @@
-import { Navigation } from 'components/Navigation';
-import { Links } from 'constants/links';
-import { locales } from 'i18n/config';
+import { ContactBlock } from 'components/home/ContactBlock';
+import { SiteFooter } from 'components/home/SiteFooter';
+import { Nav } from 'components/shell/Nav';
+import { pageMetadata } from 'lib/page-metadata';
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Contact } from 'sections/Contact';
-import { Footer } from 'sections/Footer';
 
-export function generateStaticParams() {
-  return locales.map(locale => ({ locale }));
-}
+// Re-render daily so "years of experience" and the © year stay current.
+export const revalidate = 86400;
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'contact' });
-  const title = t('metaTitle');
-  const description = t('metaDescription');
 
-  return {
-    title,
-    description,
-    alternates: {
-      canonical: `/${locale}/contact`,
-      languages: {
-        en: '/en/contact',
-        es: '/es/contact',
-        'x-default': '/en/contact',
-      },
-    },
-    openGraph: {
-      type: 'website',
-      url: `${Links.siteUrl}/${locale}/contact`,
-      title,
-      description,
-    },
-  };
+  return pageMetadata(locale, '/contact', t('metaTitle'), t('metaDescription'));
 }
 
-export default function ContactPage({
-  params: { locale },
+export default async function ContactPage({
+  params,
 }: {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await params;
   setRequestLocale(locale);
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navigation />
-      <main>
-        <Contact standalone />
+    <>
+      <Nav />
+      <main id="main">
+        <ContactBlock headingLevel={1} />
       </main>
-      <Footer />
-    </div>
+      <SiteFooter />
+    </>
   );
 }

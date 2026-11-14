@@ -2,187 +2,80 @@
   "seo": {
     "title": "Zagham Arif | Ingeniero Full-Stack Senior, Node.js y AWS",
     "description": "Ingeniero full-stack senior en Lahore, Pakistán, con más de 5 años en Node.js, TypeScript, React, Next.js y AWS. Arquitectura backend, pipelines de datos y pagos.",
-    "keywords": "Ingeniero Full-Stack Senior, Desarrollador Node.js, TypeScript, NestJS, React, Next.js, Python, FastAPI, PostgreSQL, Redis, AWS, Terraform, Arquitectura Backend, Integración de Pagos, Desarrollador Remoto, Lahore Pakistán"
-  },
-  "main": {
-    "scrollUp": "Desplazarse hacia arriba"
-  },
-  "nav": {
-    "home": "Inicio",
-    "projects": "Proyectos",
-    "experience": "Experiencia",
-    "skills": "Habilidades",
-    "contact": "Contacto",
-    "allProjects": "Todos los Proyectos",
-    "toggleTheme": "Cambiar tema",
-    "toggleLanguage": "Cambiar idioma",
-    "languages": {
-      "en": "Inglés",
-      "es": "Español"
-    },
-    "toggleMenu": "Abrir menú"
-  },
-  "hero": {
-    "greeting": "Hola, soy",
-    "title": "Ingeniero de Software Full-Stack Senior",
-    "subtitle": "Node.js, TypeScript, React y Next.js. Arquitectura backend, pipelines de datos y pagos en AWS.",
-    "description": "Apasionado por construir aplicaciones escalables y dar vida a las ideas a través del código.",
-    "downloadCV": "Descargar CV",
-    "contactMe": "Contáctame",
-    "available": "Disponible",
-    "scrollDown": "Desplazarse hacia abajo",
-    "bio": "Soy un Ingeniero de Software Full-Stack Senior con más de 5 años de experiencia creando productos que a la gente le encanta usar. Desde interfaces elegantes en React y Next.js hasta backends escalables en Node.js y Python, disfruto resolviendo problemas de principio a fin. He trabajado en todo, desde sistemas de pago con Stripe hasta canalizaciones de datos de alto volumen en AWS. Ya sea desplegando con Terraform, escalando con Redis o mentorando compañeros de equipo, me apasiona crear software rápido, confiable y con impacto.",
-    "cv": {
-      "europass": "CV Europass",
-      "traditional": "CV Tradicional"
-    }
-  },
-  "social": {
-    "github": "GitHub",
-    "linkedin": "LinkedIn",
-    "discord": "Discord",
-    "email": "Correo electrónico"
-  },
-  "projects": {
-    "title": "Proyectos Destacados",
-    "subtitle": "Trabajo reciente: arquitectura backend, pipelines de datos y sistemas de pago que llegaron a producción.",
-    "viewCode": "Ver Código",
-    "liveDemo": "Demo en Vivo",
-    "viewProject": "Ver Proyecto",
-    "code": "Código",
-    "demo": "Demostración",
-    "viewAll": "Ver Todos los Proyectos",
-    "viewAllCount": "Ver los {count} proyectos"
+    "keywords": "Ingeniero Full-Stack Senior, Desarrollador Node.js, TypeScript, NestJS, React, Next.js, Python, FastAPI, PostgreSQL, Redis, AWS, Terraform, Arquitectura Backend, Integración de Pagos, Desarrollador Remoto, Lahore Pakistán",
+    "personDescription": "Ingeniero full-stack sénior especializado en arquitectura backend, pipelines de datos y sistemas de pago con Node.js, TypeScript y AWS."
   },
   "projectsPage": {
-    "title": "Todos los Proyectos",
-    "subtitle": "Arquitectura backend, pipelines de datos y sistemas de pago, desde el trabajo reciente con clientes hasta productos anteriores.",
     "metaTitle": "Proyectos | Zagham Arif, Ingeniero de Software Full-Stack Senior",
-    "metaDescription": "Arquitectura backend, pipelines de datos y sistemas de pago construidos en Node.js, TypeScript, Python y AWS, incluyendo auditoría de precios minoristas, donaciones recurrentes y estadísticas deportivas en tiempo real.",
-    "backToHome": "Volver al inicio",
-    "featuredHeading": "Trabajo reciente y destacado",
-    "featuredSubheading": "Sistemas en producción construidos en los últimos tres años, en su mayoría de backend.",
-    "earlierHeading": "Trabajo anterior",
-    "earlierSubheading": "Productos y herramientas construidos en el camino de junior a senior, aquí como registro completo.",
-    "contactCta": "¿Tienes algo parecido que construir? Hablemos."
-  },
-  "experience": {
-    "title": "Experiencia Laboral",
-    "subtitle": "Cinco años de trabajo full-stack, desde un primer puesto en JavaScript hasta liderar la entrega de backend, datos y pagos para clientes internacionales.",
-    "present": "Presente",
-    "keyAchievements": "Logros Clave",
-    "technologiesUsed": "Tecnologías Utilizadas",
-    "expand": "Expandir",
-    "collapse": "Colapsar"
-  },
-  "skills": {
-    "title": "Habilidades y Tecnologías",
-    "subtitle": "Las herramientas con las que construyo sistemas en producción, desde la API y la capa de datos hasta la infraestructura cloud.",
-    "categories": {
-      "backend": "Backend y APIs",
-      "frontend": "Tecnologías Frontend",
-      "database": "Bases de Datos y Almacenamiento",
-      "tools": "Nube y DevOps",
-      "other": "Herramientas y Utilidades"
-    },
-    "stats": {
-      "yearsExperience": "Años de Experiencia",
-      "projectsCompleted": "Proyectos Completados",
-      "technologies": "Tecnologías"
-    },
-    "coreStack": "Stack principal"
+    "metaDescription": "Arquitectura backend, pipelines de datos y sistemas de pago construidos en Node.js, TypeScript, Python y AWS, incluyendo auditoría de precios minoristas, donaciones recurrentes y estadísticas deportivas en tiempo real."
   },
   "contact": {
-    "title": "Ponte en Contacto",
-    "description": "¡No dudes en contactarme para colaboraciones o simplemente un saludo amigable!",
-    "subtitle": "Trabajemos juntos",
-    "followMe": "Sígueme",
-    "sendMessage": "Enviar un Mensaje",
-    "getBackSoon": "Te responderé lo antes posible.",
-    "messageSentTitle": "¡Mensaje Enviado Exitosamente!",
-    "messageSentDescription": "Gracias por contactarme. Te responderé lo antes posible.",
-    "errorSending": "Hubo un error al enviar tu mensaje. Por favor intenta de nuevo.",
-    "validation": {
-      "nameMinLength": "El nombre debe tener al menos 2 caracteres",
-      "messageMinLength": "El mensaje debe tener al menos 10 caracteres",
-      "invalidUrl": "Por favor ingresa una URL válida"
-    },
-    "name": "Nombre",
-    "email": "Correo electrónico",
-    "website": "Sitio web (Opcional)",
-    "message": "Mensaje",
-    "send": "Enviar Mensaje",
-    "sending": "Enviando...",
-    "success": "¡Mensaje enviado con éxito!",
-    "error": "Error al enviar el mensaje. Por favor intenta de nuevo.",
-    "timezone": "Hora estándar de Pakistán (UTC+5), con solapamiento con el horario laboral de Reino Unido y la UE",
-    "hireMe": "Contrátame en una plataforma freelance",
     "metaTitle": "Contacto | Zagham Arif, Ingeniero de Software Full-Stack Senior",
-    "metaDescription": "Contacta con Zagham Arif, ingeniero full-stack senior en Lahore, Pakistán, para trabajo remoto por contrato o a tiempo completo en Node.js, TypeScript, React, Next.js y AWS.",
-    "detailsTitle": "Datos de contacto",
-    "pageIntro": "Disponible para trabajo remoto por contrato o a tiempo completo. Arquitectura backend, pipelines de datos, integraciones de pago y producto full-stack en Node.js, TypeScript, Python, React, Next.js y AWS. Envía una nota breve sobre lo que estás construyendo y los plazos, y te responderé con cómo lo abordaría."
+    "metaDescription": "Contacta con Zagham Arif, ingeniero full-stack senior en Lahore, Pakistán, para trabajo remoto por contrato o a tiempo completo en Node.js, TypeScript, React, Next.js y AWS."
   },
   "notFound": {
     "title": "404 - Página No Encontrada",
     "description": "La página que buscas no existe.",
     "backToHome": "Ir al Inicio"
   },
-  "footer": {
-    "rights": "Todos los derechos reservados.",
-    "quickLinks": "Enlaces Rápidos",
-    "getInTouch": "Ponte en Contacto",
-    "hireOnUpwork": "Contrátame en Upwork",
-    "brandTagline": "Del concepto a la nube: yo lo implemento",
-    "brandDescription": "Ingeniero de Software Full-Stack Senior con más de 5 años de experiencia especializado en JavaScript, TypeScript, Python y el stack MERN. Experto en la construcción de aplicaciones web escalables, en el diseño de backends nativos en la nube y en la integración de sistemas de pago. Apasionado por entregar soluciones de alto impacto y por guiar equipos hacia la excelencia técnica."
-  },
   "projectsData": {
     "price-auditing-backend": {
       "description": "Auditoría de precios minoristas para un retailer estadounidense, operada desde una app móvil en el propio pasillo. Diseñé el backend desde cero: más de 2 millones de registros por ejecución desde una fuente externa, encolados con Redis y escritos en paralelo con worker threads de Node.js, y devueltos paginados y consultables. Node.js, Express, TypeScript y TypeORM sobre AWS ECS Fargate, con infraestructura en Terraform y logging en Datadog.",
-      "imageAlt": "Diagrama de arquitectura del backend de auditoría de precios: fuente externa, cola Redis, pool de workers Node.js e inserción por lotes sobre AWS ECS Fargate"
+      "imageAlt": "Diagrama de arquitectura del backend de auditoría de precios: fuente externa, cola Redis, pool de workers Node.js e inserción por lotes sobre AWS ECS Fargate",
+      "kind": "Pipeline de datos · Retail"
     },
     "recurring-donations-platform": {
-      "description": "Plataforma de donaciones recurrentes y pagos para un cliente directo. Construí transacciones recurrentes programadas, con autenticación, almacenamiento y edge functions en Supabase y un front end en Next.js y TypeScript. Nombre del cliente y del producto reservados.",
-      "imageAlt": "Diagrama de arquitectura de la plataforma de donaciones recurrentes: registro de donantes en Supabase, APIs de Next.js y edge functions, proveedor de pagos con autorización guardada, cobros recurrentes programados"
+      "description": "Plataforma de donaciones recurrentes y pagos para un cliente directo. Construí transacciones recurrentes programadas, con autenticación, almacenamiento y edge functions en Supabase y un front end en Next.js y TypeScript.",
+      "kind": "Pagos · Sin ánimo de lucro"
     },
     "playertotals": {
-      "description": "Plataforma de estadísticas deportivas en vivo que cubre NBA, NFL y MLB, con marcadores y estadísticas actualizados cada 5 minutos. Construida sobre Node.js y TypeScript con colas Redis y MongoDB para procesamiento de datos de alto rendimiento.",
-      "imageAlt": "Diagrama de arquitectura de la plataforma en tiempo real PlayerTotals: extracción programada de datos de partidos, cola Redis, API Node.js con MongoDB y panel React en vivo"
+      "description": "Plataforma de estadísticas deportivas en vivo que cubre NBA, NFL y MLB. Las estadísticas se obtienen en ciclos de 5 minutos, así que lo que ven los aficionados tiene como máximo 2–3 minutos de antigüedad. Construida sobre Node.js y TypeScript con colas Redis y MongoDB para procesamiento de datos de alto rendimiento.",
+      "imageAlt": "Diagrama de arquitectura de la plataforma en tiempo real PlayerTotals: extracción programada de datos de partidos, cola Redis, API Node.js con MongoDB y panel React en vivo",
+      "kind": "Tiempo real · Deportes"
     },
     "memberstore": {
       "description": "Un único storefront para varios comerciantes independientes, cada uno vendiendo bajo su propia marca. Stripe gestiona pagos, alta de comerciantes y conciliación de webhooks tras una API KeystoneJS con GraphQL sobre MongoDB, con un front end en Next.js y TypeScript.",
-      "imageAlt": "Diagrama de arquitectura del storefront multicomerciante de Memberstore: frontend en Next.js, API GraphQL sobre KeystoneJS, pagos y alta con Stripe, y gestión de eventos por webhook"
+      "imageAlt": "Diagrama de arquitectura del storefront multicomerciante de Memberstore: frontend en Next.js, API GraphQL sobre KeystoneJS, pagos y alta con Stripe, y gestión de eventos por webhook",
+      "kind": "Comercio · Pagos"
     },
     "civasource": {
       "description": "Coincidencia de productos asistida por IA para un marketplace de proveedores. Extrae hasta 1.000 productos por minuto usando asyncio con caché en Redis, tras un servicio FastAPI con autenticación.",
-      "imageAlt": "Diagrama de arquitectura del pipeline de datos de CivaSource: scrapers concurrentes, cola Redis, motor de coincidencia con IA y servicios FastAPI"
+      "imageAlt": "Diagrama de arquitectura del pipeline de datos de CivaSource: scrapers concurrentes, cola Redis, motor de coincidencia con IA y servicios FastAPI",
+      "kind": "Matching con IA · Marketplace"
     },
     "safety-compliance-platform": {
-      "description": "Listas de verificación de seguridad y flujos de cumplimiento en varias plantas industriales, con trazabilidad de auditoría entre sedes. Migré APIs monolíticas a microservicios serverless en AWS Lambda con Terraform y reduje el coste de infraestructura en torno al 30 por ciento. Dirigí al equipo en arquitectura frontend e infraestructura cloud. Nombre del cliente y del producto reservados.",
-      "imageAlt": "Diagrama de arquitectura de la plataforma de seguridad y cumplimiento: frontend React de microservicios, capa de API, lógica de cumplimiento en AWS Lambda e informes multisede"
+      "description": "Listas de verificación de seguridad y flujos de cumplimiento en varias plantas industriales, con trazabilidad de auditoría entre sedes. Migré APIs monolíticas a microservicios serverless en AWS Lambda con Terraform y reduje el coste de infraestructura en torno al 30 por ciento. Dirigí al equipo en arquitectura frontend e infraestructura cloud.",
+      "kind": "Cumplimiento · Empresa"
     },
     "real-time-gaming-platform": {
-      "description": "Plataforma de juego en tiempo real. Construí bibliotecas de bots en JavaScript y conexiones WebSocket para el comportamiento y la comunicación de bots dentro del juego, además de las bibliotecas de UI y comandos usadas para controlarlos. Nombre del cliente y del producto reservados.",
-      "imageAlt": "Diagrama de arquitectura de la plataforma de juego en tiempo real: interfaz de control y librerías de comandos, mensajería WebSocket, librerías de bots en JavaScript, acciones dentro del juego"
+      "description": "Plataforma de juego en tiempo real. Construí bibliotecas de bots en JavaScript y conexiones WebSocket para el comportamiento y la comunicación de bots dentro del juego, además de las bibliotecas de UI y comandos usadas para controlarlos.",
+      "imageAlt": "Diagrama de arquitectura de la plataforma de juego en tiempo real: interfaz de control y librerías de comandos, mensajería WebSocket, librerías de bots en JavaScript, acciones dentro del juego",
+      "kind": "Tiempo real · Videojuegos"
     },
     "tradefundrr": {
       "description": "Plataforma de formación en trading con un CRM integrado que usa su propio equipo comercial. Contribuí con funcionalidades clave, pruebas de API y entrega por sprints en un equipo ágil. Python, Flask, Django y React.",
-      "imageAlt": "Diagrama de arquitectura de TradeFundrr: front end en React, APIs en Python con Flask y Django, CRM integrado, seguimiento del equipo de ventas"
+      "imageAlt": "Diagrama de arquitectura de TradeFundrr: front end en React, APIs en Python con Flask y Django, CRM integrado, seguimiento del equipo de ventas",
+      "kind": "EdTech · CRM"
     },
     "autotempest": {
       "description": "Búsqueda de coches en muchos portales a la vez, filtrada desde un único formulario. Construí el front end responsivo en React y la API REST que consulta los anuncios extraídos desde MySQL.",
-      "imageAlt": "Captura de la página de inicio de AutoTempest mostrando el formulario de búsqueda agregada de coches usados"
+      "imageAlt": "Captura de la página de inicio de AutoTempest mostrando el formulario de búsqueda agregada de coches usados",
+      "kind": "Búsqueda · Automoción"
     },
     "points-app": {
       "description": "Programa de fidelización donde los puntos se convierten en códigos de recarga móvil. Construí el flujo de canje y el procesamiento de pagos sobre Node.js, React y MySQL.",
-      "imageAlt": "Diagrama de arquitectura de Points App: saldo de puntos de fidelidad, canje en React, procesamiento de pagos en Node.js y MySQL, emisión del código de recarga móvil"
+      "imageAlt": "Diagrama de arquitectura de Points App: saldo de puntos de fidelidad, canje en React, procesamiento de pagos en Node.js y MySQL, emisión del código de recarga móvil",
+      "kind": "Fidelización · Pagos"
     },
     "al-khair-traders-pos": {
       "description": "Sustituyó un proceso en papel para un mayorista: productos, proveedores, compras, ventas, devoluciones y cotizaciones en un solo sistema, con permisos por rol hasta el nivel de módulo. Node.js, Express y TypeORM tras React con TanStack Query, incluyendo autenticación JWT, migraciones versionadas y documentación de API generada.",
-      "imageAlt": "Diagrama de arquitectura del POS de Al Khair Traders: cliente React con TanStack Query, autenticación JWT por roles, API Express con TypeORM, base de datos MySQL"
+      "imageAlt": "Diagrama de arquitectura del POS de Al Khair Traders: cliente React con TanStack Query, autenticación JWT por roles, API Express con TypeORM, base de datos MySQL",
+      "kind": "App de negocio · Mayorista"
     },
     "deployment-tool": {
       "description": "Proyecto de fin de carrera que elimina la traducción manual entre Couchbase y Firebase: convierte consultas N1QL en Firebase Cloud Functions y las despliega.",
-      "imageAlt": "Diagrama del flujo de la herramienta N1QL a Firebase: consultas N1QL de Couchbase traducidas a Firebase Cloud Functions y desplegadas"
+      "imageAlt": "Diagrama del flujo de la herramienta N1QL a Firebase: consultas N1QL de Couchbase traducidas a Firebase Cloud Functions y desplegadas",
+      "kind": "Herramienta dev · Universidad"
     }
   },
   "experiencesData": {
@@ -279,6 +172,442 @@
         "Construí el front end de una búsqueda de coches sobre anuncios extraídos, con un formulario de filtros que seguía siendo rápido con muchos resultados",
         "Entregué por sprints, participé en la planificación ágil y adopté la revisión de código como hábito, no como trámite"
       ]
+    }
+  },
+  "home": {
+    "nav": {
+      "role": "Full-stack sénior · Backend",
+      "work": "Trabajo",
+      "skills": "Habilidades",
+      "experience": "Experiencia",
+      "contact": "Contacto",
+      "modeLabel": "Cómo leer este sitio",
+      "plain": "Lenguaje sencillo",
+      "tech": "Ingeniería",
+      "commandMenu": "Abrir menú rápido",
+      "otherLanguage": "View in English",
+      "otherLanguageShort": "EN",
+      "themeToggle": "Cambiar entre tema claro y oscuro",
+      "hire": "Contrátame",
+      "plainShort": "Simple",
+      "techShort": "Técnico",
+      "mainNav": "Principal",
+      "skip": "Saltar al contenido"
+    },
+    "hero": {
+      "greeting": "Hola, soy Zagham",
+      "available": "Disponible para proyectos y puestos · Lahore, UTC+5",
+      "headline": "Tú traes el problema. Yo diseño el sistema.",
+      "lede": {
+        "plain": "Construyo los sistemas que no se ven pero mantienen tu producto rápido, fiable y seguro con tus datos, y los entrego en el plazo que necesitas, aunque el primer día no esté todo claro.",
+        "tech": "Ingeniero full-stack sénior. Diseño APIs, colas, cachés e infraestructura serverless en AWS con Node.js y TypeScript, y lidero equipos en migraciones, pagos y procesamiento de grandes volúmenes de datos."
+      },
+      "book": "Reserva una llamada de 20 min",
+      "seeWork": "Ver mi trabajo",
+      "resume": "Descargar CV",
+      "numbers": {
+        "years": "años en producción",
+        "projects": "proyectos entregados",
+        "teams": "equipos con los que he trabajado",
+        "downtime": "caídas al migrar una plataforma de pagos en vivo"
+      }
+    },
+    "console": {
+      "title": {
+        "plain": "Intenta romper mi sistema",
+        "tech": "sim://patrones-de-produccion"
+      },
+      "live": "En vivo",
+      "metrics": {
+        "latency": {
+          "plain": "velocidad",
+          "tech": "latencia p95"
+        },
+        "queue": {
+          "plain": "tareas en espera",
+          "tech": "profundidad de cola"
+        },
+        "workers": {
+          "plain": "ayudantes activos",
+          "tech": "workers"
+        },
+        "failed": {
+          "plain": "visitantes afectados",
+          "tech": "peticiones fallidas"
+        }
+      },
+      "nodes": {
+        "users": "usuarios",
+        "api": "API",
+        "cache": "caché",
+        "queue": "cola",
+        "workers": "workers",
+        "db": "BD",
+        "dbSub": "historial",
+        "provider": "proveedor",
+        "providerSub": "API externa",
+        "rps": "{count} pet/s"
+      },
+      "scenarios": {
+        "spike": {
+          "label": {
+            "plain": "10× más visitantes",
+            "tech": "Pico de tráfico ×10"
+          },
+          "from": "de: cumplimiento y auditoría de precios"
+        },
+        "provider": {
+          "label": {
+            "plain": "Se cae el proveedor de datos",
+            "tech": "Apagar el proveedor externo"
+          },
+          "from": "de: PlayerTotals"
+        },
+        "duplicate": {
+          "label": {
+            "plain": "Pago enviado dos veces",
+            "tech": "Cobro duplicado"
+          },
+          "from": "de: plataforma de donaciones"
+        }
+      },
+      "log": {
+        "healthy": {
+          "plain": "todo funciona con normalidad",
+          "tech": "sano · acierto de caché 96%"
+        },
+        "spikeIn": {
+          "plain": "llegan 10× visitantes; el trabajo extra espera su turno en vez de tumbar el sitio",
+          "tech": "ráfaga ×10 · la cola absorbe 418 tareas"
+        },
+        "spikeScale": {
+          "plain": "se suman más ayudantes automáticamente (2 → 8)",
+          "tech": "workers escalados 2 → 8"
+        },
+        "spikeDone": {
+          "plain": "cola vacía · nadie se quedó fuera",
+          "tech": "cola drenada · 0 descartadas"
+        },
+        "providerDown": {
+          "plain": "el proveedor de datos deja de responder",
+          "tech": "upstream 503 · circuito abierto"
+        },
+        "providerFallback": {
+          "plain": "nuestra copia guardada sigue atendiendo a los visitantes",
+          "tech": "sirviendo último dato de Redis + historial en MongoDB"
+        },
+        "providerDone": {
+          "plain": "visitantes afectados: 0",
+          "tech": "usuarios afectados: 0 · reintento con backoff en 30 s"
+        },
+        "dupFirst": {
+          "plain": "un donante pulsa “Donar 25 $”",
+          "tech": "POST /charge key=don_8f2a → 201 cobrado 25 $"
+        },
+        "dupSecond": {
+          "plain": "el mismo pago llega otra vez (doble clic, reintento)",
+          "tech": "POST /charge key=don_8f2a → repetición detectada"
+        },
+        "dupDone": {
+          "plain": "reconocido como repetido · se cobra una sola vez",
+          "tech": "clave de idempotencia → 200, sin segundo cobro"
+        },
+        "reset": {
+          "plain": "todo vuelve a la normalidad",
+          "tech": "reinicio · sano"
+        }
+      },
+      "footnote": "Simulación de patrones de mis proyectos reales",
+      "reset": "Reiniciar",
+      "pause": "Pausar animación",
+      "play": "Reanudar animación"
+    },
+    "capabilities": {
+      "kicker": "01 / Qué hago",
+      "title": "Donde más aporto",
+      "intro": {
+        "plain": "Lo que los usuarios nunca ven pero siempre notan: velocidad, fiabilidad y datos correctos.",
+        "tech": "Full-stack con foco en backend: diseño de servicios, procesamiento asíncrono, modelado de datos e infraestructura como código."
+      },
+      "items": {
+        "backend": {
+          "title": "Backend y APIs",
+          "body": {
+            "plain": "APIs rápidas y tipadas en las que tus apps y socios pueden confiar.",
+            "tech": "REST y GraphQL en Node.js y TypeScript, validadas con Zod y documentadas con Swagger."
+          }
+        },
+        "cloud": {
+          "title": "Cloud y serverless",
+          "body": {
+            "plain": "Infraestructura que crece en los días de mucho tráfico y cuesta menos en los tranquilos.",
+            "tech": "AWS Lambda, ECS Fargate, SQS y S3; monolitos convertidos en microservicios; todo en Terraform."
+          }
+        },
+        "data": {
+          "title": "Datos, colas y caché",
+          "body": {
+            "plain": "Millones de registros procesados y páginas que siguen siendo instantáneas.",
+            "tech": "Colas y cachés en Redis, streams de Kinesis, pools de workers con contrapresión."
+          }
+        },
+        "lead": {
+          "title": "Full-stack y liderazgo",
+          "body": {
+            "plain": "De la primera llamada con el cliente al producto entregado, con un equipo detrás.",
+            "tech": "Front ends en Next.js, estimaciones, planificación de sprints, revisión de código y liderazgo de equipos de cuatro o más."
+          }
+        }
+      }
+    },
+    "work": {
+      "kicker": "02 / Trabajo",
+      "title": "Problemas que he resuelto",
+      "intro": "Elige un proyecto para abrirlo. Todos siguen el mismo camino: el problema, lo que hice y lo que cambió.",
+      "problem": "El problema",
+      "did": "Lo que hice",
+      "changed": "Lo que cambió",
+      "tryIt": "Ver este patrón en la consola en vivo",
+      "pendingNote": "Cifra pendiente de confirmar",
+      "filterLabel": "Mostrando trabajo que usó {skill}",
+      "clearFilter": "Quitar",
+      "moreTitle": "Todo lo demás que he construido",
+      "allProjects": "Ver los {count} proyectos",
+      "visit": "Visitar",
+      "archive": {
+        "title": "Todos los proyectos",
+        "project": "Proyecto",
+        "what": "Qué es",
+        "builtWith": "Construido con",
+        "link": "Enlace"
+      },
+      "lanes": {
+        "client": "Cliente",
+        "service": "Servicio",
+        "data": "Datos"
+      }
+    },
+    "stack": {
+      "kicker": "03 / Stack",
+      "title": "Mi stack, por profundidad",
+      "intro": "Agrupado según cuánto uso cada herramienta. Elige una para ver dónde la usé.",
+      "tiers": {
+        "core": {
+          "name": "Base",
+          "rule": "Con lo que construyo cada día, en todos mis puestos desde 2021."
+        },
+        "strong": {
+          "name": "Sólido",
+          "rule": "Llevado a producción en varios proyectos."
+        },
+        "familiar": {
+          "name": "Familiar",
+          "rule": "Usado en proyectos concretos."
+        }
+      },
+      "whereUsed": "Dónde la usé",
+      "examples": "Ejemplos de mis puestos y proyectos",
+      "noRecord": "Aún no figura en un proyecto de esta página.",
+      "showWork": "Ver este trabajo",
+      "close": "Cerrar"
+    },
+    "experience": {
+      "kicker": "04 / Trayectoria",
+      "title": "Dónde he trabajado",
+      "intro": "Cinco años entre empresas de producto y agencias, con clientes en EE. UU., Alemania y Turquía.",
+      "now": "Ahora",
+      "showAll": "Ver todos los logros",
+      "award": "Empleado del mes",
+      "short": {
+        "freelance": [
+          "Construyo de principio a fin una plataforma de donaciones y pagos recurrentes, del alcance al despliegue",
+          "Reintentos, idempotencia y conciliación para que un cobro fallido nunca cobre dos veces a un donante"
+        ],
+        "xavor": [
+          "Diseñé desde cero el backend de auditoría de precios para un minorista de EE. UU.",
+          "Más de 2 millones de registros por ejecución con colas Redis y workers Node.js en paralelo sobre ECS Fargate"
+        ],
+        "hashlogics": [
+          "Lideré equipos en cuatro productos, incluida la plataforma de cumplimiento de seguridad y PlayerTotals",
+          "Migré APIs monolíticas a microservicios serverless en AWS Lambda con Terraform"
+        ]
+      },
+      "earlier": {
+        "title": "Software Engineer · Associate Software Engineer",
+        "companies": "SKUPREME · Homeats · Memberhood Inc. · GulzarSoft",
+        "where": "Remoto: EE. UU., DE, TR · Gujrat, PK",
+        "summary": "Paneles, tiendas online y APIs para productos de cadena de suministro, comida y membresías"
+      }
+    },
+    "how": {
+      "kicker": "05 / Cómo trabajo",
+      "title": "Cómo es trabajar conmigo",
+      "steps": {
+        "find": {
+          "title": "Averiguo lo que realmente necesitas",
+          "body": "Aunque todavía no esté todo claro. Pregunto hasta que lo esté y explico las opciones en palabras sencillas."
+        },
+        "design": {
+          "title": "Diseño dentro de tus límites",
+          "body": "La base de datos que no se puede cambiar, el acceso que no puedes dar, el presupuesto que tienes. Lo resuelvo dentro de eso."
+        },
+        "deliver": {
+          "title": "Entrego a tiempo, con honestidad",
+          "body": "Conoces los riesgos pronto y recibes lo acordado, cuando lo acordamos."
+        }
+      }
+    },
+    "contact": {
+      "kicker": "06 / Contacto",
+      "title": "¿Tienes un backend que tiene que aguantar?",
+      "body": "Proyectos freelance, rescates de backend o un puesto sénior en remoto. Cuéntame qué estás construyendo.",
+      "book": "Reserva una llamada de 20 min",
+      "upwork": "Contrátame en Upwork",
+      "email": "Correo",
+      "copy": "Copiar",
+      "copied": "Copiado",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "localTime": "Hora local",
+      "city": "Lahore"
+    },
+    "footer": {
+      "rights": "© {year} Zagham Arif",
+      "hint": "Pulsa ⌘ K o Ctrl+K en cualquier momento",
+      "pages": "Páginas",
+      "contact": "Contacto",
+      "settings": "Idioma y tema",
+      "allProjects": "Todos los proyectos",
+      "email": "Correo",
+      "bookCall": "Reservar una llamada",
+      "source": "Código en GitHub",
+      "built": "Hecho con Next.js, TypeScript y Tailwind CSS."
+    },
+    "cmdk": {
+      "placeholder": "Escribe un comando o busca…",
+      "empty": "Sin resultados",
+      "hint": "↑↓ para moverte · Enter para ejecutar · Esc para cerrar",
+      "groups": {
+        "action": "acción",
+        "jump": "ir a",
+        "view": "vista",
+        "language": "idioma",
+        "project": "proyecto",
+        "demo": "demo",
+        "file": "archivo"
+      },
+      "items": {
+        "copyEmail": "Copiar mi correo",
+        "book": "Reserva una llamada de 20 min",
+        "work": "Ir a Trabajo",
+        "skills": "Ir a Habilidades",
+        "experience": "Ir a Experiencia",
+        "contact": "Ir a Contacto",
+        "plain": "Cambiar a lenguaje sencillo",
+        "tech": "Cambiar a detalle de ingeniería",
+        "theme": "Cambiar tema claro u oscuro",
+        "system": "Usar el tema del sistema",
+        "language": "View in English",
+        "resume": "Descargar CV",
+        "open": "Abrir {project}",
+        "demo": "Pruébalo: apagar el proveedor de datos"
+      },
+      "copied": "Correo copiado"
+    }
+  },
+  "caseStudies": {
+    "safety": {
+      "category": "Empresa · AWS serverless",
+      "title": "Safety Compliance Platform",
+      "result": "3–4 min → instantáneo*",
+      "problem": {
+        "plain": "Árboles de empresas de 20–30 niveles tardaban minutos en cargar y a menudo fallaban. La base de datos no se podía cambiar.",
+        "tech": "Jerarquías de 20–30 niveles, hasta 30 hijos por nodo, en RDS. El ensamblado recursivo en Lambda tardaba 3–4 min y agotaba el tiempo. NoSQL no era una opción."
+      },
+      "did": {
+        "plain": "Construí una copia lista del árbol que se actualiza sola cada vez que algo cambia.",
+        "tech": "JSON de la jerarquía precalculado en S3, reconstruido por una Lambda de sincronización en cada cambio vía SQS (gana el último). Las lecturas ya no tocan RDS."
+      },
+      "changed": {
+        "plain": "Las páginas ahora cargan el árbol al instante.",
+        "tech": "Sin recursión en la ruta de lectura y sin timeouts de Lambda."
+      },
+      "kpis": [
+        "carga del árbol",
+        "menos coste de infraestructura",
+        "niveles de profundidad"
+      ],
+      "diagram": {
+        "aria": "Edición de empresa → SQS → Lambda de sincronización → S3 tree.json → Lambda de lectura → UI. Antes: UI → Lambda → joins recursivos en la base de datos, 3–4 min, timeout.",
+        "before": "antes: UI → Lambda → joins recursivos · 3–4 min · timeout",
+        "edit": "edición",
+        "editSub": "padre / hijo",
+        "sqsSub": "gana el último",
+        "syncSub": "BD → JSON",
+        "treeSub": "siempre al día",
+        "readSub": "sin recursión"
+      }
+    },
+    "donations": {
+      "category": "Pagos · migración en vivo · líder de equipo",
+      "title": "Recurring Donations Platform",
+      "result": "0 caídas · 0 datos perdidos",
+      "problem": {
+        "plain": "Una plataforma de donaciones en vivo tenía que pasar a un sistema nuevo sin caídas, sin perder registros, sin acceso a los datos de pago y con un cobro diario a las 5 AM que no podía fallar.",
+        "tech": "Plataforma de pagos recurrentes en vivo migrando a un nuevo backend basado en Postgres y a otro proveedor de autenticación. Sin acceso a producción (tokens de pago en la BD), un esquema de CMS que no se podía exportar directamente y un cron de cobro diario a las 5 AM."
+      },
+      "did": {
+        "plain": "Planifiqué y ensayé cada paso primero en una copia de pruebas, y lideré al equipo como manager, desarrollador y contacto con el cliente.",
+        "tech": "Scripts de extracción vía la API del CMS, con módulos referenciados, medios y tokens, ensayados en staging. Autenticación migrada; el cron protegido durante el cambio."
+      },
+      "changed": {
+        "plain": "La migración fue fluida. Los donantes no notaron nada y el equipo recibió un bonus.",
+        "tech": "0 caídas, 0 datos perdidos, 0 tokens expuestos, 0 cobros perdidos. Bonus para el equipo."
+      },
+      "kpis": ["caídas", "registros perdidos", "cobros perdidos"],
+      "diagram": {
+        "aria": "Backend y autenticación antiguos → scripts de migración ensayados en staging → nueva plataforma Postgres con nueva autenticación; el cobro diario de las 5 AM nunca falló.",
+        "old": "backend antiguo",
+        "oldSub": "+ auth antigua",
+        "scripts": "scripts de migración",
+        "scriptsSub": "ensayados en staging",
+        "new": "nueva plataforma",
+        "newSub": "Postgres + nueva auth",
+        "cron": "cobro de las 5 AM",
+        "cronSub": "nunca falló ✓"
+      }
+    },
+    "playertotals": {
+      "category": "Datos deportivos · producto público · equipo de 4",
+      "title": "PlayerTotals: estadísticas deportivas en vivo",
+      "result": "Datos de 2–3 min como máximo",
+      "problem": {
+        "plain": "El cliente quería estadísticas recientes y rápidas de NBA, NFL y MLB, y el proveedor de datos limita cuántas veces puedes pedirlas.",
+        "tech": "APIs externas de estadísticas con límites estrictos y la necesidad de datos casi en tiempo real para tres ligas."
+      },
+      "did": {
+        "plain": "Pedir los datos según un horario, guardar lo más reciente en memoria rápida y conservar nuestra propia copia del historial.",
+        "tech": "Ingesta por cron cada 5 minutos en MongoDB (versionada, conserva el historial); ventana caliente en Redis con memoria e instancias acotadas."
+      },
+      "changed": {
+        "plain": "Las estadísticas cargan rápido, tienen 2–3 minutos como máximo y el historial sobrevive aunque el proveedor lo borre.",
+        "tech": "Datos de 2–3 min como máximo, límites del proveedor respetados, historial independiente del proveedor."
+      },
+      "kpis": [
+        "antigüedad máxima de los datos",
+        "bloqueos por límite",
+        "desarrolladores liderados"
+      ],
+      "diagram": {
+        "aria": "APIs de estadísticas → crons cada 5 minutos → ventana caliente en Redis e historial completo en MongoDB → aficionados.",
+        "apis": "APIs de stats",
+        "apisSub": "con límite",
+        "cron": "crons",
+        "cronSub": "cada 5 min",
+        "redisSub": "ventana caliente",
+        "mongoSub": "historial completo",
+        "fans": "fans"
+      }
     }
   }
 }

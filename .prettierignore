@@ -63,3 +63,12 @@ public/animations/
 PORTFOLIO_UPDATE_BRIEF.md
 Portfolio site review*.md
 UPDATES_*.md
+
+# Temp working folders (not part of the site)
+.superpowers/
+.taste-skill/
+design-refs/
+research_notes/
+reports/
+DESIGN-IS-*/
+graphify-out/
