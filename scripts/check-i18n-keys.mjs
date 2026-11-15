@@ -49,6 +49,6 @@ if (errors.length) {
   console.error(`i18n key check failed:\n  ${errors.join('\n  ')}`);
   process.exit(1);
 }
-console.log(
-  `i18n key check passed: ${referenced.length} references across ${locales.join(', ')}`
+process.stdout.write(
+  `i18n key check passed: ${referenced.length} references across ${locales.join(', ')}\n`
 );

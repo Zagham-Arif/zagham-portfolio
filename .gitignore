@@ -6,6 +6,7 @@
 .pnp.js
 .yarn/install-state.gz
 .vscode
+.claude
 # testing
 /coverage
 
@@ -40,3 +41,14 @@ next-env.d.ts
 
 # Source images for project cards (originals kept out of the bundle)
 project-pics/
+# Local working material: temp design/research folders and briefs that name NDA clients.
+# Never commit these to the public repo.
+PORTFOLIO_UPDATE_BRIEF.md
+UPDATES_2026-09-18.md
+design-refs/
+.superpowers/
+.taste-skill/
+research_notes/
+reports/
+DESIGN-IS-*/
+graphify-out/

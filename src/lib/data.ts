@@ -1,11 +1,4 @@
-import { Links } from 'constants/links';
-import type {
-  Education,
-  Experience,
-  Project,
-  Skill,
-  SocialLink,
-} from './types';
+import type { Education, Experience, Project } from './types';
 
 // -----------------------------
 // Personal Info
@@ -18,28 +11,16 @@ export const personalInfo = {
   location: 'Lahore, Pakistan',
   // TODO(zagham): re-add anonymized CV PDFs to public/ and restore these paths.
   // The hero CV buttons stay hidden while both values are empty.
+  // TODO(zagham): add a square photo to public/ and set its path; the hero shows a "ZA" monogram until then.
+  avatarUrl: '',
+  // TODO(zagham): Cal.com / Calendly link; "Book a call" falls back to the contact section while empty.
+  bookingUrl: '',
   cvUrls: {
     europass: '',
     traditional: '',
   },
 };
 
-// -----------------------------
-// Social Links
-// -----------------------------
-export const socialLinks: SocialLink[] = [
-  { name: 'GitHub', url: Links.github, icon: 'SiGithub' },
-  { name: 'LinkedIn', url: Links.linkedIn, icon: 'SiLinkedin' },
-  { name: 'Discord', url: Links.discord, icon: 'SiDiscord' },
-  { name: 'Email', url: `mailto:${personalInfo.email}`, icon: 'FiMail' },
-];
-
-// -----------------------------
-// Freelance Links
-// -----------------------------
-export const freelanceLinks: SocialLink[] = [
-  { name: 'Upwork', url: Links.upwork, icon: 'SiUpwork' },
-];
 // -----------------------------
 // Projects
 // -----------------------------
@@ -60,7 +41,6 @@ export const projects: Project[] = [
     liveUrl: '',
     imageUrl: '/projects/price-auditing-backend.webp',
     imageAlt: 'projectsData.price-auditing-backend.imageAlt',
-    featured: true,
   },
   {
     id: 'recurring-donations-platform',
@@ -68,9 +48,8 @@ export const projects: Project[] = [
     description: 'projectsData.recurring-donations-platform.description',
     technologies: ['Next.js', 'Supabase', 'Deno', 'TypeScript', 'PostgreSQL'],
     liveUrl: '',
-    imageUrl: '/projects/recurring-donations-platform.webp',
-    imageAlt: 'projectsData.recurring-donations-platform.imageAlt',
-    featured: true,
+    // Shown as an inline diagram in the work explorer; the old image printed confidentiality wording.
+    imageUrl: '',
   },
   {
     id: 'playertotals',
@@ -80,7 +59,6 @@ export const projects: Project[] = [
     liveUrl: '',
     imageUrl: '/projects/playertotals.webp',
     imageAlt: 'projectsData.playertotals.imageAlt',
-    featured: true,
   },
   {
     id: 'memberstore',
@@ -97,7 +75,6 @@ export const projects: Project[] = [
     liveUrl: '',
     imageUrl: '/projects/memberstore.webp',
     imageAlt: 'projectsData.memberstore.imageAlt',
-    featured: true,
   },
   {
     id: 'civasource',
@@ -107,7 +84,6 @@ export const projects: Project[] = [
     liveUrl: '',
     imageUrl: '/projects/civasource.webp',
     imageAlt: 'projectsData.civasource.imageAlt',
-    featured: true,
   },
   {
     id: 'safety-compliance-platform',
@@ -117,13 +93,16 @@ export const projects: Project[] = [
       'Node.js',
       'TypeScript',
       'AWS Lambda',
+      'SQS',
+      'Kinesis',
+      'S3',
+      'PostgreSQL',
       'Terraform',
       'Microservices',
     ],
     liveUrl: '',
-    imageUrl: '/projects/safety-compliance-platform.webp',
-    imageAlt: 'projectsData.safety-compliance-platform.imageAlt',
-    featured: true,
+    // Shown as an inline diagram in the work explorer; the old image printed confidentiality wording.
+    imageUrl: '',
   },
   {
     id: 'real-time-gaming-platform',
@@ -133,7 +112,6 @@ export const projects: Project[] = [
     liveUrl: '',
     imageUrl: '/projects/real-time-gaming-platform.webp',
     imageAlt: 'projectsData.real-time-gaming-platform.imageAlt',
-    featured: false,
   },
   {
     id: 'tradefundrr',
@@ -143,7 +121,6 @@ export const projects: Project[] = [
     liveUrl: 'https://tradefundrr.com',
     imageUrl: '/projects/tradefundrr.webp',
     imageAlt: 'projectsData.tradefundrr.imageAlt',
-    featured: false,
   },
   {
     id: 'al-khair-traders-pos',
@@ -160,7 +137,6 @@ export const projects: Project[] = [
     ],
     imageUrl: '/projects/al-khair-traders-pos.webp',
     imageAlt: 'projectsData.al-khair-traders-pos.imageAlt',
-    featured: false,
   },
   {
     id: 'autotempest',
@@ -170,7 +146,6 @@ export const projects: Project[] = [
     liveUrl: 'https://www.autotempest.com',
     imageUrl: '/projects/autotempest.webp',
     imageAlt: 'projectsData.autotempest.imageAlt',
-    featured: false,
   },
   {
     id: 'points-app',
@@ -179,7 +154,6 @@ export const projects: Project[] = [
     technologies: ['Node.js', 'React.js', 'MySQL', 'Payment Integration'],
     imageUrl: '/projects/points-app.webp',
     imageAlt: 'projectsData.points-app.imageAlt',
-    featured: false,
   },
   {
     id: 'deployment-tool',
@@ -195,7 +169,6 @@ export const projects: Project[] = [
     ],
     imageUrl: '/projects/deployment-tool.webp',
     imageAlt: 'projectsData.deployment-tool.imageAlt',
-    featured: false,
   },
 ];
 
@@ -326,93 +299,6 @@ export const experiences: Experience[] = [
     responsibilitiesKey: 'experiencesData.gulzarsoft.responsibilities',
     technologies: ['Node.js', 'React.js', 'MySQL', 'MongoDB', 'REST APIs'],
   },
-];
-
-// -----------------------------
-// Skills
-// -----------------------------
-export const skills: Skill[] = [
-  // Frontend Technologies
-  { name: 'JavaScript', icon: 'SiJavascript', category: 'frontend' },
-  { name: 'TypeScript', icon: 'SiTypescript', category: 'frontend' },
-  { name: 'React', icon: 'SiReact', category: 'frontend' },
-  { name: 'Next.js', icon: 'SiNextdotjs', category: 'frontend' },
-  { name: 'Material UI', icon: 'SiMui', category: 'frontend' },
-  { name: 'Tailwind CSS', icon: 'SiTailwindcss', category: 'frontend' },
-  { name: 'Ant Design', icon: 'SiAntdesign', category: 'frontend' },
-  { name: 'shadcn/ui', icon: 'SiShadcnui', category: 'frontend' },
-  { name: 'Bootstrap', icon: 'SiBootstrap', category: 'frontend' },
-
-  // Backend Technologies
-  { name: 'Node.js', icon: 'SiNodedotjs', category: 'backend' },
-  { name: 'Express.js', icon: 'SiExpress', category: 'backend' },
-  { name: 'Python', icon: 'SiPython', category: 'backend' },
-  { name: 'PHP', icon: 'SiPhp', category: 'backend' },
-  { name: 'FastAPI', icon: 'SiFastapi', category: 'backend' },
-  { name: 'Django', icon: 'SiDjango', category: 'backend' },
-  { name: 'Supabase', icon: 'SiSupabase', category: 'backend' },
-  { name: 'KeystoneJS', icon: 'SiNodedotjs', category: 'backend' },
-  { name: 'Strapi', icon: 'SiStrapi', category: 'backend' },
-  { name: 'TypeORM', icon: 'SiTypescript', category: 'backend' },
-  { name: 'Zod', icon: 'SiTypescript', category: 'backend' },
-
-  // Databases & Storage
-  { name: 'MongoDB', icon: 'SiMongodb', category: 'database' },
-  { name: 'PostgreSQL', icon: 'SiPostgresql', category: 'database' },
-  { name: 'MySQL', icon: 'SiMysql', category: 'database' },
-  { name: 'Redis', icon: 'SiRedis', category: 'database' },
-  { name: 'Couchbase', icon: 'SiCouchbase', category: 'database' },
-  { name: 'Firebase', icon: 'SiFirebase', category: 'database' },
-  { name: 'AWS S3', icon: 'SiAmazons3', category: 'database' },
-  { name: 'AWS DynamoDB', icon: 'SiAmazondynamodb', category: 'database' },
-  { name: 'Cloudinary', icon: 'SiCloudinary', category: 'database' },
-
-  // Cloud & DevOps Tools
-  { name: 'AWS EC2', icon: 'SiAmazonaws', category: 'tools' },
-  { name: 'Docker', icon: 'SiDocker', category: 'tools' },
-  { name: 'AWS RDS', icon: 'SiAmazonaws', category: 'tools' },
-  { name: 'Terraform', icon: 'SiTerraform', category: 'tools' },
-  { name: 'AWS ECS', icon: 'SiAmazonaws', category: 'tools' },
-  { name: 'DigitalOcean', icon: 'SiDigitalocean', category: 'tools' },
-  { name: 'Heroku', icon: 'SiHeroku', category: 'tools' },
-  { name: 'AWS CloudFront', icon: 'SiAmazonaws', category: 'tools' },
-  { name: 'Netlify', icon: 'SiNetlify', category: 'tools' },
-  { name: 'AWS Lightsail', icon: 'SiAmazonaws', category: 'tools' },
-  { name: 'Vercel', icon: 'SiVercel', category: 'tools' },
-  { name: 'AWS Fargate', icon: 'SiAmazonaws', category: 'tools' },
-  { name: 'Datadog', icon: 'SiDatadog', category: 'tools' },
-  { name: 'Git', icon: 'SiGit', category: 'tools' },
-  { name: 'GitHub', icon: 'SiGithub', category: 'tools' },
-  { name: 'GitLab', icon: 'SiGitlab', category: 'tools' },
-  { name: 'Bitbucket', icon: 'SiBitbucket', category: 'tools' },
-  { name: 'Okta', icon: 'SiOkta', category: 'tools' },
-  { name: 'Swagger', icon: 'SiSwagger', category: 'tools' },
-
-  // Other Tools & Utilities
-  { name: 'Jira', icon: 'SiJira', category: 'other' },
-  { name: 'ClickUp', icon: 'SiClickup', category: 'other' },
-  { name: 'Trello', icon: 'SiTrello', category: 'other' },
-  { name: 'Notion', icon: 'SiNotion', category: 'other' },
-  { name: 'Slack', icon: 'SiSlack', category: 'other' },
-  { name: 'VS Code', icon: 'SiVisualstudiocode', category: 'other' },
-  { name: 'PyCharm', icon: 'SiPycharm', category: 'other' },
-  { name: 'Postman', icon: 'SiPostman', category: 'other' },
-  { name: 'Figma', icon: 'SiFigma', category: 'other' },
-];
-
-// The technologies worth leading with. Rendered as the highlighted row above the
-// full skill categories, so "AWS" stands in for the individual AWS services below.
-export const coreSkills: Pick<Skill, 'name' | 'icon'>[] = [
-  { name: 'Node.js', icon: 'SiNodedotjs' },
-  { name: 'TypeScript', icon: 'SiTypescript' },
-  { name: 'React', icon: 'SiReact' },
-  { name: 'Next.js', icon: 'SiNextdotjs' },
-  { name: 'Python', icon: 'SiPython' },
-  { name: 'PostgreSQL', icon: 'SiPostgresql' },
-  { name: 'Redis', icon: 'SiRedis' },
-  { name: 'AWS', icon: 'SiAmazonaws' },
-  { name: 'Terraform', icon: 'SiTerraform' },
-  { name: 'Docker', icon: 'SiDocker' },
 ];
 
 // -----------------------------

@@ -2,187 +2,80 @@
   "seo": {
     "title": "Zagham Arif | Senior Full-Stack Software Engineer | Node.js, TypeScript, React, Next.js, AWS",
     "description": "Senior full-stack engineer in Lahore, Pakistan with 5+ years in Node.js, TypeScript, React, Next.js and AWS. Backend architecture, data pipelines and payments.",
-    "keywords": "Senior Full-Stack Software Engineer, Node.js Developer, TypeScript, NestJS, React, Next.js, Python, FastAPI, PostgreSQL, Redis, AWS, Terraform, Backend Architecture, Payment Integration, Remote Contract Developer, Lahore Pakistan"
-  },
-  "main": {
-    "scrollUp": "Scroll to Top"
-  },
-  "nav": {
-    "home": "Home",
-    "projects": "Projects",
-    "experience": "Experience",
-    "skills": "Skills",
-    "contact": "Contact",
-    "allProjects": "All Projects",
-    "toggleTheme": "Toggle theme",
-    "toggleLanguage": "Toggle language",
-    "languages": {
-      "en": "English",
-      "es": "Español"
-    },
-    "toggleMenu": "Toggle menu"
-  },
-  "hero": {
-    "greeting": "Hi, I'm",
-    "title": "Senior Full-Stack Software Engineer",
-    "subtitle": "Node.js, TypeScript, React and Next.js. Backend architecture, data pipelines and payments on AWS.",
-    "description": "Passionate about building scalable applications and bringing ideas to life through code.",
-    "downloadCV": "Download CV",
-    "contactMe": "Contact Me",
-    "available": "Available",
-    "scrollDown": "Scroll Down",
-    "bio": "I’m a Senior Full-Stack Software Engineer with 5+ years of experience building products that people love to use. From sleek frontends in React and Next.js to scalable backends in Node.js and Python, I enjoy solving problems end-to-end. I’ve worked on everything from payment systems with Stripe to high-volume data pipelines on AWS. Whether it’s deploying with Terraform, scaling with Redis, or mentoring teammates, I’m passionate about creating software that’s fast, reliable, and impactful.",
-    "cv": {
-      "europass": "Europass CV",
-      "traditional": "Traditional CV"
-    }
-  },
-  "social": {
-    "github": "GitHub",
-    "linkedin": "LinkedIn",
-    "discord": "Discord",
-    "email": "Email"
-  },
-  "projects": {
-    "title": "Featured Projects",
-    "subtitle": "Recent work: backend architecture, data pipelines and payment systems that went into production.",
-    "viewCode": "View Code",
-    "liveDemo": "Live Demo",
-    "viewProject": "View Project",
-    "code": "Code",
-    "demo": "Demo",
-    "viewAll": "View All Projects",
-    "viewAllCount": "View all {count} projects"
+    "keywords": "Senior Full-Stack Software Engineer, Node.js Developer, TypeScript, NestJS, React, Next.js, Python, FastAPI, PostgreSQL, Redis, AWS, Terraform, Backend Architecture, Payment Integration, Remote Contract Developer, Lahore Pakistan",
+    "personDescription": "Senior full-stack engineer specializing in backend architecture, data pipelines and payment systems with Node.js, TypeScript and AWS."
   },
   "projectsPage": {
-    "title": "All Projects",
-    "subtitle": "Backend architecture, data pipelines and payment systems, from recent client work back to earlier products.",
     "metaTitle": "Projects | Zagham Arif, Senior Full-Stack Software Engineer",
-    "metaDescription": "Backend architecture, data pipelines and payment systems built in Node.js, TypeScript, Python and AWS, including retail price auditing, recurring donations and real-time sports statistics.",
-    "backToHome": "Back to home",
-    "featuredHeading": "Recent and featured work",
-    "featuredSubheading": "Production systems built in the last three years, most of them backend heavy.",
-    "earlierHeading": "Earlier work",
-    "earlierSubheading": "Products and tools built while moving from junior to senior, kept here as the full record.",
-    "contactCta": "Have something similar to build? Get in touch."
-  },
-  "experience": {
-    "title": "Work Experience",
-    "subtitle": "Five years of full-stack work, from a first JavaScript role to leading backend, data and payments delivery for international clients.",
-    "present": "Present",
-    "keyAchievements": "Key Achievements",
-    "technologiesUsed": "Technologies Used",
-    "expand": "Expand",
-    "collapse": "Collapse"
-  },
-  "skills": {
-    "title": "Skills & Technologies",
-    "subtitle": "The tools I build production systems with, from API and data layer through to cloud infrastructure.",
-    "categories": {
-      "backend": "Backend & APIs",
-      "frontend": "Frontend Technologies",
-      "database": "Databases & Storage",
-      "tools": "Cloud & DevOps",
-      "other": "Tools & Utilities"
-    },
-    "stats": {
-      "yearsExperience": "Years Experience",
-      "projectsCompleted": "Projects Completed",
-      "technologies": "Technologies"
-    },
-    "coreStack": "Core stack"
+    "metaDescription": "Backend architecture, data pipelines and payment systems built in Node.js, TypeScript, Python and AWS, including retail price auditing, recurring donations and real-time sports statistics."
   },
   "contact": {
-    "title": "Get In Touch",
-    "description": "Feel free to reach out for collaborations or just a friendly hello!",
-    "subtitle": "Let's work together",
-    "followMe": "Follow Me",
-    "sendMessage": "Send a Message",
-    "getBackSoon": "I'll get back to you as soon as possible.",
-    "messageSentTitle": "Message Sent Successfully!",
-    "messageSentDescription": "Thank you for reaching out. I'll get back to you as soon as possible.",
-    "errorSending": "There was an error sending your message. Please try again.",
-    "validation": {
-      "nameMinLength": "Name must be at least 2 characters",
-      "messageMinLength": "Message must be at least 10 characters",
-      "invalidUrl": "Please enter a valid URL"
-    },
-    "name": "Name",
-    "email": "Email",
-    "website": "Website (Optional)",
-    "message": "Message",
-    "send": "Send Message",
-    "sending": "Sending...",
-    "success": "Message sent successfully!",
-    "error": "Failed to send message. Please try again.",
-    "timezone": "Pakistan Standard Time (UTC+5), overlapping with UK and EU working hours",
-    "hireMe": "Hire me on a freelance platform",
     "metaTitle": "Contact | Zagham Arif, Senior Full-Stack Software Engineer",
-    "metaDescription": "Get in touch with Zagham Arif, a senior full-stack engineer in Lahore, Pakistan, about remote contract or full-time work in Node.js, TypeScript, React, Next.js and AWS.",
-    "detailsTitle": "Contact details",
-    "pageIntro": "Available for remote contract and full-time work. Backend architecture, data pipelines, payment integrations and full-stack product work in Node.js, TypeScript, Python, React, Next.js and AWS. Send a short note on what you are building and the timeline, and I will reply with how I would approach it."
+    "metaDescription": "Get in touch with Zagham Arif, a senior full-stack engineer in Lahore, Pakistan, about remote contract or full-time work in Node.js, TypeScript, React, Next.js and AWS."
   },
   "notFound": {
     "title": "404 - Page Not Found",
     "description": "The page you are looking for does not exist.",
     "backToHome": "Go to Homepage"
   },
-  "footer": {
-    "rights": "All rights reserved.",
-    "quickLinks": "Quick Links",
-    "getInTouch": "Get In Touch",
-    "hireOnUpwork": "Hire me on Upwork",
-    "brandTagline": "From concept to cloud - I ship it",
-    "brandDescription": "Senior Full-Stack Software Engineer with 5+ years of experience specializing in JavaScript, TypeScript, Python, and the MERN stack. Skilled in building scalable web applications, architecting cloud-native backends, and integrating payment systems. Passionate about delivering high-impact solutions and mentoring teams to achieve technical excellence."
-  },
   "projectsData": {
     "price-auditing-backend": {
       "description": "Retail price auditing for a US retailer, driven from a mobile app in the aisle. Designed the backend from scratch: over 2 million records per run pulled from an external feed, queued through Redis and written in parallel by Node.js worker threads, then served back paginated and queryable. Node.js, Express, TypeScript and TypeORM on AWS ECS Fargate, with Terraform-managed infrastructure and Datadog logging.",
-      "imageAlt": "Architecture diagram of the retail price auditing backend: external feed to Redis queue to Node.js worker pool to batch insert, on AWS ECS Fargate"
+      "imageAlt": "Architecture diagram of the retail price auditing backend: external feed to Redis queue to Node.js worker pool to batch insert, on AWS ECS Fargate",
+      "kind": "Data pipeline · Retail"
     },
     "recurring-donations-platform": {
-      "description": "Recurring donations and payments platform for a direct client. Built scheduled recurring transactions, with authentication, storage and edge functions on Supabase and a Next.js and TypeScript front end. Client and product name withheld.",
-      "imageAlt": "Architecture diagram of the recurring donations platform: supporter signup on Supabase, Next.js APIs and edge functions, payment provider with saved authorization, scheduled recurring charges"
+      "description": "Recurring donations and payments platform for a direct client. Built scheduled recurring transactions, with authentication, storage and edge functions on Supabase and a Next.js and TypeScript front end.",
+      "kind": "Payments · Non-profit"
     },
     "playertotals": {
-      "description": "Live sports statistics platform covering NBA, NFL and MLB, with scores and stats refreshed every 5 minutes. Built on Node.js and TypeScript with Redis queues and MongoDB for high-throughput data processing.",
-      "imageAlt": "Architecture diagram of the PlayerTotals real-time platform: scheduled game data extraction, Redis queue, Node.js and MongoDB API, React live stats dashboard"
+      "description": "Live sports statistics platform covering NBA, NFL and MLB. Stats are fetched on a 5-minute cycle, so what fans see is at most 2–3 minutes old. Built on Node.js and TypeScript with Redis queues and MongoDB for high-throughput data processing.",
+      "imageAlt": "Architecture diagram of the PlayerTotals real-time platform: scheduled game data extraction, Redis queue, Node.js and MongoDB API, React live stats dashboard",
+      "kind": "Real-time · Sports"
     },
     "memberstore": {
       "description": "One storefront serving multiple independent merchants, each selling under their own brand. Stripe handles payments, merchant onboarding and webhook reconciliation behind a KeystoneJS and GraphQL API on MongoDB, with a Next.js and TypeScript front end.",
-      "imageAlt": "Architecture diagram of the Memberstore multi-merchant storefront: Next.js frontend, GraphQL API on KeystoneJS, Stripe payments and onboarding, and webhook event handling"
+      "imageAlt": "Architecture diagram of the Memberstore multi-merchant storefront: Next.js frontend, GraphQL API on KeystoneJS, Stripe payments and onboarding, and webhook event handling",
+      "kind": "Commerce · Payments"
     },
     "civasource": {
       "description": "AI-assisted product matching for a supply marketplace. Extracts up to 1,000 products per minute using asyncio with Redis caching, behind a FastAPI service with authentication.",
-      "imageAlt": "Architecture diagram of the CivaSource data pipeline: concurrent source scrapers, Redis queue, AI product matching engine and FastAPI services"
+      "imageAlt": "Architecture diagram of the CivaSource data pipeline: concurrent source scrapers, Redis queue, AI product matching engine and FastAPI services",
+      "kind": "AI matching · Marketplace"
     },
     "safety-compliance-platform": {
-      "description": "Safety checklists and compliance workflows running across multiple industrial sites, with a multi-site audit trail. Moved monolithic APIs to serverless microservices on AWS Lambda with Terraform and cut infrastructure cost by around 30 percent. Directed the team across frontend architecture and cloud infrastructure. Client and product name withheld.",
-      "imageAlt": "Architecture diagram of the safety compliance platform: React microservices frontend, API layer, AWS Lambda compliance logic and multi-site reporting"
+      "description": "Safety checklists and compliance workflows running across multiple industrial sites, with a multi-site audit trail. Moved monolithic APIs to serverless microservices on AWS Lambda with Terraform and cut infrastructure cost by around 30 percent. Directed the team across frontend architecture and cloud infrastructure.",
+      "kind": "Compliance · Enterprise"
     },
     "real-time-gaming-platform": {
-      "description": "Real-time gaming platform. Built JavaScript bot libraries and WebSocket connections for in-game bot behavior and communication, plus the UI and command libraries used to control them. Client and product name withheld.",
-      "imageAlt": "Architecture diagram of the real-time gaming platform: control UI and command libraries, WebSocket messaging, JavaScript bot libraries, in-game actions"
+      "description": "Real-time gaming platform. Built JavaScript bot libraries and WebSocket connections for in-game bot behavior and communication, plus the UI and command libraries used to control them.",
+      "imageAlt": "Architecture diagram of the real-time gaming platform: control UI and command libraries, WebSocket messaging, JavaScript bot libraries, in-game actions",
+      "kind": "Real-time · Gaming"
     },
     "tradefundrr": {
       "description": "Trading education platform with an integrated CRM used by its own sales team. Contributed core features, API testing and sprint delivery in an agile team. Python, Flask, Django and React.",
-      "imageAlt": "Architecture diagram of TradeFundrr: React front end, Python APIs on Flask and Django, integrated CRM, sales team follow-up"
+      "imageAlt": "Architecture diagram of TradeFundrr: React front end, Python APIs on Flask and Django, integrated CRM, sales team follow-up",
+      "kind": "EdTech · CRM"
     },
     "autotempest": {
       "description": "Car search across many listing sites at once, filtered in a single form. Built the responsive React front end and the REST API that queries scraped listings out of MySQL.",
-      "imageAlt": "Screenshot of the AutoTempest home page showing the aggregated used car search form"
+      "imageAlt": "Screenshot of the AutoTempest home page showing the aggregated used car search form",
+      "kind": "Search · Automotive"
     },
     "points-app": {
       "description": "Customer loyalty scheme where points convert into mobile top-up codes. Built the redemption flow and payment processing on Node.js, React and MySQL.",
-      "imageAlt": "Architecture diagram of the Points App: loyalty points balance, redemption in React, payment processing on Node.js and MySQL, mobile top-up code issued"
+      "imageAlt": "Architecture diagram of the Points App: loyalty points balance, redemption in React, payment processing on Node.js and MySQL, mobile top-up code issued",
+      "kind": "Loyalty · Payments"
     },
     "al-khair-traders-pos": {
       "description": "Replaced a paper process for a wholesale trader: products, suppliers, purchases, sales, returns and quotations in one system, with role-based permissions down to the module level. Node.js, Express and TypeORM behind React with TanStack Query, including JWT authentication, versioned migrations and generated API documentation.",
-      "imageAlt": "Architecture diagram of the Al Khair Traders POS: React client with TanStack Query, JWT role-based auth, Express API with TypeORM, MySQL database"
+      "imageAlt": "Architecture diagram of the Al Khair Traders POS: React client with TanStack Query, JWT role-based auth, Express API with TypeORM, MySQL database",
+      "kind": "Business app · Wholesale"
     },
     "deployment-tool": {
       "description": "Final year project that removes the hand translation step between Couchbase and Firebase: it converts N1QL queries into Firebase Cloud Functions and deploys them.",
-      "imageAlt": "Pipeline diagram of the N1QL-to-Firebase tool: Couchbase N1QL queries translated into Firebase Cloud Functions and deployed"
+      "imageAlt": "Pipeline diagram of the N1QL-to-Firebase tool: Couchbase N1QL queries translated into Firebase Cloud Functions and deployed",
+      "kind": "Developer tool · University"
     }
   },
   "experiencesData": {
@@ -279,6 +172,434 @@
         "Built a car search front end over scraped listings, with a filter form that stayed fast on large result sets",
         "Delivered in sprints, took part in agile planning, and learned code review as a habit rather than a gate"
       ]
+    }
+  },
+  "home": {
+    "nav": {
+      "role": "Senior full-stack · Backend",
+      "work": "Work",
+      "skills": "Skills",
+      "experience": "Experience",
+      "contact": "Contact",
+      "modeLabel": "How to read this site",
+      "plain": "Plain English",
+      "tech": "Engineering",
+      "commandMenu": "Open quick menu",
+      "otherLanguage": "Ver en español",
+      "otherLanguageShort": "ES",
+      "themeToggle": "Switch light or dark theme",
+      "hire": "Hire me",
+      "plainShort": "Plain",
+      "techShort": "Tech",
+      "mainNav": "Main",
+      "skip": "Skip to content"
+    },
+    "hero": {
+      "greeting": "Hi, I'm Zagham",
+      "available": "Available for projects and roles · Lahore, UTC+5",
+      "headline": "You bring the problem. I'll figure out the system.",
+      "lede": {
+        "plain": "I build the behind-the-scenes systems that keep products fast, reliable and safe with your data, and I deliver them on the timeline you need, even when the full picture isn't clear on day one.",
+        "tech": "Senior full-stack engineer. I design APIs, queues, caches and AWS serverless infrastructure in Node.js and TypeScript, and lead teams through migrations, payments and high-volume data work."
+      },
+      "book": "Book a 20-min call",
+      "seeWork": "See my work",
+      "resume": "Download resume",
+      "numbers": {
+        "years": "years in production",
+        "projects": "projects shipped",
+        "teams": "teams worked with",
+        "downtime": "downtime on a live payments move"
+      }
+    },
+    "console": {
+      "title": {
+        "plain": "Try to break my system",
+        "tech": "sim://patterns-from-production"
+      },
+      "live": "Live",
+      "metrics": {
+        "latency": {
+          "plain": "page speed",
+          "tech": "p95 latency"
+        },
+        "queue": {
+          "plain": "waiting jobs",
+          "tech": "queue depth"
+        },
+        "workers": {
+          "plain": "helpers on duty",
+          "tech": "workers"
+        },
+        "failed": {
+          "plain": "visitors affected",
+          "tech": "failed requests"
+        }
+      },
+      "nodes": {
+        "users": "users",
+        "api": "API",
+        "cache": "cache",
+        "queue": "queue",
+        "workers": "workers",
+        "db": "DB",
+        "dbSub": "history",
+        "provider": "provider",
+        "providerSub": "third-party API",
+        "rps": "{count} req/s"
+      },
+      "scenarios": {
+        "spike": {
+          "label": {
+            "plain": "10× more visitors",
+            "tech": "Traffic spike ×10"
+          },
+          "from": "from: compliance and price-auditing work"
+        },
+        "provider": {
+          "label": {
+            "plain": "Data supplier goes down",
+            "tech": "Kill upstream provider"
+          },
+          "from": "from: PlayerTotals"
+        },
+        "duplicate": {
+          "label": {
+            "plain": "Payment sent twice",
+            "tech": "Duplicate charge request"
+          },
+          "from": "from: donations platform"
+        }
+      },
+      "log": {
+        "healthy": {
+          "plain": "everything running smoothly",
+          "tech": "healthy · cache hit ratio 96%"
+        },
+        "spikeIn": {
+          "plain": "10× visitors arrive; extra work waits in line instead of crashing the site",
+          "tech": "burst ×10 · queue absorbing 418 jobs"
+        },
+        "spikeScale": {
+          "plain": "more helpers called in automatically (2 → 8)",
+          "tech": "workers autoscaled 2 → 8"
+        },
+        "spikeDone": {
+          "plain": "line cleared · nobody turned away",
+          "tech": "queue drained · 0 dropped"
+        },
+        "providerDown": {
+          "plain": "the data supplier stops responding",
+          "tech": "upstream 503 · circuit open"
+        },
+        "providerFallback": {
+          "plain": "our own saved copy keeps serving visitors",
+          "tech": "serving last-known from Redis + MongoDB history"
+        },
+        "providerDone": {
+          "plain": "visitors affected: 0",
+          "tech": "users affected: 0 · retry with backoff in 30s"
+        },
+        "dupFirst": {
+          "plain": "donor clicks “Donate $25”",
+          "tech": "POST /charge key=don_8f2a → 201 charged $25"
+        },
+        "dupSecond": {
+          "plain": "the same payment arrives again (double click, retry)",
+          "tech": "POST /charge key=don_8f2a → replay detected"
+        },
+        "dupDone": {
+          "plain": "recognised as a repeat · donor charged once",
+          "tech": "idempotency key held → 200, no second charge"
+        },
+        "reset": {
+          "plain": "back to normal",
+          "tech": "reset · healthy"
+        }
+      },
+      "footnote": "Simulation of patterns from my real projects",
+      "reset": "Reset",
+      "pause": "Pause animation",
+      "play": "Play animation"
+    },
+    "capabilities": {
+      "kicker": "01 / What I do",
+      "title": "Where I'm strongest",
+      "intro": {
+        "plain": "The parts users never see but always feel: speed, reliability, and data that's right.",
+        "tech": "Backend-heavy full-stack: service design, async processing, data modelling and infrastructure as code."
+      },
+      "items": {
+        "backend": {
+          "title": "Backend and APIs",
+          "body": {
+            "plain": "Fast, typed APIs your apps and partners can rely on.",
+            "tech": "REST and GraphQL in Node.js and TypeScript, validated with Zod, documented with Swagger."
+          }
+        },
+        "cloud": {
+          "title": "Cloud and serverless",
+          "body": {
+            "plain": "Infrastructure that scales up for busy days and costs less on quiet ones.",
+            "tech": "AWS Lambda, ECS Fargate, SQS and S3; monoliths moved to microservices; Terraform for everything."
+          }
+        },
+        "data": {
+          "title": "Data, queues and caching",
+          "body": {
+            "plain": "Millions of records moved, and pages that stay instant.",
+            "tech": "Redis queues and caches, Kinesis streams, worker pools with backpressure."
+          }
+        },
+        "lead": {
+          "title": "Full-stack and team lead",
+          "body": {
+            "plain": "From the first client call to a shipped product, with a team behind it.",
+            "tech": "Next.js front ends, estimates, sprint planning, code review, leading teams of four or more."
+          }
+        }
+      }
+    },
+    "work": {
+      "kicker": "02 / Work",
+      "title": "Problems I've solved",
+      "intro": "Pick a project to open it. Each one follows the same path: the problem, what I did, what changed.",
+      "problem": "The problem",
+      "did": "What I did",
+      "changed": "What changed",
+      "tryIt": "See this pattern in the live console",
+      "pendingNote": "Number being confirmed",
+      "filterLabel": "Showing work that used {skill}",
+      "clearFilter": "Clear",
+      "moreTitle": "Everything else I’ve built",
+      "allProjects": "See all {count} projects",
+      "visit": "Visit",
+      "archive": {
+        "title": "All projects",
+        "project": "Project",
+        "what": "What it is",
+        "builtWith": "Built with",
+        "link": "Link"
+      },
+      "lanes": {
+        "client": "Client",
+        "service": "Service",
+        "data": "Data"
+      }
+    },
+    "stack": {
+      "kicker": "03 / Stack",
+      "title": "My stack, by depth",
+      "intro": "Grouped by how much I use each tool. Pick a skill to see where I used it.",
+      "tiers": {
+        "core": {
+          "name": "Core",
+          "rule": "What I build with every day, across my roles since 2021."
+        },
+        "strong": {
+          "name": "Strong",
+          "rule": "Shipped to production on several projects."
+        },
+        "familiar": {
+          "name": "Familiar",
+          "rule": "Used on specific projects."
+        }
+      },
+      "whereUsed": "Where I used it",
+      "examples": "Examples from my roles and projects",
+      "noRecord": "Not yet listed on a project here.",
+      "showWork": "Show this work",
+      "close": "Close"
+    },
+    "experience": {
+      "kicker": "04 / Career",
+      "title": "Where I've worked",
+      "intro": "Five years across product companies and agencies, with clients in the US, Germany and Turkey.",
+      "now": "Now",
+      "showAll": "Show all achievements",
+      "award": "Employee of the Month",
+      "short": {
+        "freelance": [
+          "Building a recurring donations and payments platform end to end, from scope to deployment",
+          "Retry, idempotency and reconciliation so a failed charge never double-bills a supporter"
+        ],
+        "xavor": [
+          "Designed a retail price-auditing backend from scratch for a US retailer",
+          "2M+ records per run through Redis queues and parallel Node.js workers on ECS Fargate"
+        ],
+        "hashlogics": [
+          "Led teams across four products, including the safety compliance platform and PlayerTotals",
+          "Moved monolithic APIs to serverless microservices on AWS Lambda with Terraform"
+        ]
+      },
+      "earlier": {
+        "title": "Software Engineer · Associate Software Engineer",
+        "companies": "SKUPREME · Homeats · Memberhood Inc. · GulzarSoft",
+        "where": "Remote: US, DE, TR · Gujrat, PK",
+        "summary": "Dashboards, storefronts and APIs for supply-chain, food and membership products"
+      }
+    },
+    "how": {
+      "kicker": "05 / How I work",
+      "title": "What working with me is like",
+      "steps": {
+        "find": {
+          "title": "I find out what you really need",
+          "body": "Even when the full picture isn't clear yet. I ask until it is, and explain the options in plain words."
+        },
+        "design": {
+          "title": "I design within your limits",
+          "body": "The database you can't change, the access you can't give, the budget you have. I solve it inside those."
+        },
+        "deliver": {
+          "title": "I deliver on time, honestly",
+          "body": "You hear about risks early, and you get what we agreed, when we agreed it."
+        }
+      }
+    },
+    "contact": {
+      "kicker": "06 / Contact",
+      "title": "Got a backend that needs to hold up?",
+      "body": "Freelance projects, backend rescues, or a senior remote role. Tell me what you're building.",
+      "book": "Book a 20-min call",
+      "upwork": "Hire me on Upwork",
+      "email": "Email",
+      "copy": "Copy",
+      "copied": "Copied",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "localTime": "Local time",
+      "city": "Lahore"
+    },
+    "footer": {
+      "rights": "© {year} Zagham Arif",
+      "hint": "Press ⌘ K or Ctrl+K anywhere",
+      "pages": "Pages",
+      "contact": "Contact",
+      "settings": "Language and theme",
+      "allProjects": "All projects",
+      "email": "Email",
+      "bookCall": "Book a call",
+      "source": "Source on GitHub",
+      "built": "Built with Next.js, TypeScript and Tailwind CSS."
+    },
+    "cmdk": {
+      "placeholder": "Type a command or search…",
+      "empty": "No matches",
+      "hint": "↑↓ to move · Enter to run · Esc to close",
+      "groups": {
+        "action": "action",
+        "jump": "go to",
+        "view": "view",
+        "language": "language",
+        "project": "project",
+        "demo": "demo",
+        "file": "file"
+      },
+      "items": {
+        "copyEmail": "Copy my email",
+        "book": "Book a 20-min call",
+        "work": "Go to Work",
+        "skills": "Go to Skills",
+        "experience": "Go to Experience",
+        "contact": "Go to Contact",
+        "plain": "Switch to Plain English",
+        "tech": "Switch to Engineering detail",
+        "theme": "Toggle light or dark theme",
+        "system": "Use my system theme",
+        "language": "Ver en español",
+        "resume": "Download resume",
+        "open": "Open {project}",
+        "demo": "Try it: kill the data provider"
+      },
+      "copied": "Email copied"
+    }
+  },
+  "caseStudies": {
+    "safety": {
+      "category": "Enterprise · AWS serverless",
+      "title": "Safety Compliance Platform",
+      "result": "3–4 min → instant*",
+      "problem": {
+        "plain": "Company trees 20–30 levels deep took minutes to load and often failed. The database couldn't be changed.",
+        "tech": "Hierarchies 20–30 levels deep, up to 30 children per node, in RDS. Recursive assembly in Lambda took 3–4 min and timed out. NoSQL was not an option."
+      },
+      "did": {
+        "plain": "Built a ready-made copy of the tree that updates itself every time something changes.",
+        "tech": "Precomputed hierarchy JSON in S3, rebuilt by a sync Lambda on every change through SQS (latest wins). Reads skip RDS entirely."
+      },
+      "changed": {
+        "plain": "Pages now load the tree instantly.",
+        "tech": "No recursion on the read path, and the Lambda timeouts are gone."
+      },
+      "kpis": ["tree load time", "lower infrastructure cost", "levels deep"],
+      "diagram": {
+        "aria": "Company edit → SQS → sync Lambda → S3 tree.json → read Lambda → UI. Before: UI → Lambda → recursive database joins, 3–4 min, timeout.",
+        "before": "before: UI → Lambda → recursive DB joins · 3–4 min · timeout",
+        "edit": "company edit",
+        "editSub": "parent / child",
+        "sqsSub": "latest wins",
+        "syncSub": "DB → JSON",
+        "treeSub": "always current",
+        "readSub": "no recursion"
+      }
+    },
+    "donations": {
+      "category": "Payments · live migration · team lead",
+      "title": "Recurring Donations Platform",
+      "result": "0 downtime · 0 data loss",
+      "problem": {
+        "plain": "A live donations platform had to move to a new system with no downtime, no lost records, no access to payment details, and a daily 5 AM charge run that could never be missed.",
+        "tech": "Live recurring-payments platform moving to a new Postgres-based backend and auth provider. No production access (payment tokens in the DB), a CMS schema that could not be exported directly, and a daily 5 AM charge cron."
+      },
+      "did": {
+        "plain": "Planned and rehearsed every step on a test copy first, and led the team as manager, developer and client contact.",
+        "tech": "Extraction scripts through the CMS API, covering referenced modules, media and tokens, rehearsed on staging. Auth migrated; the cron guarded through cutover."
+      },
+      "changed": {
+        "plain": "The move went smoothly. Donors never noticed, and the team earned a bonus.",
+        "tech": "0 downtime, 0 data loss, 0 tokens exposed, 0 missed charge runs. Team bonus."
+      },
+      "kpis": ["downtime", "records lost", "missed charge runs"],
+      "diagram": {
+        "aria": "Old backend and auth → migration scripts rehearsed on staging → new Postgres platform with new auth; the daily 5 AM charge run never missed.",
+        "old": "old backend",
+        "oldSub": "+ old auth",
+        "scripts": "migration scripts",
+        "scriptsSub": "rehearsed on staging",
+        "new": "new platform",
+        "newSub": "Postgres + new auth",
+        "cron": "5 AM charge run",
+        "cronSub": "never missed ✓"
+      }
+    },
+    "playertotals": {
+      "category": "Sports data · public product · team of 4",
+      "title": "PlayerTotals: live sports stats",
+      "result": "Stats at most 2–3 min old",
+      "problem": {
+        "plain": "The client wanted fast, recent NBA, NFL and MLB stats, and the data supplier limits how often you can ask.",
+        "tech": "External stats APIs with hard rate limits, and a requirement for near-real-time stats across three leagues."
+      },
+      "did": {
+        "plain": "Fetch on a schedule, keep the newest stats in fast memory, and keep our own copy of the history.",
+        "tech": "Cron ingestion every 5 minutes into MongoDB (versioned, keeps history); a Redis hot window with bounded memory and instance count."
+      },
+      "changed": {
+        "plain": "Stats load fast, are at most 2–3 minutes old, and old stats survive even if the supplier drops them.",
+        "tech": "Data at most 2–3 min old, upstream rate limits respected, history independent of the provider."
+      },
+      "kpis": ["maximum data age", "rate-limit blocks", "developers led"],
+      "diagram": {
+        "aria": "Stats APIs → cron jobs every 5 minutes → Redis hot window and MongoDB full history → fans.",
+        "apis": "stats APIs",
+        "apisSub": "rate-limited",
+        "cron": "cron jobs",
+        "cronSub": "every 5 min",
+        "redisSub": "hot window",
+        "mongoSub": "full history",
+        "fans": "fans"
+      }
     }
   }
 }

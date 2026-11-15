@@ -30,26 +30,6 @@ const nextConfig = {
       },
     ];
   },
-
-  // Webpack configuration for better development experience
-  webpack: (config, { dev, isServer }) => {
-    if (dev && !isServer) {
-      // Suppress specific webpack warnings in development
-      config.module.rules.push({
-        test: /\.js$/,
-        enforce: 'pre',
-        use: ['source-map-loader'],
-        exclude: /node_modules/,
-      });
-    }
-    return config;
-  },
-
-  // Experimental features for better development experience
-  experimental: {
-    // Optimize for development
-    optimizePackageImports: ['react-icons'],
-  },
 };
 
 export default withNextIntl(nextConfig);

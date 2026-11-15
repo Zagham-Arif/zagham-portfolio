@@ -8,7 +8,6 @@ export interface Project {
   imageUrl: string;
   /** Translation key for the image alt text. Required whenever imageUrl is set. */
   imageAlt?: string;
-  featured: boolean;
 }
 
 export interface Experience {
@@ -24,25 +23,6 @@ export interface Experience {
   summaryKey: string;
   responsibilitiesKey: string;
   technologies: string[];
-}
-
-export interface Skill {
-  name: string;
-  icon: string;
-  category: 'frontend' | 'backend' | 'database' | 'tools' | 'other';
-}
-
-export interface ContactFormData {
-  name: string;
-  email: string;
-  website?: string;
-  message: string;
-}
-
-export interface SocialLink {
-  name: string;
-  url: string;
-  icon: string;
 }
 
 export interface Education {
