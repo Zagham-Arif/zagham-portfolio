@@ -1,99 +1,67 @@
-# Tech Stack Documentation
+# Tech stack
 
-## Core Framework
+This file lists what the site runs on and why each piece is there. The rule behind most of these choices: send as little JavaScript as possible, keep content on the server, and make no network calls that aren't needed.
 
-- **Next.js 14**: React framework with App Router for server-side rendering and static generation
-- **TypeScript**: Type-safe JavaScript with enhanced developer experience
-- **React 18**: Modern React with concurrent features
+## Runtime
 
-## Styling & UI
+| Package           | Version | Role                                                             |
+| ----------------- | ------- | ---------------------------------------------------------------- |
+| Next.js           | 16      | App Router, static prerendering, `next/font`, `next/og`, Proxy   |
+| React / React DOM | 19      | Server Components by default; client components only for islands |
+| next-intl         | 4.x     | `[locale]` routing, server and client translations               |
+| next-themes       | 0.4     | Light / dark / system theme on `html.dark`, no flash             |
+| simple-icons      | 16      | Tech logo paths, imported by name so only the used ones ship     |
+| lucide-react      | 1.x     | A few UI icons (play, pause, reset, sun, moon)                   |
 
-- **Tailwind CSS**: Utility-first CSS framework for rapid UI development
-- **shadcn/ui**: High-quality, accessible React components built on Radix UI
-- **CSS Variables**: Custom properties for consistent theming
-- **Responsive Design**: Mobile-first approach with Tailwind breakpoints
+That is the whole dependency list. There is no UI kit, animation library, form library or CMS.
 
-## Animations
+## Language and tooling
 
-- **Framer Motion**: Production-ready motion library for React
-  - Page transitions
-  - Component animations
-  - Gesture handling
-  - Advanced variants with proper TypeScript support
+- **TypeScript 5** in strict mode. `allowImportingTsExtensions` lets the pure `lib/` modules import each other as `./x.ts`, so Node can run their tests without a build step.
+- **Node 22.18+**. That release turned on type stripping by default, which `yarn test` depends on.
+- **Tests**: `node --test "src/**/*.test.ts"`. They cover the pure logic: the console simulation, tech-name normalisation, stack tiers, diagram lanes, command filtering, view mode, hreflang alternates and text helpers. There is no Jest or Vitest.
+- **ESLint 9** flat config: `eslint-config-next` (core-web-vitals and TypeScript), then `eslint-plugin-prettier`.
+- **Prettier 3** with `prettier-plugin-tailwindcss` for class ordering. Single quotes, ES5 trailing commas, `arrowParens: avoid`.
+- **`scripts/check-i18n-keys.mjs`** fails the build if a translation key referenced in `data.ts` is missing, or if the locale files' key trees differ.
+- **Path aliases**: `components/*`, `lib/*`, `i18n/*`, `constants/*` (see `tsconfig.json`).
 
-## Internationalization
+## Styling
 
-- **next-intl**: Professional internationalization library for Next.js
-  - Locale-based routing (`/en`, `/es`)
-  - Server-side rendering support
-  - Type-safe translations
-  - Automatic locale detection
+- **Tailwind CSS 4**, configured in CSS. There is no `tailwind.config.*`. `globals.css` holds `@import 'tailwindcss'`, `@custom-variant dark` and `@theme inline`. PostCSS runs only `@tailwindcss/postcss`.
+- **Tokens**: `--c-*` custom properties for background, surface, ink, muted, rule, accent (blue `#3B5BFD`), accent-2 (teal), lime "live" dot and the dark panel. They are redefined under `.dark` and exposed to Tailwind as `bg-surface`, `text-ink`, `text-brand` and so on.
+- **Type**: Bricolage Grotesque 700/800 for display, Inter for body, JetBrains Mono for labels and numbers, all from `next/font/google` (self-hosted at build time).
+- **Component classes** (`.card`, `.btn`, `.kicker`, `.display`, `.mono`, `.layer` and others) sit in `@layer components` next to the tokens. Tailwind utilities handle layout.
 
-## Form Handling
+## Motion
 
-- **React Hook Form**: Performant forms with minimal re-renders
-- **Zod**: TypeScript-first schema validation
-- **Real-time validation**: Instant feedback for better UX
+- **CSS only.** Keyframes cover the hero word rise, console node boot and log lines, diagram stroke draw-in, marquee, mini-diagram pulses and the ⌘K entrance.
+- **Theme switch**: a circular reveal through `document.startViewTransition`. It is instant when the API is missing or reduced motion is on.
+- **Scroll**: the experience timeline fill is the only scroll-linked effect (`TimelineProgress`, one `requestAnimationFrame`-throttled listener).
+- **Reduced motion**: every animation has a static version under `prefers-reduced-motion: reduce`. Keyframes animate paint and compositor properties only (`transform`, `opacity`, `clip-path`, `box-shadow`, SVG `stroke-dashoffset`), never layout, so animation causes no layout shift.
 
-## Theme System
+## Rendering model
 
-- **next-themes**: Dark/light theme switching
-- **System preference detection**: Respects user's OS theme
-- **Smooth transitions**: CSS transitions for theme changes
+- Sections are async Server Components that read `lib/data.ts` and translations on the server.
+- Client islands receive plain props and only the message namespaces they need (`home.nav`, `home.console`, `home.cmdk`, `caseStudies`). The rest of the messages never reach the browser.
+- Islands talk through typed `window` events (`lib/events.ts`) rather than a shared context, so no provider has to wrap the server tree.
+- The Plain / Engineering mode is a `data-mode` attribute set by an inline `<head>` script and read by CSS. It costs no hydration.
+- Both locales are prerendered (`generateStaticParams`, `dynamicParams = false`) and revalidate every 24 hours.
 
-## Development Tools
+## SEO and metadata
 
-- **ESLint**: Code linting with Next.js configuration
-- **TypeScript**: Static type checking
-- **PostCSS**: CSS processing with Tailwind
-- **Git**: Version control with conventional commits
-
-## Build & Deployment
-
-- **Vercel**: Optimized for Next.js deployment
-- **Static Generation**: Pre-rendered pages for better performance
-- **Image Optimization**: Next.js automatic image optimization
-- **Bundle Analysis**: Built-in bundle analyzer
-
-## Performance Features
-
-- **Code Splitting**: Automatic route-based code splitting
-- **Tree Shaking**: Unused code elimination
-- **Image Optimization**: WebP conversion and responsive images
-- **Font Optimization**: Self-hosted fonts with display: swap
-
-## SEO & Metadata
-
-- **Next.js Metadata API**: Type-safe metadata management
-- **Open Graph**: Social media preview optimization
-- **Structured Data**: Rich snippets for search engines
-- **Internationalized URLs**: SEO-friendly locale routing
+- Metadata API: `metadataBase`, per-locale title and description, canonical URLs, `en` / `es` / `x-default` hreflang.
+- `opengraph-image.tsx` and `twitter-image.tsx` generate a social card per locale with `next/og`.
+- `Person` JSON-LD in the locale layout, with `knowsAbout` taken from the stack list.
+- `sitemap.ts`, `robots.ts` and `manifest.ts` as route handlers.
+- Security headers in `next.config.mjs`: `X-Frame-Options: DENY`, `nosniff` and a strict referrer policy.
 
 ## Accessibility
 
-- **Radix UI**: WAI-ARIA compliant components
-- **Keyboard Navigation**: Full keyboard accessibility
-- **Screen Reader Support**: Semantic HTML and ARIA labels
-- **Color Contrast**: WCAG 2.1 compliant color schemes
+- Target WCAG 2.2 AA in both themes.
+- ⌘K is a native `<dialog>` opened with `showModal()`. The work explorer uses `role="tablist"` / `tab` / `tabpanel` with arrow-key navigation. Skill details use the native Popover API.
+- Live regions announce the console log and the "copied" confirmation.
+- Skip link, labelled icon buttons of at least 24 × 24 px, and visible focus rings.
 
-## File Structure Philosophy
+## Removed in the 2026 redesign
 
-```
-src/
-├── app/                    # Next.js App Router
-│   ├── [locale]/          # Internationalized routes
-│   └── globals.css        # Global styles
-├── components/            # Reusable components
-│   ├── ui/               # shadcn/ui components
-│   └── sections/         # Page sections
-├── i18n/                 # Internationalization config
-├── lib/                  # Utilities and data
-└── middleware.ts         # Next.js middleware
-```
-
-This structure promotes:
-
-- Clear separation of concerns
-- Easy maintainability
-- Scalable architecture
-- Type safety throughout
+These were in the Next.js 14 version and are gone: Framer Motion, shadcn/ui and Radix, react-icons, React Hook Form + Zod and the Formspree contact form (contact is now email and booking first), the Lottie splash screen, the custom cursor and the project slider.

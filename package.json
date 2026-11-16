@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Modern portfolio website built with Next.js 14, TypeScript, Tailwind CSS, and next-intl for internationalization",
+  "description": "Portfolio of a senior full-stack engineer, built with Next.js 16, React 19, TypeScript, Tailwind CSS 4 and next-intl",
   "engines": {
     "node": ">=22.18.0"
   },

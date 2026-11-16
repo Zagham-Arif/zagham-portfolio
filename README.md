@@ -1,280 +1,141 @@
-# Zagham Arif - Portfolio
+# Zagham Arif, portfolio
 
-A modern, responsive portfolio website built with Next.js 14, TypeScript, and Tailwind CSS. Features internationalization with next-intl and a professional design system.
+The source for [zagham-portfolio.vercel.app](https://zagham-portfolio.vercel.app), the portfolio of a senior full-stack engineer whose work is mostly backend. Most of that work has no screenshots, so the site shows the systems themselves. It has a live console where you try to break a system, architecture diagrams, and a stack map that links each skill to the projects that used it.
 
-## ✨ Features
+Built with Next.js 16, React 19, TypeScript and Tailwind CSS 4, in English and Spanish, with light and dark themes. See [TECH_STACK.md](TECH_STACK.md) for the reasoning behind each choice.
 
-- **Modern Design**: Clean, professional design with smooth animations using Framer Motion
-- **Responsive Layout**: Mobile-first design optimized for all device sizes
-- **Dark/Light Theme**: Toggle between themes with smooth transitions using next-themes
-- **Internationalization**: Multi-language support (English/Spanish) using next-intl
-- **Interactive Sections**: Hero, Projects, Experience, Skills, and Contact sections
-- **Form Validation**: Contact form with proper validation using React Hook Form + Zod
-- **Performance Optimized**: Built with Next.js 14 App Router and TypeScript
-- **SEO Friendly**: Server-rendered content, per-locale metadata with canonical and hreflang, `Person` JSON-LD, sitemap, robots and web manifest
-- **Dual CV Support**: Traditional and Europass CV download options
-- **Project Slider**: Interactive project showcase with navigation controls
+## What's on the page
 
-## 🚀 Tech Stack
+The homepage, top to bottom:
 
-- **Framework**: Next.js 14 (App Router with TypeScript)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui (Button, Input, Textarea, Card, Tooltip)
-- **Icons**: React Icons
-- **Animations**: Framer Motion with advanced variants
-- **Form Handling**: React Hook Form + Zod validation
-- **Theme**: next-themes for dark/light mode
-- **Internationalization**: next-intl for professional i18n
-- **Deployment**: Vercel (deployment-ready)
+1. **Nav**: section links, a **Plain English / Engineering** switch, the ⌘K button, language, theme and "Hire me".
+2. **Hero**: headline, a short intro in both reading modes, booking and work buttons, and four count-up numbers.
+3. **"Try to break my system" console**: a simulated system (users → API → cache / queue → workers → DB, plus a third-party provider). Each of the three scenarios (traffic spike, provider outage, duplicate request) comes from a real project and shows the pattern that handles it. The console is labelled as a simulation.
+4. **Tech marquee**: logos scroll past and pause on hover.
+5. **What I do**: four capability cards.
+6. **Work explorer**: three featured case studies, each with tabs, a problem / what I did / what changed story, an animated diagram, result tiles, and a button that runs the matching console scenario. Below it, a one-line list of the other projects, each with a mini architecture diagram.
+7. **Stack map**: skills grouped into Core, Strong and Familiar. Each skill opens a popover that lists where it was used and can filter the work section by it.
+8. **Experience timeline**: the line fills as you scroll and the current role is marked live.
+9. **How I work**: three steps.
+10. **Contact**: email with a copy button, booking, Upwork, LinkedIn, GitHub and a live Lahore clock.
 
-## 📋 Prerequisites
+Three more pages per locale: `/projects` (the explorer plus a table of every project), `/contact` and a localized 404.
 
-- **Node.js**: Version 18.x or higher (22.x recommended for optimal performance)
-- **Package Manager**: Yarn (recommended) or npm
+**⌘K / Ctrl+K** opens a command menu from anywhere. You can copy the email, jump to a section, switch reading mode, theme or language, open a case study, or run a console demo.
 
-## 📦 Installation
+## Getting started
 
-1. Clone the repository:
+You need **Node.js 22.18 or later** (the tests run TypeScript directly through Node's type stripping) and **Yarn 1**.
 
 ```bash
 git clone https://github.com/Zagham-Arif/zagham-portfolio.git
 cd zagham-portfolio
-```
-
-2. Install dependencies:
-
-```bash
 yarn install
-```
-
-3. Start the development server:
-
-```bash
 yarn dev
 ```
 
-4. Open your browser:
-   - English: [http://localhost:3000/en](http://localhost:3000/en)
-   - Spanish: [http://localhost:3000/es](http://localhost:3000/es)
+Then open [localhost:3000/en](http://localhost:3000/en) or [localhost:3000/es](http://localhost:3000/es). `/` redirects to `/en`, and the site never redirects based on browser language.
 
-## 🛠️ Scripts
+## Scripts
 
-- `yarn dev` - Start development server
-- `yarn build` - Build for production
-- `yarn start` - Start production server
-- `yarn lint` - Run ESLint
-- `yarn lint:fix` - Fix ESLint issues automatically
-- `yarn type-check` - Run TypeScript type checking
+| Command           | What it does                                                         |
+| ----------------- | -------------------------------------------------------------------- |
+| `yarn dev`        | Start the dev server                                                 |
+| `yarn build`      | Production build (both locales are prerendered)                      |
+| `yarn start`      | Serve the production build                                           |
+| `yarn lint`       | ESLint (Next core-web-vitals + TypeScript + Prettier rules)          |
+| `yarn lint:fix`   | ESLint with autofix                                                  |
+| `yarn type-check` | `tsc --noEmit`                                                       |
+| `yarn test`       | Unit tests with `node --test` (no test framework)                    |
+| `yarn check-i18n` | Fails if a locale is missing a key or the locale key trees differ    |
+| `yarn format`     | Prettier write (`format:check` to verify only)                       |
+| `yarn check-all`  | type-check, check-i18n, lint, test and format check. Run before a PR |
 
-## 🔧 Development Setup
-
-### Environment
-
-Ensure you have the correct Node.js version:
-
-```bash
-node --version  # Should be >= 18.0.0 (22.x recommended)
-```
-
-### VS Code Setup (Recommended)
-
-Install these extensions for the best development experience:
-
-- TypeScript and JavaScript Language Features
-- Tailwind CSS IntelliSense
-- ES7+ React/Redux/React-Native snippets
-- Auto Rename Tag
-- Prettier - Code formatter
-
-### Hot Reload
-
-The development server supports hot reload for:
-
-- React components
-- CSS changes
-- Translation updates
-- Configuration changes
-
-## 📁 Project Structure
+## Project structure
 
 ```
 src/
 ├── app/
-│   ├── [locale]/          # Locale-based routing (en/es)
-│   │   ├── layout.tsx     # Locale layout with metadata and Person JSON-LD
-│   │   ├── page.tsx       # Main portfolio page (server component)
-│   │   ├── projects/      # /[locale]/projects, all projects grouped by recency
-│   │   └── contact/       # /[locale]/contact, contact details and form
-│   ├── manifest.ts        # Web app manifest route
-│   ├── robots.ts          # robots.txt route
-│   ├── sitemap.ts         # sitemap.xml route
-│   ├── fonts/             # Custom fonts (Geist Sans/Mono)
-│   ├── globals.css        # Global styles and CSS variables
-│   └── layout.tsx         # Root layout with ThemeProvider
+│   ├── layout.tsx              # Root: imports globals.css only
+│   ├── globals.css             # Design tokens, component classes, all keyframes
+│   ├── manifest.ts, robots.ts, sitemap.ts
+│   └── [locale]/
+│       ├── layout.tsx          # Fonts, metadata, Person JSON-LD, theme + intl providers, ⌘K
+│       ├── page.tsx            # Homepage, composed of server sections
+│       ├── projects/, contact/ # Sub-pages with their own metadata
+│       ├── opengraph-image.tsx # Per-locale social image (also twitter-image.tsx)
+│       ├── not-found.tsx, [...rest]/
 ├── components/
-│   ├── ui/                # shadcn/ui components
-│   ├── sections/          # Page sections
-│   │   ├── Hero.tsx       # Hero section (CV buttons hidden while cvUrls are empty)
-│   │   ├── Projects.tsx   # Projects with slider functionality
-│   │   ├── Experience.tsx # Work experience timeline
-│   │   ├── Skills.tsx     # Skills and technologies
-│   │   ├── Contact.tsx    # Contact form with validation
-│   │   └── Footer.tsx     # Footer with social links
-│   └── Navigation.tsx     # Navigation with theme toggle
-├── i18n/
-│   ├── config.ts          # Supported locales and the default
-│   └── request.ts         # next-intl request configuration
+│   ├── shell/       # Nav, CommandMenu, ModeText, TechIcon (SVG sprite)
+│   ├── hero/        # Hero, CountUp
+│   ├── console/     # Console, SystemDiagram, simulation.ts (pure, tested)
+│   ├── home/        # Capabilities, Marquee, HowIWork, ContactBlock, SectionHead, SiteFooter
+│   ├── work/        # WorkSection, WorkExplorer, MiniDiagram, ArchiveTable, diagrams/
+│   ├── stack/       # StackMap, SkillButton
+│   ├── timeline/    # Timeline, TimelineProgress
+│   └── contact/     # CopyEmail, LocalClock
 ├── lib/
-│   ├── data.ts           # Portfolio data (projects, experience, skills)
-│   ├── icons.ts          # Explicit icon registry (only these icons are bundled)
-│   ├── types.ts          # TypeScript type definitions
-│   └── utils.ts          # Utility functions
-├── middleware.ts         # Locale middleware for routing
-└── public/
-    └── projects/         # Project card images (architecture diagrams, screenshots)
-messages/
-├── en.json              # English translations
-└── es.json              # Spanish translations
+│   ├── data.ts          # Personal info, projects, experience, education
+│   ├── case-studies.ts  # The three featured projects: scenario, KPIs, wiring
+│   ├── stack.ts         # Skills and their tier; where each was used
+│   ├── skills.ts        # normalizeTech(): folds "React.js"/"ReactJS" → "react"
+│   ├── lanes.ts         # Sorts a project's tech into client / service / data lanes
+│   ├── events.ts        # Typed window events between client islands
+│   ├── view-mode.ts     # Plain / Engineering preference + no-flash inline script
+│   ├── page-metadata.ts # Sub-page metadata (canonical, hreflang, OG)
+│   └── *.test.ts        # Unit tests next to the code they cover
+├── i18n/            # Locales, request config, canonical/hreflang helper
+├── constants/links.ts
+└── proxy.ts         # next-intl locale routing (Next 16's replacement for middleware.ts)
+messages/en.json, es.json   # All visible copy
+scripts/check-i18n-keys.mjs
+public/projects/            # Project images (.webp)
 ```
 
-## 🎨 Customization
+## How it's built
 
-### Personal Information
+**Server first, small client islands.** Every section renders on the server, so crawlers and visitors without JavaScript get the full content. Only interactive pieces are client components: the console, work explorer, skill popovers, ⌘K, nav controls, count-ups, clock, copy button and timeline progress. The islands don't share a React provider. They send typed `CustomEvent`s on `window` (`lib/events.ts`), so the stack map can filter the work section and the explorer can run a console scenario.
 
-Update your personal information in `src/lib/data.ts`:
+**Two reading modes without a re-render.** `ModeText` outputs both the Plain and the Engineering version of a passage, and CSS on `html[data-mode]` shows one of them. An inline script in `<head>` applies the saved mode before first paint. The page reads correctly before hydration and with storage blocked, and the switch never flashes.
 
-```typescript
-export const personalInfo = {
-  name: 'Your Name',
-  title: 'Your Title',
-  email: 'your.email@example.com',
-  cvUrls: {
-    traditional: '/Your-CV-Traditional.pdf',
-    europass: '/Your-CV-Europass.pdf',
-  },
-  // ... other details
-};
-```
+**Design tokens in one place.** Colours are `--c-*` custom properties in `globals.css`, redefined under `.dark` and exposed to Tailwind through `@theme inline` (`bg-surface`, `text-ink`, `text-brand` and so on). Type is Bricolage Grotesque for display, Inter for body and JetBrains Mono for labels, all loaded with `next/font/google`. The accent runs from blue (`#3B5BFD`) to teal.
 
-### Projects
+**Motion in CSS.** The site has no animation library. The hero entrance, console boot, diagram draw-in, marquee, ⌘K and the circular theme reveal (View Transitions API) are all CSS keyframes. The timeline fill is the one scroll-linked effect. Every animation has a static version under `prefers-reduced-motion`.
 
-Add your projects in `src/lib/data.ts`:
+**Diagrams and icons are inline SVG.** They follow the theme and need no network requests. Tech logos come from named `simple-icons` imports, which are rendered once into an SVG sprite and referenced with `<use>`, so only the icons the site uses are bundled.
 
-```typescript
-export const projects: Project[] = [
-  {
-    id: 'project-id',
-    title: 'Project Title',
-    description: 'Project description',
-    technologies: ['Next.js', 'TypeScript'],
-    liveUrl: 'https://your-project.com',
-    imageUrl: '/projects/project-id.webp',
-    imageAlt: 'projectsData.project-id.imageAlt',
-    featured: true,
-  },
-  // ... more projects
-];
-```
+## Editing content
 
-`description` and `imageAlt` are translation keys, not literal text, and must exist
-in every file under `messages/`. `yarn check-i18n` (part of `yarn check-all`) fails
-the build if a key referenced here is missing from a locale.
+All visible text is in `messages/en.json` and `messages/es.json`. Both files need the same key structure, and `yarn check-i18n` enforces it.
 
-### Experience & Skills
+- **Personal details, booking link, avatar, CV paths:** `personalInfo` in `src/lib/data.ts`. Empty `avatarUrl`, `bookingUrl` or `cvUrls` hide the related UI or fall back to something else (a "ZA" monogram, the contact section, no resume button).
+- **Projects and experience:** `projects` and `experiences` in `src/lib/data.ts`. `description`, `imageAlt` and the experience keys are translation keys, not literal text. Technology names are free text, and `normalizeTech()` folds the variants together, so a new alias may need an entry in `src/lib/skills.ts`.
+- **Featured case studies:** `src/lib/case-studies.ts` (facts and wiring), copy under `caseStudies.<id>` in the messages, and the diagram in `src/components/work/diagrams/`. A KPI with `pending: true` shows a visible `*` until the number is confirmed. Numbers on this site are real and are not estimated.
+- **Skills:** the `tier` of a skill in `src/lib/stack.ts`. Its "where used" list is derived from `projects` and `experiences`.
+- **Plain / Engineering copy:** paired keys ending in `plain` and `tech`.
+- **Links:** `src/constants/links.ts`.
 
-Update your work experience and skills in `src/lib/data.ts`
+## Adding a language
 
-### Translations
+1. Add the code to `locales` in `src/i18n/config.ts`.
+2. Copy `messages/en.json` to `messages/<code>.json` and translate it.
+3. Add its Open Graph locale to `ogLocales` in `src/app/[locale]/layout.tsx` and `src/lib/page-metadata.ts`.
+4. The language button in `Nav.tsx` toggles between two locales, so with three or more it would need to become a menu.
 
-Modify translations in `messages/en.json` and `messages/es.json`
+## SEO and accessibility
 
-### CV Files
+- One `h1` per page, server-rendered content, and both locales prerendered with `generateStaticParams`. Pages revalidate daily so "years of experience" and the © year stay current.
+- Per-locale titles and descriptions, a canonical URL, and `en` / `es` / `x-default` hreflang on every route. Per-locale Open Graph and Twitter images. `Person` JSON-LD.
+- `sitemap.xml` (three routes × two locales), `robots.txt` and `manifest.webmanifest` are App Router routes.
+- Target WCAG 2.2 AA. Icon-only buttons are labelled and at least 24 × 24 px, the explorer follows the WAI-ARIA tabs pattern, ⌘K is a native `<dialog>` opened with `showModal()` (focus trap, Escape and focus return come from the browser), the console log is `aria-live="polite"`, and the page has a skip link.
 
-Place your CV files in the `public/` directory:
+## Deployment
 
-- Traditional format CV
-- Europass format CV
+Hosted on Vercel and deployed from `main`. Any host that runs Next.js 16 on Node 22 works.
 
-## 🌐 Internationalization
+## Contact
 
-The portfolio supports multiple languages using next-intl:
-
-- **URLs**: `/en` for English, `/es` for Spanish
-- **Automatic Detection**: Browser language detection
-- **Fallback**: Defaults to English
-- **Scalable**: Easy to add more languages
-
-### Adding New Languages
-
-1. Create a new translation file: `messages/[locale].json`
-2. Update middleware: `src/middleware.ts` to include the new locale
-3. Add translations following the existing structure
-
-## 🔄 Migration Notes
-
-This project has been migrated from a custom translation system to **next-intl** for better maintainability and professional standards. The migration includes:
-
-- ✅ Locale-based routing (`/en`, `/es`)
-- ✅ Professional i18n configuration
-- ✅ Type-safe translations
-- ✅ Server-side rendering support
-
-## 🚀 Deployment
-
-### Vercel (Recommended)
-
-1. Push your code to GitHub
-2. Connect to Vercel
-3. Deploy automatically
-
-### Other Platforms
-
-The project is compatible with any platform supporting Next.js:
-
-- Netlify
-- Railway
-- DigitalOcean App Platform
-
-## 📱 Features Details
-
-### Theme System
-
-- Light/Dark mode toggle
-- System preference detection
-- Smooth transitions
-- CSS variables for theming
-
-### Form Validation
-
-- Real-time validation
-- Email format checking
-- Required field validation
-- Success/error states
-
-### Project Slider
-
-- Navigation controls
-- Pagination indicators
-- Smooth animations
-- Responsive design
-
-### SEO Optimization
-
-- Every section is server-rendered, so crawlers see the content without running JavaScript
-- Per-locale `generateMetadata` with `metadataBase`, canonical URLs and `en` / `es` / `x-default` hreflang
-- Open Graph and Twitter Card tags with an absolute image URL
-- `Person` JSON-LD in the locale layout
-- Three indexable routes per locale (home, `/projects`, `/contact`), each with its own title, description and canonical
-- `/sitemap.xml`, `/robots.txt` and `/manifest.webmanifest` as App Router routes
-- Both locales prerendered at build time via `generateStaticParams` and `setRequestLocale`
-
-## 📞 Contact
-
-- **Email**: zaghamarif@gmail.com
-- **LinkedIn**: [linkedin.com/in/zagham-arif](https://www.linkedin.com/in/zagham-arif)
-- **GitHub**: [github.com/Zagham-Arif](https://github.com/Zagham-Arif)
-
----
-
-Built with ❤️ using Next.js 14, TypeScript, and next-intl
+- Email: zaghamarif@gmail.com
+- LinkedIn: [linkedin.com/in/zagham-arif](https://www.linkedin.com/in/zagham-arif)
+- GitHub: [github.com/Zagham-Arif](https://github.com/Zagham-Arif)
+- Upwork: [upwork.com/freelancers/~01b58b210c60ff7195](https://www.upwork.com/freelancers/~01b58b210c60ff7195)
